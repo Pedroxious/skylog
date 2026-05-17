@@ -87,13 +87,13 @@
         <text x="25" y="38" font-family="Segoe UI, Arial, sans-serif" font-size="18" 
             font-weight="700" fill="#E8EAF6">Dubai, Emirados Árabes</text>
         <text x="25" y="56" font-family="Segoe UI, Arial, sans-serif" font-size="11" 
-            fill="#B0BEC5">Oriente Médio · 02:39 · NOITE 🌙</text>
+            fill="#B0BEC5">Oriente Médio · 03:44 · NOITE 🌙</text>
         
         <!-- Temperature -->
         <text x="25" y="110" font-family="Segoe UI, Arial, sans-serif" font-size="52" 
             font-weight="800" fill="#E8EAF6">27°C</text>
         <text x="25" y="130" font-family="Segoe UI, Arial, sans-serif" font-size="13" 
-            fill="#B0BEC5">Sensação 31°C</text>
+            fill="#B0BEC5">Sensação 30°C</text>
         
         <!-- Condition emoji & text -->
         <text x="250" y="100" font-family="Segoe UI, Arial, sans-serif" font-size="36">☀️</text>
@@ -102,7 +102,7 @@
         
         <!-- Details -->
         <text x="25" y="165" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#78909C">
-            💧 Umidade: 75%   💨 Vento: 11 km/h   🌡️ Mín 27° / Máx 32°
+            💧 Umidade: 75%   💨 Vento: 12 km/h   🌡️ Mín 27° / Máx 32°
         </text>
         
         <!-- Sunrise / Sunset -->
@@ -118,6 +118,6 @@
         
         <!-- Footer -->
         <text x="25" y="260" font-family="Segoe UI, Arial, sans-serif" font-size="10" 
-            fill="#78909C">📍 25.20, 55.27 · Atualizado: 2026-05-18 02:39</text>
+            fill="#78909C">📍 25.20, 55.27 · Atualizado: 2026-05-18 03:44</text>
     </g>
 </svg>

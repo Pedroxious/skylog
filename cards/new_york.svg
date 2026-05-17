@@ -72,7 +72,7 @@
         <text x="25" y="38" font-family="Segoe UI, Arial, sans-serif" font-size="18" 
             font-weight="700" fill="#1a1a2e">New York, EUA</text>
         <text x="25" y="56" font-family="Segoe UI, Arial, sans-serif" font-size="11" 
-            fill="#333355">América do Norte · 18:38 · DIA ☀️</text>
+            fill="#333355">América do Norte · 19:44 · DIA ☀️</text>
         
         <!-- Temperature -->
         <text x="25" y="110" font-family="Segoe UI, Arial, sans-serif" font-size="52" 
@@ -87,7 +87,7 @@
         
         <!-- Details -->
         <text x="25" y="165" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#555577">
-            💧 Umidade: 42%   💨 Vento: 8 km/h   🌡️ Mín 18° / Máx 31°
+            💧 Umidade: 39%   💨 Vento: 8 km/h   🌡️ Mín 18° / Máx 31°
         </text>
         
         <!-- Sunrise / Sunset -->
@@ -97,12 +97,12 @@
         
         <!-- Day Progress Bar -->
         <rect x="25" y="210" width="400" height="6" rx="3" fill="rgba(128,128,128,0.2)"/>
-        <rect x="25" y="210" width="359" height="6" rx="3" fill="#FFD54F"/>
+        <rect x="25" y="210" width="389" height="6" rx="3" fill="#FFD54F"/>
         <text x="430" y="215" font-family="Segoe UI, Arial, sans-serif" font-size="10" 
-            fill="#555577">90%</text>
+            fill="#555577">97%</text>
         
         <!-- Footer -->
         <text x="25" y="260" font-family="Segoe UI, Arial, sans-serif" font-size="10" 
-            fill="#555577">📍 40.71, -74.01 · Atualizado: 2026-05-17 18:38</text>
+            fill="#555577">📍 40.71, -74.01 · Atualizado: 2026-05-17 19:44</text>
     </g>
 </svg>

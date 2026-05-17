@@ -89,7 +89,7 @@
         <text x="25" y="38" font-family="Segoe UI, Arial, sans-serif" font-size="18" 
             font-weight="700" fill="#E8EAF6">Rio de Janeiro, Brasil</text>
         <text x="25" y="56" font-family="Segoe UI, Arial, sans-serif" font-size="11" 
-            fill="#B0BEC5">América do Sul · 19:38 · NOITE 🌙</text>
+            fill="#B0BEC5">América do Sul · 20:44 · NOITE 🌙</text>
         
         <!-- Temperature -->
         <text x="25" y="110" font-family="Segoe UI, Arial, sans-serif" font-size="52" 
@@ -104,7 +104,7 @@
         
         <!-- Details -->
         <text x="25" y="165" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#78909C">
-            💧 Umidade: 85%   💨 Vento: 3 km/h   🌡️ Mín 22° / Máx 29°
+            💧 Umidade: 83%   💨 Vento: 2 km/h   🌡️ Mín 22° / Máx 29°
         </text>
         
         <!-- Sunrise / Sunset -->
@@ -120,6 +120,6 @@
         
         <!-- Footer -->
         <text x="25" y="260" font-family="Segoe UI, Arial, sans-serif" font-size="10" 
-            fill="#78909C">📍 -22.91, -43.17 · Atualizado: 2026-05-17 19:38</text>
+            fill="#78909C">📍 -22.91, -43.17 · Atualizado: 2026-05-17 20:44</text>
     </g>
 </svg>

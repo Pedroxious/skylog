@@ -47,8 +47,8 @@
     </style>
     <defs>
         <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#1B5E20"/>
-            <stop offset="100%" style="stop-color:#A5D6A7"/>
+            <stop offset="0%" style="stop-color:#F9A825"/>
+            <stop offset="100%" style="stop-color:#FFF9C4"/>
         </linearGradient>
         <clipPath id="rounded">
             <rect x="0" y="0" width="500" height="280" rx="20" ry="20"/>
@@ -72,11 +72,11 @@
         <text x="25" y="38" font-family="Segoe UI, Arial, sans-serif" font-size="18" 
             font-weight="700" fill="#1a1a2e">San Francisco, EUA</text>
         <text x="25" y="56" font-family="Segoe UI, Arial, sans-serif" font-size="11" 
-            fill="#333355">América do Norte · 15:38 · DIA ☀️</text>
+            fill="#333355">América do Norte · 16:44 · DIA ☀️</text>
         
         <!-- Temperature -->
         <text x="25" y="110" font-family="Segoe UI, Arial, sans-serif" font-size="52" 
-            font-weight="800" fill="#1a1a2e">21°C</text>
+            font-weight="800" fill="#1a1a2e">24°C</text>
         <text x="25" y="130" font-family="Segoe UI, Arial, sans-serif" font-size="13" 
             fill="#333355">Sensação 19°C</text>
         
@@ -87,7 +87,7 @@
         
         <!-- Details -->
         <text x="25" y="165" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#555577">
-            💧 Umidade: 36%   💨 Vento: 18 km/h   🌡️ Mín 10° / Máx 23°
+            💧 Umidade: 24%   💨 Vento: 27 km/h   🌡️ Mín 10° / Máx 24°
         </text>
         
         <!-- Sunrise / Sunset -->
@@ -97,12 +97,12 @@
         
         <!-- Day Progress Bar -->
         <rect x="25" y="210" width="400" height="6" rx="3" fill="rgba(128,128,128,0.2)"/>
-        <rect x="25" y="210" width="271" height="6" rx="3" fill="#FFD54F"/>
+        <rect x="25" y="210" width="302" height="6" rx="3" fill="#FFD54F"/>
         <text x="430" y="215" font-family="Segoe UI, Arial, sans-serif" font-size="10" 
-            fill="#555577">68%</text>
+            fill="#555577">76%</text>
         
         <!-- Footer -->
         <text x="25" y="260" font-family="Segoe UI, Arial, sans-serif" font-size="10" 
-            fill="#555577">📍 37.77, -122.42 · Atualizado: 2026-05-17 15:38</text>
+            fill="#555577">📍 37.77, -122.42 · Atualizado: 2026-05-17 16:44</text>
     </g>
 </svg>

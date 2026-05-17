@@ -72,13 +72,13 @@
         <text x="25" y="38" font-family="Segoe UI, Arial, sans-serif" font-size="18" 
             font-weight="700" fill="#1a1a2e">Tokyo, Japão</text>
         <text x="25" y="56" font-family="Segoe UI, Arial, sans-serif" font-size="11" 
-            fill="#333355">Ásia · 07:39 · DIA ☀️</text>
+            fill="#333355">Ásia · 08:44 · DIA ☀️</text>
         
         <!-- Temperature -->
         <text x="25" y="110" font-family="Segoe UI, Arial, sans-serif" font-size="52" 
-            font-weight="800" fill="#1a1a2e">16°C</text>
+            font-weight="800" fill="#1a1a2e">19°C</text>
         <text x="25" y="130" font-family="Segoe UI, Arial, sans-serif" font-size="13" 
-            fill="#333355">Sensação 18°C</text>
+            fill="#333355">Sensação 21°C</text>
         
         <!-- Condition emoji & text -->
         <text x="250" y="100" font-family="Segoe UI, Arial, sans-serif" font-size="36">☀️</text>
@@ -87,7 +87,7 @@
         
         <!-- Details -->
         <text x="25" y="165" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#555577">
-            💧 Umidade: 82%   💨 Vento: 0 km/h   🌡️ Mín 13° / Máx 26°
+            💧 Umidade: 76%   💨 Vento: 2 km/h   🌡️ Mín 13° / Máx 26°
         </text>
         
         <!-- Sunrise / Sunset -->
@@ -97,12 +97,12 @@
         
         <!-- Day Progress Bar -->
         <rect x="25" y="210" width="400" height="6" rx="3" fill="rgba(128,128,128,0.2)"/>
-        <rect x="25" y="210" width="87" height="6" rx="3" fill="#FFD54F"/>
+        <rect x="25" y="210" width="118" height="6" rx="3" fill="#FFD54F"/>
         <text x="430" y="215" font-family="Segoe UI, Arial, sans-serif" font-size="10" 
-            fill="#555577">22%</text>
+            fill="#555577">30%</text>
         
         <!-- Footer -->
         <text x="25" y="260" font-family="Segoe UI, Arial, sans-serif" font-size="10" 
-            fill="#555577">📍 35.68, 139.65 · Atualizado: 2026-05-18 07:39</text>
+            fill="#555577">📍 35.68, 139.65 · Atualizado: 2026-05-18 08:44</text>
     </g>
 </svg>
