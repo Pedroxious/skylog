@@ -1,0 +1,13 @@
+datetime,city,country,continent,temp_c,feels_like_c,temp_min_c,temp_max_c,humidity_pct,wind_kmh,precipitation_mm,weather_code,condition,image_key,is_day,sunrise,sunset
+2026-05-17 19:38,São Paulo,Brasil,América do Sul,18.9,20.2,16.6,22.6,93,10.1,0.5,61,Chuva leve,NightRain.webp,0,2026-05-17T06:34,2026-05-17T17:31
+2026-05-17 19:38,Rio de Janeiro,Brasil,América do Sul,24.2,28.4,21.8,28.8,85,2.9,0.0,3,Nublado,OvercastNight.webp,0,2026-05-17T06:19,2026-05-17T17:18
+2026-05-17 19:38,Buenos Aires,Argentina,América do Sul,10.8,8.3,7.8,13.1,60,6.5,0.0,0,Céu limpo,FullMoonClear.webp,0,2026-05-17T07:42,2026-05-17T17:58
+2026-05-17 16:38,Mexico City,México,América Central,24.1,22.7,15.9,29.5,38,8.0,0.0,2,Parcialmente nublado,ParcialNublado.webp,1,2026-05-17T06:00,2026-05-17T19:05
+2026-05-17 18:38,New York,EUA,América do Norte,28.8,29.1,18.3,30.6,42,8.4,0.0,0,Céu limpo,Limpo.webp,1,2026-05-17T05:36,2026-05-17T20:08
+2026-05-17 15:38,San Francisco,EUA,América do Norte,21.2,18.9,10.0,23.3,36,18.5,0.0,0,Céu limpo,Limpo.webp,1,2026-05-17T05:57,2026-05-17T20:14
+2026-05-17 23:38,London,Reino Unido,Europa,10.3,8.0,9.6,16.7,79,10.4,0.0,3,Nublado,OvercastNight.webp,0,2026-05-17T05:05,2026-05-17T20:48
+2026-05-18 00:38,Paris,França,Europa,11.9,10.2,9.2,15.6,78,8.4,0.0,3,Nublado,OvercastNight.webp,0,2026-05-18T06:04,2026-05-18T21:29
+2026-05-18 07:39,Tokyo,Japão,Ásia,16.5,17.6,13.1,26.3,82,0.4,0.0,0,Céu limpo,Limpo.webp,1,2026-05-18T04:34,2026-05-18T18:41
+2026-05-18 02:39,Dubai,Emirados Árabes,Oriente Médio,27.4,31.0,26.6,31.7,75,11.2,0.0,0,Céu limpo,FullMoonClear.webp,0,2026-05-18T05:32,2026-05-18T18:57
+2026-05-18 01:39,Cairo,Egito,África,28.3,28.4,23.4,37.2,39,5.6,0.0,1,Principalmente limpo,FullMoonClear.webp,0,2026-05-18T05:59,2026-05-18T19:43
+2026-05-18 08:39,Sydney,Austrália,Oceania,15.9,17.1,15.6,19.0,98,4.5,0.1,51,Chuvisco leve,Chuvisco.webp,1,2026-05-18T06:42,2026-05-18T17:00

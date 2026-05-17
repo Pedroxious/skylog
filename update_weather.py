@@ -1,0 +1,776 @@
+#!/usr/bin/env python3
+"""
+🌍 SkyLog — Automated Weather Dashboard Generator
+Fetches real-time weather data for 12 global cities, generates animated SVG cards,
+updates CSV history, and builds a visual README dashboard.
+"""
+
+import requests
+import csv
+import os
+import math
+from datetime import datetime, timezone, timedelta
+
+# ============================================================
+# Try to import pytz; fall back to manual UTC offsets if missing
+# ============================================================
+try:
+    import pytz
+    HAS_PYTZ = True
+except ImportError:
+    HAS_PYTZ = False
+
+# ============================================================
+# CITY DATA — 12 cities across 6 continents
+# ============================================================
+CIDADES = [
+    {"nome": "São Paulo",      "pais": "Brasil",          "continente": "América do Sul",   "lat": -23.5505, "lon": -46.6333, "tz": "America/Sao_Paulo",              "slug": "sao_paulo",      "landmark": "SaoPaulo.webp",      "utc_offset": -3},
+    {"nome": "Rio de Janeiro",  "pais": "Brasil",          "continente": "América do Sul",   "lat": -22.9068, "lon": -43.1729, "tz": "America/Sao_Paulo",              "slug": "rio_de_janeiro", "landmark": "RiodeJaneiro.webp",  "utc_offset": -3},
+    {"nome": "Buenos Aires",   "pais": "Argentina",       "continente": "América do Sul",   "lat": -34.6037, "lon": -58.3816, "tz": "America/Argentina/Buenos_Aires", "slug": "buenos_aires",   "landmark": "Argentina.webp",     "utc_offset": -3},
+    {"nome": "Mexico City",    "pais": "México",          "continente": "América Central",  "lat":  19.4326, "lon": -99.1332, "tz": "America/Mexico_City",            "slug": "mexico_city",    "landmark": "Mexico.webp",        "utc_offset": -6},
+    {"nome": "New York",       "pais": "EUA",             "continente": "América do Norte", "lat":  40.7128, "lon": -74.0060, "tz": "America/New_York",               "slug": "new_york",       "landmark": "NewYork.webp",       "utc_offset": -4},
+    {"nome": "San Francisco",  "pais": "EUA",             "continente": "América do Norte", "lat":  37.7749, "lon":-122.4194, "tz": "America/Los_Angeles",            "slug": "san_francisco",  "landmark": "SanFrancisco.webp",  "utc_offset": -7},
+    {"nome": "London",         "pais": "Reino Unido",     "continente": "Europa",           "lat":  51.5074, "lon":  -0.1278, "tz": "Europe/London",                  "slug": "london",         "landmark": "London.webp",        "utc_offset": 1},
+    {"nome": "Paris",          "pais": "França",          "continente": "Europa",           "lat":  48.8566, "lon":   2.3522, "tz": "Europe/Paris",                   "slug": "paris",          "landmark": "Paris.webp",         "utc_offset": 2},
+    {"nome": "Tokyo",          "pais": "Japão",           "continente": "Ásia",             "lat":  35.6762, "lon": 139.6503, "tz": "Asia/Tokyo",                     "slug": "tokyo",          "landmark": "Tokyo.webp",         "utc_offset": 9},
+    {"nome": "Dubai",          "pais": "Emirados Árabes", "continente": "Oriente Médio",    "lat":  25.2048, "lon":  55.2708, "tz": "Asia/Dubai",                     "slug": "dubai",          "landmark": "Dubai.webp",         "utc_offset": 4},
+    {"nome": "Cairo",          "pais": "Egito",           "continente": "África",           "lat":  30.0444, "lon":  31.2357, "tz": "Africa/Cairo",                   "slug": "cairo",          "landmark": "Cairo.webp",         "utc_offset": 2},
+    {"nome": "Sydney",         "pais": "Austrália",       "continente": "Oceania",          "lat": -33.8688, "lon": 151.2093, "tz": "Australia/Sydney",               "slug": "sydney",         "landmark": "Sydney.webp",        "utc_offset": 10},
+]
+
+# ============================================================
+# WEATHER CODE MAPPING — maps WMO codes to emoji, description, condition key, and image
+# ============================================================
+WEATHER_MAP = {
+    0:  ("☀️", "Céu limpo",              "limpo",       "Limpo.webp"),
+    1:  ("🌤️", "Principalmente limpo",   "limpo",       "ParcialLimpo.webp"),
+    2:  ("⛅",  "Parcialmente nublado",   "nublado",     "ParcialNublado.webp"),
+    3:  ("☁️",  "Nublado",               "nublado",     "Nublado.webp"),
+    45: ("🌫️", "Neblina",               "neblina",     "Cerracao.webp"),
+    48: ("🌫️", "Neblina com gelo",      "neblina",     "Geada.webp"),
+    51: ("🌦️", "Chuvisco leve",         "chuva",       "Chuvisco.webp"),
+    53: ("🌦️", "Chuvisco moderado",     "chuva",       "Chuvisco.webp"),
+    55: ("🌧️", "Chuvisco intenso",      "chuva",       "Chuva.webp"),
+    56: ("🌧️", "Chuvisco congelante leve",   "chuva",  "Geada.webp"),
+    57: ("🌧️", "Chuvisco congelante forte",  "chuva",  "Geada.webp"),
+    61: ("🌧️", "Chuva leve",            "chuva",       "Chuva.webp"),
+    63: ("🌧️", "Chuva moderada",        "chuva",       "Chuva.webp"),
+    65: ("🌧️", "Chuva forte",           "chuva",       "Chuva.webp"),
+    66: ("🌧️", "Chuva congelante leve", "chuva",       "Geada.webp"),
+    67: ("🌧️", "Chuva congelante forte","chuva",       "Geada.webp"),
+    71: ("🌨️", "Neve leve",             "neve",        "Geada.webp"),
+    73: ("🌨️", "Neve moderada",         "neve",        "Geada.webp"),
+    75: ("🌨️", "Neve forte",            "neve",        "Geada.webp"),
+    77: ("🌨️", "Grãos de neve",         "neve",        "Granizo.webp"),
+    80: ("🌦️", "Pancadas leves",        "chuva",       "Chuva.webp"),
+    81: ("⛈️",  "Pancadas moderadas",    "tempestade",  "Tempestade.webp"),
+    82: ("⛈️",  "Pancadas intensas",     "tempestade",  "Tempestade.webp"),
+    85: ("🌨️", "Pancadas de neve leves","neve",        "Geada.webp"),
+    86: ("🌨️", "Pancadas de neve fortes","neve",       "Granizo.webp"),
+    95: ("⛈️",  "Tempestade",            "tempestade",  "Tempestade.webp"),
+    96: ("⛈️",  "Tempestade c/ granizo", "tempestade",  "Granizo.webp"),
+    99: ("⛈️",  "Tempestade c/ granizo forte", "tempestade", "Tornado.webp"),
+}
+
+# Night variants for specific conditions
+NIGHT_CONDITION_MAP = {
+    "limpo":   "FullMoonClear.webp",
+    "nublado": "OvercastNight.webp",
+    "neblina": "MoonCloudsFog.webp",
+    "chuva":   "NightRain.webp",
+}
+
+# ============================================================
+# TEMPERATURE PALETTE — gradient colors by temperature range
+# ============================================================
+TEMP_PALETTES = [
+    (-999,  5, "#0D1B2A", "#1B4F72"),   # Azul gelo profundo
+    (5,    15, "#1A237E", "#4FC3F7"),    # Azul frio
+    (15,   22, "#1B5E20", "#A5D6A7"),    # Verde ameno
+    (22,   29, "#F9A825", "#FFF9C4"),    # Amarelo/laranja suave
+    (29,   36, "#E65100", "#FFCC80"),    # Laranja quente
+    (36, 9999, "#B71C1C", "#FF8A65"),    # Vermelho intenso
+]
+
+# ============================================================
+# DAYTIME MAPPING — determines which image shows based on hour
+# ============================================================
+DAYTIME_MAP = [
+    (5,  7,  "Dawn.jpeg",  "🌅 Amanhecer"),
+    (7,  17, "Day.jpeg",   "☀️ Dia"),
+    (17, 19, "Dusk.jpeg",  "🌇 Entardecer"),
+    (19, 24, "Night.jpeg", "🌙 Noite"),
+    (0,  5,  "Night.jpeg", "🌙 Noite"),
+]
+
+# ============================================================
+# CONTINENT EMOJIS
+# ============================================================
+CONTINENT_EMOJI = {
+    "América do Sul":   "🌎",
+    "América Central":  "🌎",
+    "América do Norte": "🌎",
+    "Europa":           "🌍",
+    "Ásia":             "🌏",
+    "Oriente Médio":    "🌍",
+    "África":           "🌍",
+    "Oceania":          "🌏",
+}
+
+
+def get_local_time(city):
+    """Get the current local time for a city."""
+    if HAS_PYTZ:
+        tz = pytz.timezone(city["tz"])
+        return datetime.now(tz)
+    else:
+        offset = timedelta(hours=city["utc_offset"])
+        tz = timezone(offset)
+        return datetime.now(tz)
+
+
+def get_daytime_image(hour):
+    """Return the daytime image filename and label for a given hour."""
+    for start, end, img, label in DAYTIME_MAP:
+        if start <= hour < end:
+            return img, label
+    return "Night.jpeg", "🌙 Noite"
+
+
+def get_temp_palette(temp):
+    """Return gradient colors based on temperature."""
+    for low, high, c1, c2 in TEMP_PALETTES:
+        if low <= temp < high:
+            return c1, c2
+    return "#1A237E", "#4FC3F7"
+
+
+def get_condition_image(weather_code, is_day):
+    """Return the condition image filename based on weather code and day/night."""
+    if weather_code in WEATHER_MAP:
+        emoji, desc, key, day_img = WEATHER_MAP[weather_code]
+        if not is_day and key in NIGHT_CONDITION_MAP:
+            return emoji, desc, NIGHT_CONDITION_MAP[key]
+        return emoji, desc, day_img
+    return "❓", "Desconhecido", "Nublado.webp"
+
+
+def fetch_weather(city):
+    """Fetch current weather + daily forecast from Open-Meteo API."""
+    url = "https://api.open-meteo.com/v1/forecast"
+    params = {
+        "latitude": city["lat"],
+        "longitude": city["lon"],
+        "current": "temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m,precipitation",
+        "daily": "temperature_2m_max,temperature_2m_min,sunrise,sunset",
+        "timezone": city["tz"],
+        "forecast_days": 1,
+    }
+    resp = requests.get(url, params=params, timeout=15)
+    resp.raise_for_status()
+    return resp.json()
+
+
+def parse_weather(city, data):
+    """Parse API response into a flat dict of weather info."""
+    current = data["current"]
+    daily = data["daily"]
+    
+    local_now = get_local_time(city)
+    hour = local_now.hour
+    
+    sunrise_str = daily["sunrise"][0]  # e.g. "2024-01-15T06:45"
+    sunset_str = daily["sunset"][0]
+    
+    # Parse sunrise/sunset as local times
+    sunrise_dt = datetime.fromisoformat(sunrise_str)
+    sunset_dt = datetime.fromisoformat(sunset_str)
+    
+    # Determine is_day based on sunrise/sunset
+    local_naive = local_now.replace(tzinfo=None)
+    is_day = sunrise_dt <= local_naive <= sunset_dt
+    
+    # Day progress percentage
+    if is_day:
+        total_day = (sunset_dt - sunrise_dt).total_seconds()
+        elapsed = (local_naive - sunrise_dt).total_seconds()
+        day_progress = min(max(elapsed / total_day * 100, 0), 100)
+    else:
+        day_progress = 0 if local_naive < sunrise_dt else 100
+
+    weather_code = current.get("weather_code", 0)
+    emoji, condition_desc, condition_img = get_condition_image(weather_code, is_day)
+    daytime_img, daytime_label = get_daytime_image(hour)
+    color1, color2 = get_temp_palette(current["temperature_2m"])
+
+    return {
+        "city_name": city["nome"],
+        "country": city["pais"],
+        "continent": city["continente"],
+        "slug": city["slug"],
+        "landmark": city["landmark"],
+        "lat": city["lat"],
+        "lon": city["lon"],
+        "temp": current["temperature_2m"],
+        "feels_like": current["apparent_temperature"],
+        "humidity": current["relative_humidity_2m"],
+        "wind": current["wind_speed_10m"],
+        "precipitation": current.get("precipitation", 0),
+        "weather_code": weather_code,
+        "emoji": emoji,
+        "condition": condition_desc,
+        "condition_img": condition_img,
+        "temp_min": daily["temperature_2m_min"][0],
+        "temp_max": daily["temperature_2m_max"][0],
+        "sunrise": sunrise_str,
+        "sunset": sunset_str,
+        "is_day": is_day,
+        "day_progress": day_progress,
+        "local_time": local_now.strftime("%H:%M"),
+        "local_date": local_now.strftime("%Y-%m-%d"),
+        "local_datetime": local_now.strftime("%Y-%m-%d %H:%M"),
+        "hour": hour,
+        "daytime_img": daytime_img,
+        "daytime_label": daytime_label,
+        "color1": color1,
+        "color2": color2,
+    }
+
+
+# ============================================================
+# SVG CARD GENERATION — animated weather cards
+# ============================================================
+
+def generate_weather_animations(condition_key, is_day):
+    """Generate SVG animation elements based on weather condition."""
+    animations = ""
+    
+    if condition_key == "chuva" or condition_key == "tempestade":
+        # Rain drops
+        for i in range(12):
+            x = 30 + (i * 38) % 460
+            delay = (i * 0.15) % 1.5
+            length = 15 + (i % 3) * 5
+            animations += f'''<line x1="{x}" y1="-10" x2="{x-8}" y2="{length}" 
+                stroke="rgba(200,220,255,0.4)" stroke-width="1.5" class="rain" 
+                style="animation-delay:{delay:.2f}s"/>
+            '''
+    
+    if condition_key == "tempestade":
+        # Lightning bolt
+        animations += '''<polygon points="220,20 210,80 225,75 215,130 240,60 225,65 235,20" 
+            fill="#FFE082" opacity="0" class="lightning"/>
+        '''
+    
+    if condition_key == "nublado" or condition_key == "neblina":
+        # Floating clouds
+        animations += '''<ellipse cx="100" cy="60" rx="60" ry="20" fill="rgba(200,200,210,0.25)" class="cloud1"/>
+            <ellipse cx="350" cy="45" rx="50" ry="15" fill="rgba(200,200,210,0.2)" class="cloud2"/>
+        '''
+    
+    if condition_key == "limpo" and is_day:
+        # Sun with rotating rays
+        animations += '''<circle cx="440" cy="50" r="22" fill="#FFD54F" opacity="0.9" class="sun"/>
+            <circle cx="440" cy="50" r="30" fill="none" stroke="#FFD54F" stroke-width="2" 
+                opacity="0.4" class="sun-ray"/>
+        '''
+    
+    if not is_day and condition_key in ("limpo", "nublado"):
+        # Stars
+        for i in range(8):
+            x = 40 + (i * 57) % 440
+            y = 20 + (i * 23) % 60
+            delay = i * 0.4
+            animations += f'''<circle cx="{x}" cy="{y}" r="1.5" fill="white" 
+                opacity="0.6" class="star" style="animation-delay:{delay:.1f}s"/>
+            '''
+        # Moon
+        animations += '''<circle cx="440" cy="45" r="16" fill="#E8EAF6" opacity="0.85"/>
+            <circle cx="448" cy="40" r="14" fill="''' + ('#0D1B2A' if condition_key == 'limpo' else '#1a1a2e') + '''"/>
+        '''
+    
+    if condition_key == "neblina":
+        # Fog layers
+        for i in range(3):
+            y = 180 + i * 30
+            delay = i * 1.2
+            animations += f'''<rect x="0" y="{y}" width="500" height="15" 
+                fill="rgba(200,200,210,0.15)" class="fog" 
+                style="animation-delay:{delay:.1f}s"/>
+            '''
+    
+    return animations
+
+
+def generate_svg_styles(is_day, condition_key):
+    """Generate CSS animation styles for SVG cards."""
+    return f'''<style>
+        @keyframes rainFall {{
+            0% {{ transform: translateY(-20px); opacity: 0.7; }}
+            100% {{ transform: translateY(300px); opacity: 0; }}
+        }}
+        @keyframes flash {{
+            0%, 100% {{ opacity: 0; }}
+            5% {{ opacity: 0.9; }}
+            10% {{ opacity: 0; }}
+            12% {{ opacity: 0.7; }}
+            15% {{ opacity: 0; }}
+        }}
+        @keyframes drift1 {{
+            0% {{ transform: translateX(-80px); }}
+            100% {{ transform: translateX(520px); }}
+        }}
+        @keyframes drift2 {{
+            0% {{ transform: translateX(520px); }}
+            100% {{ transform: translateX(-80px); }}
+        }}
+        @keyframes twinkle {{
+            0%, 100% {{ opacity: 0.3; }}
+            50% {{ opacity: 1; }}
+        }}
+        @keyframes sunPulse {{
+            0%, 100% {{ r: 30; opacity: 0.3; }}
+            50% {{ r: 36; opacity: 0.6; }}
+        }}
+        @keyframes sunRotate {{
+            0% {{ transform: rotate(0deg); transform-origin: 440px 50px; }}
+            100% {{ transform: rotate(360deg); transform-origin: 440px 50px; }}
+        }}
+        @keyframes fogDrift {{
+            0% {{ transform: translateX(-50px); opacity: 0.1; }}
+            50% {{ opacity: 0.2; }}
+            100% {{ transform: translateX(50px); opacity: 0.1; }}
+        }}
+        .rain {{ animation: rainFall 0.8s linear infinite; }}
+        .lightning {{ animation: flash 4s ease-in-out infinite; }}
+        .cloud1 {{ animation: drift1 18s linear infinite; }}
+        .cloud2 {{ animation: drift2 22s linear infinite; }}
+        .star {{ animation: twinkle 2s ease-in-out infinite; }}
+        .sun {{ animation: sunRotate 30s linear infinite; }}
+        .sun-ray {{ animation: sunPulse 3s ease-in-out infinite; }}
+        .fog {{ animation: fogDrift 6s ease-in-out infinite alternate; }}
+    </style>'''
+
+
+def generate_svg_card(w):
+    """Generate a complete animated SVG weather card."""
+    is_day = w["is_day"]
+    condition_key = "limpo"
+    for code, (_, _, key, _) in WEATHER_MAP.items():
+        if code == w["weather_code"]:
+            condition_key = key
+            break
+    
+    bg1 = w["color1"]
+    bg2 = w["color2"]
+    
+    # Text colors based on theme
+    if is_day:
+        text_main = "#1a1a2e"
+        text_secondary = "#333355"
+        text_light = "#555577"
+    else:
+        text_main = "#E8EAF6"
+        text_secondary = "#B0BEC5"
+        text_light = "#78909C"
+    
+    styles = generate_svg_styles(is_day, condition_key)
+    animations = generate_weather_animations(condition_key, is_day)
+    
+    # Day progress bar
+    progress_width = int(w["day_progress"] * 4.0)  # max 400px
+    progress_color = "#FFD54F" if is_day else "#5C6BC0"
+    day_label = "DIA ☀️" if is_day else "NOITE 🌙"
+    
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="500" height="280" viewBox="0 0 500 280">
+    {styles}
+    <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:{bg1}"/>
+            <stop offset="100%" style="stop-color:{bg2}"/>
+        </linearGradient>
+        <clipPath id="rounded">
+            <rect x="0" y="0" width="500" height="280" rx="20" ry="20"/>
+        </clipPath>
+    </defs>
+    
+    <!-- Shadow -->
+    <rect x="4" y="4" width="500" height="280" rx="20" ry="20" fill="rgba(0,0,0,0.15)"/>
+    
+    <!-- Background -->
+    <g clip-path="url(#rounded)">
+        <rect width="500" height="280" fill="url(#bg)" rx="20" ry="20"/>
+        
+        <!-- Weather Animations -->
+        {animations}
+        
+        <!-- City name & country -->
+        <text x="25" y="38" font-family="Segoe UI, Arial, sans-serif" font-size="18" 
+            font-weight="700" fill="{text_main}">{w["city_name"]}, {w["country"]}</text>
+        <text x="25" y="56" font-family="Segoe UI, Arial, sans-serif" font-size="11" 
+            fill="{text_secondary}">{w["continent"]} · {w["local_time"]} · {day_label}</text>
+        
+        <!-- Temperature -->
+        <text x="25" y="110" font-family="Segoe UI, Arial, sans-serif" font-size="52" 
+            font-weight="800" fill="{text_main}">{w["temp"]:.0f}°C</text>
+        <text x="25" y="130" font-family="Segoe UI, Arial, sans-serif" font-size="13" 
+            fill="{text_secondary}">Sensação {w["feels_like"]:.0f}°C</text>
+        
+        <!-- Condition emoji & text -->
+        <text x="250" y="100" font-family="Segoe UI, Arial, sans-serif" font-size="36">{w["emoji"]}</text>
+        <text x="250" y="125" font-family="Segoe UI, Arial, sans-serif" font-size="12" 
+            fill="{text_secondary}">{w["condition"]}</text>
+        
+        <!-- Details -->
+        <text x="25" y="165" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="{text_light}">
+            💧 Umidade: {w["humidity"]}%   💨 Vento: {w["wind"]:.0f} km/h   🌡️ Mín {w["temp_min"]:.0f}° / Máx {w["temp_max"]:.0f}°
+        </text>
+        
+        <!-- Sunrise / Sunset -->
+        <text x="25" y="190" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="{text_light}">
+            🌅 {w["sunrise"][-5:]}  →  🌇 {w["sunset"][-5:]}
+        </text>
+        
+        <!-- Day Progress Bar -->
+        <rect x="25" y="210" width="400" height="6" rx="3" fill="rgba(128,128,128,0.2)"/>
+        <rect x="25" y="210" width="{progress_width}" height="6" rx="3" fill="{progress_color}"/>
+        <text x="430" y="215" font-family="Segoe UI, Arial, sans-serif" font-size="10" 
+            fill="{text_light}">{w["day_progress"]:.0f}%</text>
+        
+        <!-- Footer -->
+        <text x="25" y="260" font-family="Segoe UI, Arial, sans-serif" font-size="10" 
+            fill="{text_light}">📍 {w["lat"]:.2f}, {w["lon"]:.2f} · Atualizado: {w["local_datetime"]}</text>
+    </g>
+</svg>'''
+    
+    return svg
+
+
+# ============================================================
+# CSV HISTORY — append-only log
+# ============================================================
+CSV_FILE = "data/history.csv"
+CSV_COLUMNS = [
+    "datetime", "city", "country", "continent", "temp_c", "feels_like_c",
+    "temp_min_c", "temp_max_c", "humidity_pct", "wind_kmh", "precipitation_mm",
+    "weather_code", "condition", "image_key", "is_day", "sunrise", "sunset"
+]
+
+
+def append_csv(w):
+    """Append a weather record to the CSV history file."""
+    file_exists = os.path.exists(CSV_FILE) and os.path.getsize(CSV_FILE) > 0
+    
+    with open(CSV_FILE, "a", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        if not file_exists:
+            writer.writerow(CSV_COLUMNS)
+        
+        writer.writerow([
+            w["local_datetime"],
+            w["city_name"],
+            w["country"],
+            w["continent"],
+            f'{w["temp"]:.1f}',
+            f'{w["feels_like"]:.1f}',
+            f'{w["temp_min"]:.1f}',
+            f'{w["temp_max"]:.1f}',
+            w["humidity"],
+            f'{w["wind"]:.1f}',
+            f'{w["precipitation"]:.1f}' if w["precipitation"] else "0.0",
+            w["weather_code"],
+            w["condition"],
+            w["condition_img"],
+            "1" if w["is_day"] else "0",
+            w["sunrise"],
+            w["sunset"],
+        ])
+
+
+def get_csv_stats():
+    """Read CSV and return statistics."""
+    stats = {
+        "total_records": 0,
+        "first_record": "N/A",
+        "last_record": "N/A",
+        "highest_temp": None,
+        "highest_temp_city": "",
+        "lowest_temp": None,
+        "lowest_temp_city": "",
+    }
+    
+    if not os.path.exists(CSV_FILE):
+        return stats
+    
+    with open(CSV_FILE, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        rows = list(reader)
+    
+    if not rows:
+        return stats
+    
+    stats["total_records"] = len(rows)
+    stats["first_record"] = rows[0].get("datetime", "N/A")
+    stats["last_record"] = rows[-1].get("datetime", "N/A")
+    
+    for row in rows:
+        try:
+            temp = float(row["temp_c"])
+            city = row["city"]
+            if stats["highest_temp"] is None or temp > stats["highest_temp"]:
+                stats["highest_temp"] = temp
+                stats["highest_temp_city"] = city
+            if stats["lowest_temp"] is None or temp < stats["lowest_temp"]:
+                stats["lowest_temp"] = temp
+                stats["lowest_temp_city"] = city
+        except (ValueError, KeyError):
+            pass
+    
+    return stats
+
+
+# ============================================================
+# README GENERATION — complete visual dashboard
+# ============================================================
+
+def generate_readme(all_weather, update_time):
+    """Generate the full README.md dashboard."""
+    
+    csv_stats = get_csv_stats()
+    
+    # Determine daytime banner based on São Paulo's local time
+    sp_data = all_weather[0] if all_weather else None
+    daytime_img = sp_data["daytime_img"] if sp_data else "Day.jpeg"
+    daytime_label = sp_data["daytime_label"] if sp_data else "☀️ Dia"
+    
+    readme = f"""<div align="center">
+
+# 🌍 SkyLog — Global Weather Dashboard
+
+### Monitoramento climático em tempo real de 12 cidades ao redor do mundo
+
+![Last Update](https://img.shields.io/badge/Última_Atualização-{update_time.replace(' ', '_').replace(':', '%3A')}-blue?style=for-the-badge&logo=github)
+![Records](https://img.shields.io/badge/Registros_CSV-{csv_stats['total_records']}-green?style=for-the-badge&logo=database)
+![Cities](https://img.shields.io/badge/Cidades-12-orange?style=for-the-badge&logo=earth)
+
+---
+
+### {daytime_label} — Horário de referência: São Paulo
+
+<img src="daytime/{daytime_img}" width="700" alt="{daytime_label}"/>
+
+</div>
+
+---
+
+"""
+    
+    # Highlight — São Paulo
+    if sp_data:
+        readme += generate_city_section(sp_data, is_highlight=True)
+    
+    # Grid of all other cities
+    readme += """
+---
+
+<div align="center">
+
+## 🗺️ Panorama Global
+
+</div>
+
+"""
+    
+    for w in all_weather[1:]:
+        readme += generate_city_section(w, is_highlight=False)
+    
+    # History section
+    readme += f"""
+---
+
+<div align="center">
+
+## 📊 Histórico de Dados
+
+</div>
+
+| Estatística | Valor |
+|---|---|
+| 📁 Total de registros | **{csv_stats['total_records']}** |
+| 📅 Primeiro registro | `{csv_stats['first_record']}` |
+| 📅 Último registro | `{csv_stats['last_record']}` |
+| 🔥 Temperatura mais alta | **{csv_stats['highest_temp']:.1f}°C** — {csv_stats['highest_temp_city']} |
+| 🧊 Temperatura mais baixa | **{csv_stats['lowest_temp']:.1f}°C** — {csv_stats['lowest_temp_city']} |
+
+📂 [Ver histórico completo → `data/history.csv`](data/history.csv)
+
+"""
+    
+    # Footer
+    readme += f"""
+---
+
+<div align="center">
+
+### ⚙️ Informações Técnicas
+
+</div>
+
+| Item | Detalhe |
+|---|---|
+| 🌐 Fonte de dados | [Open-Meteo API](https://open-meteo.com/) (gratuita, sem API key) |
+| ⏰ Frequência | 3× ao dia (9h, 12h, 19h — horário de Brasília) |
+| 🤖 Automação | GitHub Actions — [ver workflow](.github/workflows/weather.yml) |
+| 🐍 Script | `update_weather.py` com `requests` + `pytz` |
+| 🏙️ Cidades | 12 cidades em 6 continentes |
+
+> 🔄 Este dashboard é atualizado automaticamente via GitHub Actions.  
+> Cada execução gera SVGs animados, atualiza o histórico CSV e reescreve este README.  
+> Os commits automáticos contribuem para o gráfico de atividade do perfil.
+
+---
+
+<div align="center">
+
+**Feito com 💙 por [Pedroxious](https://github.com/Pedroxious) · Dados: [Open-Meteo](https://open-meteo.com/)**
+
+</div>
+"""
+    
+    return readme
+
+
+def generate_city_section(w, is_highlight=False):
+    """Generate a README section for a single city."""
+    
+    continent_emoji = CONTINENT_EMOJI.get(w["continent"], "🌍")
+    
+    if is_highlight:
+        section = f"""
+<div align="center">
+
+## 🏙️ {w["city_name"]}, {w["country"]} — Cidade Destaque
+
+<img src="landmarks/{w['landmark']}" width="600" alt="{w['city_name']}"/>
+
+<br/>
+
+![{w["city_name"]}](cards/{w["slug"]}.svg)
+
+<img src="conditions/{w['condition_img']}" width="500" alt="{w['condition']}"/>
+
+<img src="daytime/{w['daytime_img']}" width="500" alt="{w['daytime_label']}"/>
+
+</div>
+
+| Dado | Valor |
+|---|---|
+| 🌡️ Temperatura | **{w["temp"]:.1f}°C** |
+| 🤔 Sensação Térmica | {w["feels_like"]:.1f}°C |
+| 📉 Mínima / 📈 Máxima | {w["temp_min"]:.1f}°C / {w["temp_max"]:.1f}°C |
+| 💧 Umidade | {w["humidity"]}% |
+| 💨 Vento | {w["wind"]:.1f} km/h |
+| {w["emoji"]} Condição | {w["condition"]} |
+| 🕐 Horário Local | {w["local_time"]} |
+| {w["daytime_label"].split()[0]} Período | {w["daytime_label"]} |
+| 🌅 Nascer do sol | {w["sunrise"][-5:]} |
+| 🌇 Pôr do sol | {w["sunset"][-5:]} |
+
+"""
+    else:
+        section = f"""
+<details>
+<summary><strong>{continent_emoji} {w["city_name"]}, {w["country"]} — {w["continent"]}</strong> · {w["temp"]:.0f}°C {w["emoji"]} · 🕐 {w["local_time"]}</summary>
+
+<div align="center">
+
+<img src="landmarks/{w['landmark']}" width="500" alt="{w['city_name']}"/>
+
+<br/>
+
+![{w["city_name"]}](cards/{w["slug"]}.svg)
+
+<img src="conditions/{w['condition_img']}" width="400" alt="{w['condition']}"/>
+
+<img src="daytime/{w['daytime_img']}" width="400" alt="{w['daytime_label']}"/>
+
+</div>
+
+| Dado | Valor |
+|---|---|
+| 🌡️ Temperatura | **{w["temp"]:.1f}°C** |
+| 🤔 Sensação Térmica | {w["feels_like"]:.1f}°C |
+| 📉 Mín / 📈 Máx | {w["temp_min"]:.1f}°C / {w["temp_max"]:.1f}°C |
+| 💧 Umidade | {w["humidity"]}% |
+| 💨 Vento | {w["wind"]:.1f} km/h |
+| {w["emoji"]} Condição | {w["condition"]} |
+| 🕐 Horário Local | {w["local_time"]} |
+| {w["daytime_label"].split()[0]} Período | {w["daytime_label"]} |
+
+</details>
+
+"""
+    
+    return section
+
+
+# ============================================================
+# MAIN EXECUTION
+# ============================================================
+
+def main():
+    """Main function — orchestrates the full update pipeline."""
+    print("🌍 SkyLog — Starting weather update...")
+    print("=" * 55)
+    
+    # Ensure output directories exist
+    os.makedirs("cards", exist_ok=True)
+    os.makedirs("data", exist_ok=True)
+    
+    all_weather = []
+    errors = []
+    
+    for city in CIDADES:
+        try:
+            print(f"  📡 Fetching: {city['nome']}, {city['pais']}...", end=" ")
+            data = fetch_weather(city)
+            w = parse_weather(city, data)
+            all_weather.append(w)
+            
+            # Generate SVG card
+            svg = generate_svg_card(w)
+            svg_path = f"cards/{city['slug']}.svg"
+            with open(svg_path, "w", encoding="utf-8") as f:
+                f.write(svg)
+            
+            # Append to CSV
+            append_csv(w)
+            
+            print(f"✅ {w['temp']:.1f}°C {w['emoji']} {w['condition']} ({w['local_time']})")
+            
+        except Exception as e:
+            print(f"❌ Error: {e}")
+            errors.append({"city": city["nome"], "error": str(e)})
+    
+    print("=" * 55)
+    
+    if all_weather:
+        # Generate README
+        update_time = datetime.now(timezone(timedelta(hours=-3))).strftime("%Y-%m-%d %H:%M BRT")
+        readme = generate_readme(all_weather, update_time)
+        with open("README.md", "w", encoding="utf-8") as f:
+            f.write(readme)
+        print(f"📝 README.md updated with {len(all_weather)} cities")
+    
+    # Summary
+    print(f"\n🏁 Done! {len(all_weather)} cities updated, {len(errors)} errors")
+    if errors:
+        for e in errors:
+            print(f"  ⚠️ {e['city']}: {e['error']}")
+    
+    csv_stats = get_csv_stats()
+    print(f"📊 Total CSV records: {csv_stats['total_records']}")
+
+
+if __name__ == "__main__":
+    main()
