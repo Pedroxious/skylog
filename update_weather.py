@@ -39,46 +39,8 @@ CIDADES = [
 ]
 
 # ============================================================
-# WEATHER CODE MAPPING — maps WMO codes to emoji, description, condition key, and image
+# WEATHER CODE MAPPING — advanced dynamic mapping via code
 # ============================================================
-WEATHER_MAP = {
-    0:  ("☀️", "Céu limpo",              "limpo",       "Limpo.webp"),
-    1:  ("🌤️", "Principalmente limpo",   "limpo",       "ParcialLimpo.webp"),
-    2:  ("⛅",  "Parcialmente nublado",   "nublado",     "ParcialNublado.webp"),
-    3:  ("☁️",  "Nublado",               "nublado",     "Nublado.webp"),
-    45: ("🌫️", "Neblina",               "neblina",     "Cerracao.webp"),
-    48: ("🌫️", "Neblina com gelo",      "neblina",     "Geada.webp"),
-    51: ("🌦️", "Chuvisco leve",         "chuva",       "Chuvisco.webp"),
-    53: ("🌦️", "Chuvisco moderado",     "chuva",       "Chuvisco.webp"),
-    55: ("🌧️", "Chuvisco intenso",      "chuva",       "Chuva.webp"),
-    56: ("🌧️", "Chuvisco congelante leve",   "chuva",  "Geada.webp"),
-    57: ("🌧️", "Chuvisco congelante forte",  "chuva",  "Geada.webp"),
-    61: ("🌧️", "Chuva leve",            "chuva",       "Chuva.webp"),
-    63: ("🌧️", "Chuva moderada",        "chuva",       "Chuva.webp"),
-    65: ("🌧️", "Chuva forte",           "chuva",       "Chuva.webp"),
-    66: ("🌧️", "Chuva congelante leve", "chuva",       "Geada.webp"),
-    67: ("🌧️", "Chuva congelante forte","chuva",       "Geada.webp"),
-    71: ("🌨️", "Neve leve",             "neve",        "Geada.webp"),
-    73: ("🌨️", "Neve moderada",         "neve",        "Geada.webp"),
-    75: ("🌨️", "Neve forte",            "neve",        "Geada.webp"),
-    77: ("🌨️", "Grãos de neve",         "neve",        "Granizo.webp"),
-    80: ("🌦️", "Pancadas leves",        "chuva",       "Chuva.webp"),
-    81: ("⛈️",  "Pancadas moderadas",    "tempestade",  "Tempestade.webp"),
-    82: ("⛈️",  "Pancadas intensas",     "tempestade",  "Tempestade.webp"),
-    85: ("🌨️", "Pancadas de neve leves","neve",        "Geada.webp"),
-    86: ("🌨️", "Pancadas de neve fortes","neve",       "Granizo.webp"),
-    95: ("⛈️",  "Tempestade",            "tempestade",  "Tempestade.webp"),
-    96: ("⛈️",  "Tempestade c/ granizo", "tempestade",  "Granizo.webp"),
-    99: ("⛈️",  "Tempestade c/ granizo forte", "tempestade", "Tornado.webp"),
-}
-
-# Night variants for specific conditions
-NIGHT_CONDITION_MAP = {
-    "limpo":   "FullMoonClear.webp",
-    "nublado": "OvercastNight.webp",
-    "neblina": "MoonCloudsFog.webp",
-    "chuva":   "NightRain.webp",
-}
 
 # ============================================================
 # TEMPERATURE PALETTE — gradient colors by temperature range
@@ -146,13 +108,33 @@ def get_temp_palette(temp):
 
 
 def get_condition_image(weather_code, is_day):
-    """Return the condition image filename based on weather code and day/night."""
-    if weather_code in WEATHER_MAP:
-        emoji, desc, key, day_img = WEATHER_MAP[weather_code]
-        if not is_day and key in NIGHT_CONDITION_MAP:
-            return emoji, desc, NIGHT_CONDITION_MAP[key]
-        return emoji, desc, day_img
-    return "❓", "Desconhecido", "Nublado.webp"
+    """Return the correct condition image based on weather code and strictly day/night context."""
+    if weather_code == 0:
+        emoji, desc, condition_key, img = "☀️", "Céu limpo", "limpo", ("Limpo.webp" if is_day else "FullMoonClear.webp")
+    elif weather_code == 1:
+        emoji, desc, condition_key, img = "🌤️", "Principalmente limpo", "limpo", ("ParcialLimpo.webp" if is_day else "WaningMoonClear.webp")
+    elif weather_code == 2:
+        emoji, desc, condition_key, img = "⛅", "Parcialmente nublado", "nublado", ("ParcialNublado.webp" if is_day else "MoonCloudsFog.webp")
+    elif weather_code == 3:
+        emoji, desc, condition_key, img = "☁️", "Nublado", "nublado", ("Nublado.webp" if is_day else "OvercastNight.webp")
+    elif weather_code in (45, 48):
+        emoji, desc, condition_key, img = "🌫️", "Neblina", "neblina", ("Cerracao.webp" if is_day else "MoonCloudsFog.webp")
+    elif weather_code in (51, 53, 55):
+        emoji, desc, condition_key, img = "🌦️", "Chuvisco", "chuva", ("Chuvisco.webp" if is_day else "NightRain.webp")
+    elif weather_code in (61, 63, 65, 80):
+        emoji, desc, condition_key, img = "🌧️", "Chuva", "chuva", ("Chuva.webp" if is_day else "NightRain.webp")
+    elif weather_code in (56, 57, 66, 67, 71, 73, 75, 85):
+        emoji, desc, condition_key, img = "🌨️", "Frio/Neve", "chuva", "Geada.webp"
+    elif weather_code in (77, 86, 96):
+        emoji, desc, condition_key, img = "🌨️", "Granizo", "tempestade", "Granizo.webp"
+    elif weather_code in (81, 82, 95):
+        emoji, desc, condition_key, img = "⛈️", "Tempestade", "tempestade", "Tempestade.webp"
+    elif weather_code == 99:
+        emoji, desc, condition_key, img = "🌪️", "Tornado", "tempestade", "Tornado.webp"
+    else:
+        emoji, desc, condition_key, img = "❓", "Desconhecido", "nublado", "Nublado.webp"
+        
+    return emoji, desc, condition_key, img
 
 
 def fetch_weather(city):
@@ -199,8 +181,7 @@ def parse_weather(city, data):
         day_progress = 0 if local_naive < sunrise_dt else 100
 
     weather_code = current.get("weather_code", 0)
-    emoji, condition_desc, condition_img = get_condition_image(weather_code, is_day)
-    daytime_img, daytime_label = get_daytime_image(hour)
+    emoji, condition_desc, condition_key, condition_img = get_condition_image(weather_code, is_day)
     color1, color2 = get_temp_palette(current["temperature_2m"])
 
     return {
@@ -220,6 +201,7 @@ def parse_weather(city, data):
         "emoji": emoji,
         "condition": condition_desc,
         "condition_img": condition_img,
+        "condition_key": condition_key,
         "temp_min": daily["temperature_2m_min"][0],
         "temp_max": daily["temperature_2m_max"][0],
         "sunrise": sunrise_str,
@@ -229,9 +211,6 @@ def parse_weather(city, data):
         "local_time": local_now.strftime("%H:%M"),
         "local_date": local_now.strftime("%Y-%m-%d"),
         "local_datetime": local_now.strftime("%Y-%m-%d %H:%M"),
-        "hour": hour,
-        "daytime_img": daytime_img,
-        "daytime_label": daytime_label,
         "color1": color1,
         "color2": color2,
     }
@@ -355,11 +334,7 @@ def generate_svg_styles(is_day, condition_key):
 def generate_svg_card(w):
     """Generate a complete animated SVG weather card."""
     is_day = w["is_day"]
-    condition_key = "limpo"
-    for code, (_, _, key, _) in WEATHER_MAP.items():
-        if code == w["weather_code"]:
-            condition_key = key
-            break
+    condition_key = w["condition_key"]
     
     bg1 = w["color1"]
     bg2 = w["color2"]
@@ -538,10 +513,9 @@ def generate_readme(all_weather, update_time):
     
     csv_stats = get_csv_stats()
     
-    # Determine daytime banner based on São Paulo's local time
-    sp_data = all_weather[0] if all_weather else None
-    daytime_img = sp_data["daytime_img"] if sp_data else "Day.jpeg"
-    daytime_label = sp_data["daytime_label"] if sp_data else "☀️ Dia"
+    # Determine global daytime banner based strictly on Brasilia Time.
+    brt_hour = int(update_time.split()[1].split(":")[0])  # Extracts 'HH' from 'YYYY-MM-DD HH:MM BRT'
+    daytime_img, daytime_label = get_daytime_image(brt_hour)
     
     readme = f"""<div align="center">
 
@@ -555,9 +529,9 @@ def generate_readme(all_weather, update_time):
 
 ---
 
-### {daytime_label} — Horário de referência: São Paulo
+### {daytime_label} — Horário de referência: Brasília ({update_time.split()[1]})
 
-<img src="daytime/{daytime_img}" width="700" alt="{daytime_label}"/>
+<img src="daytime/{daytime_img}" width="800" alt="{daytime_label}"/>
 
 </div>
 
@@ -566,6 +540,7 @@ def generate_readme(all_weather, update_time):
 """
     
     # Highlight — São Paulo
+    sp_data = all_weather[0] if all_weather else None
     if sp_data:
         readme += generate_city_section(sp_data, is_highlight=True)
     
@@ -653,9 +628,7 @@ def generate_city_section(w, is_highlight=False):
 
 ![{w["city_name"]}](cards/{w["slug"]}.svg)
 
-<img src="conditions/{w['condition_img']}" width="500" alt="{w['condition']}"/>
-
-<img src="daytime/{w['daytime_img']}" width="500" alt="{w['daytime_label']}"/>
+<img src="conditions/{w['condition_img']}" width="700" alt="{w['condition']}"/>
 
 </div>
 
@@ -668,7 +641,6 @@ def generate_city_section(w, is_highlight=False):
 | 💨 Vento | {w["wind"]:.1f} km/h |
 | {w["emoji"]} Condição | {w["condition"]} |
 | 🕐 Horário Local | {w["local_time"]} |
-| {w["daytime_label"].split()[0]} Período | {w["daytime_label"]} |
 | 🌅 Nascer do sol | {w["sunrise"][-5:]} |
 | 🌇 Pôr do sol | {w["sunset"][-5:]} |
 
@@ -686,9 +658,7 @@ def generate_city_section(w, is_highlight=False):
 
 ![{w["city_name"]}](cards/{w["slug"]}.svg)
 
-<img src="conditions/{w['condition_img']}" width="400" alt="{w['condition']}"/>
-
-<img src="daytime/{w['daytime_img']}" width="400" alt="{w['daytime_label']}"/>
+<img src="conditions/{w['condition_img']}" width="600" alt="{w['condition']}"/>
 
 </div>
 
@@ -701,7 +671,6 @@ def generate_city_section(w, is_highlight=False):
 | 💨 Vento | {w["wind"]:.1f} km/h |
 | {w["emoji"]} Condição | {w["condition"]} |
 | 🕐 Horário Local | {w["local_time"]} |
-| {w["daytime_label"].split()[0]} Período | {w["daytime_label"]} |
 
 </details>
 

@@ -4,15 +4,15 @@
 
 ### Monitoramento climático em tempo real de 12 cidades ao redor do mundo
 
-![Last Update](https://img.shields.io/badge/Última_Atualização-2026-05-17_20%3A45_BRT-blue?style=for-the-badge&logo=github)
-![Records](https://img.shields.io/badge/Registros_CSV-24-green?style=for-the-badge&logo=database)
+![Last Update](https://img.shields.io/badge/Última_Atualização-2026-05-18_18%3A19_BRT-blue?style=for-the-badge&logo=github)
+![Records](https://img.shields.io/badge/Registros_CSV-36-green?style=for-the-badge&logo=database)
 ![Cities](https://img.shields.io/badge/Cidades-12-orange?style=for-the-badge&logo=earth)
 
 ---
 
-### 🌙 Noite — Horário de referência: São Paulo
+### 🌇 Entardecer — Horário de referência: Brasília (18:19)
 
-<img src="daytime/Night.jpeg" width="700" alt="🌙 Noite"/>
+<img src="daytime/Dusk.jpeg" width="800" alt="🌇 Entardecer"/>
 
 </div>
 
@@ -29,22 +29,19 @@
 
 ![São Paulo](cards/sao_paulo.svg)
 
-<img src="conditions/NightRain.webp" width="500" alt="Chuva leve"/>
-
-<img src="daytime/Night.jpeg" width="500" alt="🌙 Noite"/>
+<img src="conditions/OvercastNight.webp" width="700" alt="Nublado"/>
 
 </div>
 
 | Dado | Valor |
 |---|---|
-| 🌡️ Temperatura | **18.3°C** |
-| 🤔 Sensação Térmica | 19.8°C |
-| 📉 Mínima / 📈 Máxima | 16.6°C / 22.6°C |
-| 💧 Umidade | 95% |
+| 🌡️ Temperatura | **18.0°C** |
+| 🤔 Sensação Térmica | 19.0°C |
+| 📉 Mínima / 📈 Máxima | 16.0°C / 20.1°C |
+| 💧 Umidade | 89% |
 | 💨 Vento | 8.0 km/h |
-| 🌧️ Condição | Chuva leve |
-| 🕐 Horário Local | 20:44 |
-| 🌙 Período | 🌙 Noite |
+| ☁️ Condição | Nublado |
+| 🕐 Horário Local | 18:18 |
 | 🌅 Nascer do sol | 06:34 |
 | 🌇 Pôr do sol | 17:31 |
 
@@ -59,7 +56,7 @@
 
 
 <details>
-<summary><strong>🌎 Rio de Janeiro, Brasil — América do Sul</strong> · 24°C ☁️ · 🕐 20:44</summary>
+<summary><strong>🌎 Rio de Janeiro, Brasil — América do Sul</strong> · 23°C ☁️ · 🕐 18:18</summary>
 
 <div align="center">
 
@@ -69,28 +66,25 @@
 
 ![Rio de Janeiro](cards/rio_de_janeiro.svg)
 
-<img src="conditions/OvercastNight.webp" width="400" alt="Nublado"/>
-
-<img src="daytime/Night.jpeg" width="400" alt="🌙 Noite"/>
+<img src="conditions/OvercastNight.webp" width="600" alt="Nublado"/>
 
 </div>
 
 | Dado | Valor |
 |---|---|
-| 🌡️ Temperatura | **24.3°C** |
-| 🤔 Sensação Térmica | 28.5°C |
-| 📉 Mín / 📈 Máx | 21.8°C / 28.8°C |
-| 💧 Umidade | 83% |
-| 💨 Vento | 2.3 km/h |
+| 🌡️ Temperatura | **23.1°C** |
+| 🤔 Sensação Térmica | 26.1°C |
+| 📉 Mín / 📈 Máx | 22.4°C / 26.3°C |
+| 💧 Umidade | 87% |
+| 💨 Vento | 8.7 km/h |
 | ☁️ Condição | Nublado |
-| 🕐 Horário Local | 20:44 |
-| 🌙 Período | 🌙 Noite |
+| 🕐 Horário Local | 18:18 |
 
 </details>
 
 
 <details>
-<summary><strong>🌎 Buenos Aires, Argentina — América do Sul</strong> · 10°C ☀️ · 🕐 20:44</summary>
+<summary><strong>🌎 Buenos Aires, Argentina — América do Sul</strong> · 13°C ☀️ · 🕐 18:18</summary>
 
 <div align="center">
 
@@ -100,28 +94,25 @@
 
 ![Buenos Aires](cards/buenos_aires.svg)
 
-<img src="conditions/FullMoonClear.webp" width="400" alt="Céu limpo"/>
-
-<img src="daytime/Night.jpeg" width="400" alt="🌙 Noite"/>
+<img src="conditions/FullMoonClear.webp" width="600" alt="Céu limpo"/>
 
 </div>
 
 | Dado | Valor |
 |---|---|
-| 🌡️ Temperatura | **10.2°C** |
-| 🤔 Sensação Térmica | 7.8°C |
-| 📉 Mín / 📈 Máx | 7.8°C / 13.1°C |
-| 💧 Umidade | 63% |
-| 💨 Vento | 6.8 km/h |
+| 🌡️ Temperatura | **13.1°C** |
+| 🤔 Sensação Térmica | 10.4°C |
+| 📉 Mín / 📈 Máx | 4.7°C / 15.1°C |
+| 💧 Umidade | 50% |
+| 💨 Vento | 7.2 km/h |
 | ☀️ Condição | Céu limpo |
-| 🕐 Horário Local | 20:44 |
-| 🌙 Período | 🌙 Noite |
+| 🕐 Horário Local | 18:18 |
 
 </details>
 
 
 <details>
-<summary><strong>🌎 Mexico City, México — América Central</strong> · 24°C 🌤️ · 🕐 17:44</summary>
+<summary><strong>🌎 Mexico City, México — América Central</strong> · 27°C 🌤️ · 🕐 15:18</summary>
 
 <div align="center">
 
@@ -131,28 +122,25 @@
 
 ![Mexico City](cards/mexico_city.svg)
 
-<img src="conditions/ParcialLimpo.webp" width="400" alt="Principalmente limpo"/>
-
-<img src="daytime/Dusk.jpeg" width="400" alt="🌇 Entardecer"/>
+<img src="conditions/ParcialLimpo.webp" width="600" alt="Principalmente limpo"/>
 
 </div>
 
 | Dado | Valor |
 |---|---|
-| 🌡️ Temperatura | **24.5°C** |
-| 🤔 Sensação Térmica | 22.7°C |
-| 📉 Mín / 📈 Máx | 15.9°C / 29.5°C |
-| 💧 Umidade | 35% |
-| 💨 Vento | 9.0 km/h |
+| 🌡️ Temperatura | **27.1°C** |
+| 🤔 Sensação Térmica | 26.2°C |
+| 📉 Mín / 📈 Máx | 14.0°C / 27.3°C |
+| 💧 Umidade | 25% |
+| 💨 Vento | 7.2 km/h |
 | 🌤️ Condição | Principalmente limpo |
-| 🕐 Horário Local | 17:44 |
-| 🌇 Período | 🌇 Entardecer |
+| 🕐 Horário Local | 15:18 |
 
 </details>
 
 
 <details>
-<summary><strong>🌎 New York, EUA — América do Norte</strong> · 29°C ☀️ · 🕐 19:44</summary>
+<summary><strong>🌎 New York, EUA — América do Norte</strong> · 30°C ☀️ · 🕐 17:19</summary>
 
 <div align="center">
 
@@ -162,28 +150,25 @@
 
 ![New York](cards/new_york.svg)
 
-<img src="conditions/Limpo.webp" width="400" alt="Céu limpo"/>
-
-<img src="daytime/Night.jpeg" width="400" alt="🌙 Noite"/>
+<img src="conditions/Limpo.webp" width="600" alt="Céu limpo"/>
 
 </div>
 
 | Dado | Valor |
 |---|---|
-| 🌡️ Temperatura | **28.8°C** |
-| 🤔 Sensação Térmica | 28.8°C |
-| 📉 Mín / 📈 Máx | 18.3°C / 30.6°C |
-| 💧 Umidade | 39% |
-| 💨 Vento | 7.6 km/h |
+| 🌡️ Temperatura | **29.7°C** |
+| 🤔 Sensação Térmica | 28.4°C |
+| 📉 Mín / 📈 Máx | 20.7°C / 30.7°C |
+| 💧 Umidade | 41% |
+| 💨 Vento | 20.2 km/h |
 | ☀️ Condição | Céu limpo |
-| 🕐 Horário Local | 19:44 |
-| 🌙 Período | 🌙 Noite |
+| 🕐 Horário Local | 17:19 |
 
 </details>
 
 
 <details>
-<summary><strong>🌎 San Francisco, EUA — América do Norte</strong> · 24°C ☀️ · 🕐 16:44</summary>
+<summary><strong>🌎 San Francisco, EUA — América do Norte</strong> · 27°C ☀️ · 🕐 14:19</summary>
 
 <div align="center">
 
@@ -193,28 +178,25 @@
 
 ![San Francisco](cards/san_francisco.svg)
 
-<img src="conditions/Limpo.webp" width="400" alt="Céu limpo"/>
-
-<img src="daytime/Day.jpeg" width="400" alt="☀️ Dia"/>
+<img src="conditions/Limpo.webp" width="600" alt="Céu limpo"/>
 
 </div>
 
 | Dado | Valor |
 |---|---|
-| 🌡️ Temperatura | **23.7°C** |
-| 🤔 Sensação Térmica | 18.7°C |
-| 📉 Mín / 📈 Máx | 10.0°C / 23.7°C |
-| 💧 Umidade | 24% |
-| 💨 Vento | 26.9 km/h |
+| 🌡️ Temperatura | **26.6°C** |
+| 🤔 Sensação Térmica | 24.4°C |
+| 📉 Mín / 📈 Máx | 16.9°C / 27.1°C |
+| 💧 Umidade | 14% |
+| 💨 Vento | 14.5 km/h |
 | ☀️ Condição | Céu limpo |
-| 🕐 Horário Local | 16:44 |
-| ☀️ Período | ☀️ Dia |
+| 🕐 Horário Local | 14:19 |
 
 </details>
 
 
 <details>
-<summary><strong>🌍 London, Reino Unido — Europa</strong> · 10°C ⛅ · 🕐 00:44</summary>
+<summary><strong>🌍 London, Reino Unido — Europa</strong> · 12°C ☁️ · 🕐 22:19</summary>
 
 <div align="center">
 
@@ -224,28 +206,25 @@
 
 ![London](cards/london.svg)
 
-<img src="conditions/OvercastNight.webp" width="400" alt="Parcialmente nublado"/>
-
-<img src="daytime/Night.jpeg" width="400" alt="🌙 Noite"/>
+<img src="conditions/OvercastNight.webp" width="600" alt="Nublado"/>
 
 </div>
 
 | Dado | Valor |
 |---|---|
-| 🌡️ Temperatura | **10.4°C** |
-| 🤔 Sensação Térmica | 8.1°C |
-| 📉 Mín / 📈 Máx | 9.3°C / 14.5°C |
-| 💧 Umidade | 78% |
-| 💨 Vento | 10.4 km/h |
-| ⛅ Condição | Parcialmente nublado |
-| 🕐 Horário Local | 00:44 |
-| 🌙 Período | 🌙 Noite |
+| 🌡️ Temperatura | **12.4°C** |
+| 🤔 Sensação Térmica | 9.4°C |
+| 📉 Mín / 📈 Máx | 8.5°C / 14.2°C |
+| 💧 Umidade | 64% |
+| 💨 Vento | 13.7 km/h |
+| ☁️ Condição | Nublado |
+| 🕐 Horário Local | 22:19 |
 
 </details>
 
 
 <details>
-<summary><strong>🌍 Paris, França — Europa</strong> · 11°C ☁️ · 🕐 01:44</summary>
+<summary><strong>🌍 Paris, França — Europa</strong> · 13°C ☁️ · 🕐 23:19</summary>
 
 <div align="center">
 
@@ -255,28 +234,25 @@
 
 ![Paris](cards/paris.svg)
 
-<img src="conditions/OvercastNight.webp" width="400" alt="Nublado"/>
-
-<img src="daytime/Night.jpeg" width="400" alt="🌙 Noite"/>
+<img src="conditions/OvercastNight.webp" width="600" alt="Nublado"/>
 
 </div>
 
 | Dado | Valor |
 |---|---|
-| 🌡️ Temperatura | **11.3°C** |
-| 🤔 Sensação Térmica | 9.6°C |
-| 📉 Mín / 📈 Máx | 9.3°C / 17.1°C |
-| 💧 Umidade | 79% |
-| 💨 Vento | 7.6 km/h |
+| 🌡️ Temperatura | **13.0°C** |
+| 🤔 Sensação Térmica | 11.7°C |
+| 📉 Mín / 📈 Máx | 9.2°C / 15.7°C |
+| 💧 Umidade | 68% |
+| 💨 Vento | 3.6 km/h |
 | ☁️ Condição | Nublado |
-| 🕐 Horário Local | 01:44 |
-| 🌙 Período | 🌙 Noite |
+| 🕐 Horário Local | 23:19 |
 
 </details>
 
 
 <details>
-<summary><strong>🌏 Tokyo, Japão — Ásia</strong> · 19°C ☀️ · 🕐 08:44</summary>
+<summary><strong>🌏 Tokyo, Japão — Ásia</strong> · 16°C ☀️ · 🕐 06:19</summary>
 
 <div align="center">
 
@@ -286,28 +262,25 @@
 
 ![Tokyo](cards/tokyo.svg)
 
-<img src="conditions/Limpo.webp" width="400" alt="Céu limpo"/>
-
-<img src="daytime/Day.jpeg" width="400" alt="☀️ Dia"/>
+<img src="conditions/Limpo.webp" width="600" alt="Céu limpo"/>
 
 </div>
 
 | Dado | Valor |
 |---|---|
-| 🌡️ Temperatura | **19.3°C** |
-| 🤔 Sensação Térmica | 21.3°C |
-| 📉 Mín / 📈 Máx | 13.2°C / 26.3°C |
-| 💧 Umidade | 76% |
-| 💨 Vento | 1.5 km/h |
+| 🌡️ Temperatura | **16.3°C** |
+| 🤔 Sensação Térmica | 17.1°C |
+| 📉 Mín / 📈 Máx | 15.0°C / 27.4°C |
+| 💧 Umidade | 83% |
+| 💨 Vento | 2.3 km/h |
 | ☀️ Condição | Céu limpo |
-| 🕐 Horário Local | 08:44 |
-| ☀️ Período | ☀️ Dia |
+| 🕐 Horário Local | 06:19 |
 
 </details>
 
 
 <details>
-<summary><strong>🌍 Dubai, Emirados Árabes — Oriente Médio</strong> · 27°C ☀️ · 🕐 03:44</summary>
+<summary><strong>🌍 Dubai, Emirados Árabes — Oriente Médio</strong> · 27°C ☀️ · 🕐 01:19</summary>
 
 <div align="center">
 
@@ -317,28 +290,25 @@
 
 ![Dubai](cards/dubai.svg)
 
-<img src="conditions/FullMoonClear.webp" width="400" alt="Céu limpo"/>
-
-<img src="daytime/Night.jpeg" width="400" alt="🌙 Noite"/>
+<img src="conditions/FullMoonClear.webp" width="600" alt="Céu limpo"/>
 
 </div>
 
 | Dado | Valor |
 |---|---|
-| 🌡️ Temperatura | **27.1°C** |
-| 🤔 Sensação Térmica | 30.4°C |
-| 📉 Mín / 📈 Máx | 26.6°C / 31.7°C |
-| 💧 Umidade | 75% |
-| 💨 Vento | 12.3 km/h |
+| 🌡️ Temperatura | **26.6°C** |
+| 🤔 Sensação Térmica | 27.7°C |
+| 📉 Mín / 📈 Máx | 25.0°C / 32.7°C |
+| 💧 Umidade | 62% |
+| 💨 Vento | 14.8 km/h |
 | ☀️ Condição | Céu limpo |
-| 🕐 Horário Local | 03:44 |
-| 🌙 Período | 🌙 Noite |
+| 🕐 Horário Local | 01:19 |
 
 </details>
 
 
 <details>
-<summary><strong>🌍 Cairo, Egito — África</strong> · 28°C ☀️ · 🕐 02:44</summary>
+<summary><strong>🌍 Cairo, Egito — África</strong> · 26°C ☀️ · 🕐 00:19</summary>
 
 <div align="center">
 
@@ -348,28 +318,25 @@
 
 ![Cairo](cards/cairo.svg)
 
-<img src="conditions/FullMoonClear.webp" width="400" alt="Céu limpo"/>
-
-<img src="daytime/Night.jpeg" width="400" alt="🌙 Noite"/>
+<img src="conditions/FullMoonClear.webp" width="600" alt="Céu limpo"/>
 
 </div>
 
 | Dado | Valor |
 |---|---|
-| 🌡️ Temperatura | **27.5°C** |
-| 🤔 Sensação Térmica | 27.9°C |
-| 📉 Mín / 📈 Máx | 23.4°C / 37.2°C |
-| 💧 Umidade | 43% |
-| 💨 Vento | 6.1 km/h |
+| 🌡️ Temperatura | **25.7°C** |
+| 🤔 Sensação Térmica | 25.0°C |
+| 📉 Mín / 📈 Máx | 21.1°C / 35.1°C |
+| 💧 Umidade | 46% |
+| 💨 Vento | 12.0 km/h |
 | ☀️ Condição | Céu limpo |
-| 🕐 Horário Local | 02:44 |
-| 🌙 Período | 🌙 Noite |
+| 🕐 Horário Local | 00:19 |
 
 </details>
 
 
 <details>
-<summary><strong>🌏 Sydney, Austrália — Oceania</strong> · 17°C 🌦️ · 🕐 09:45</summary>
+<summary><strong>🌏 Sydney, Austrália — Oceania</strong> · 15°C ⛅ · 🕐 07:19</summary>
 
 <div align="center">
 
@@ -379,22 +346,19 @@
 
 ![Sydney](cards/sydney.svg)
 
-<img src="conditions/Chuvisco.webp" width="400" alt="Chuvisco moderado"/>
-
-<img src="daytime/Day.jpeg" width="400" alt="☀️ Dia"/>
+<img src="conditions/ParcialNublado.webp" width="600" alt="Parcialmente nublado"/>
 
 </div>
 
 | Dado | Valor |
 |---|---|
-| 🌡️ Temperatura | **16.6°C** |
-| 🤔 Sensação Térmica | 18.0°C |
-| 📉 Mín / 📈 Máx | 15.6°C / 19.0°C |
+| 🌡️ Temperatura | **15.2°C** |
+| 🤔 Sensação Térmica | 15.7°C |
+| 📉 Mín / 📈 Máx | 14.8°C / 20.0°C |
 | 💧 Umidade | 97% |
-| 💨 Vento | 5.0 km/h |
-| 🌦️ Condição | Chuvisco moderado |
-| 🕐 Horário Local | 09:45 |
-| ☀️ Período | ☀️ Dia |
+| 💨 Vento | 7.9 km/h |
+| ⛅ Condição | Parcialmente nublado |
+| 🕐 Horário Local | 07:19 |
 
 </details>
 
@@ -409,10 +373,10 @@
 
 | Estatística | Valor |
 |---|---|
-| 📁 Total de registros | **24** |
+| 📁 Total de registros | **36** |
 | 📅 Primeiro registro | `2026-05-17 19:38` |
-| 📅 Último registro | `2026-05-18 09:45` |
-| 🔥 Temperatura mais alta | **28.8°C** — New York |
+| 📅 Último registro | `2026-05-19 07:19` |
+| 🔥 Temperatura mais alta | **29.7°C** — New York |
 | 🧊 Temperatura mais baixa | **10.2°C** — Buenos Aires |
 
 📂 [Ver histórico completo → `data/history.csv`](data/history.csv)
