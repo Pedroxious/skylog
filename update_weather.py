@@ -535,34 +535,16 @@ def generate_readme(all_weather, update_time):
 
 </div>
 
----
+<br/>
 
 """
     
-    # Highlight — São Paulo
-    sp_data = all_weather[0] if all_weather else None
-    if sp_data:
-        readme += generate_city_section(sp_data, is_highlight=True)
-    
-    # Grid of all other cities
-    readme += """
----
-
-<div align="center">
-
-## 🗺️ Panorama Global
-
-</div>
-
-"""
-    
-    for w in all_weather[1:]:
-        readme += generate_city_section(w, is_highlight=False)
+    # City Sections
+    for w in all_weather:
+        readme += generate_city_section(w)
     
     # History section
     readme += f"""
----
-
 <div align="center">
 
 ## 📊 Histórico de Dados
@@ -570,14 +552,18 @@ def generate_readme(all_weather, update_time):
 </div>
 
 | Estatística | Valor |
-|---|---|
-| 📁 Total de registros | **{csv_stats['total_records']}** |
-| 📅 Primeiro registro | `{csv_stats['first_record']}` |
-| 📅 Último registro | `{csv_stats['last_record']}` |
-| 🔥 Temperatura mais alta | **{csv_stats['highest_temp']:.1f}°C** — {csv_stats['highest_temp_city']} |
-| 🧊 Temperatura mais baixa | **{csv_stats['lowest_temp']:.1f}°C** — {csv_stats['lowest_temp_city']} |
+|:---:|:---:|
+| **Total de registros** | {csv_stats['total_records']} |
+| **Primeiro registro** | `{csv_stats['first_record']}` |
+| **Último registro** | `{csv_stats['last_record']}` |
+| **Temperatura mais alta** | **{csv_stats['highest_temp']:.1f}°C** — {csv_stats['highest_temp_city']} |
+| **Temperatura mais baixa** | **{csv_stats['lowest_temp']:.1f}°C** — {csv_stats['lowest_temp_city']} |
 
-📂 [Ver histórico completo → `data/history.csv`](data/history.csv)
+<div align="center">
+
+📂 <a href="data/history.csv">Ver histórico completo (history.csv)</a>
+
+</div>
 
 """
     
@@ -592,12 +578,12 @@ def generate_readme(all_weather, update_time):
 </div>
 
 | Item | Detalhe |
-|---|---|
-| 🌐 Fonte de dados | [Open-Meteo API](https://open-meteo.com/) (gratuita, sem API key) |
-| ⏰ Frequência | 3× ao dia (9h, 12h, 19h — horário de Brasília) |
-| 🤖 Automação | GitHub Actions — [ver workflow](.github/workflows/weather.yml) |
-| 🐍 Script | `update_weather.py` com `requests` + `pytz` |
-| 🏙️ Cidades | 12 cidades em 6 continentes |
+|:---:|:---:|
+| **Fonte de dados** | <a href="https://open-meteo.com/">Open-Meteo API</a> (gratuita) |
+| **Frequência** | 3× ao dia (9h, 12h, 19h — BRT) |
+| **Automação** | GitHub Actions — <a href=".github/workflows/weather.yml">ver workflow</a> |
+| **Script** | `update_weather.py` (requests e pytz) |
+| **Cidades Monitoradas** | 12 cidades globais |
 
 ---
 
@@ -612,71 +598,40 @@ def generate_readme(all_weather, update_time):
 
 
 def generate_city_section(w, is_highlight=False):
-    """Generate a README section for a single city."""
+    """Generate a clean, modern, fully visible section for a city, discarding dropdowns."""
     
-    continent_emoji = CONTINENT_EMOJI.get(w["continent"], "🌍")
-    
-    if is_highlight:
-        section = f"""
+    return f"""
 <div align="center">
 
-## 🏙️ {w["city_name"]}, {w["country"]} — Cidade Destaque
+## 🏙️ {w["city_name"]}, {w["country"]}
 
-<img src="landmarks/{w['landmark']}" width="600" alt="{w['city_name']}"/>
+<img src="landmarks/{w['landmark']}" width="800" alt="Vista de {w['city_name']}"/>
 
-<br/>
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="cards/{w['slug']}.svg" alt="Card {w['city_name']}"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="conditions/{w['condition_img']}" width="380" alt="Condição em tempo real {w['condition']}"/>
+    </td>
+  </tr>
+</table>
 
-![{w["city_name"]}](cards/{w["slug"]}.svg)
-
-<img src="conditions/{w['condition_img']}" width="700" alt="{w['condition']}"/>
+| Parâmetro | Medição em Tempo Real |
+|:---:|:---:|
+| **Temperatura** | {w["temp"]:.1f}°C (Sensação: {w["feels_like"]:.1f}°C) |
+| **Variação (Mín/Máx)** | {w["temp_min"]:.1f}°C — {w["temp_max"]:.1f}°C |
+| **Umidade** | {w["humidity"]}% |
+| **Vento** | {w["wind"]:.1f} km/h |
+| **Condição Atual** | {w["condition"]} |
+| **Horário Local** | {w["local_time"]} |
 
 </div>
 
-| Dado | Valor |
-|---|---|
-| 🌡️ Temperatura | **{w["temp"]:.1f}°C** |
-| 🤔 Sensação Térmica | {w["feels_like"]:.1f}°C |
-| 📉 Mínima / 📈 Máxima | {w["temp_min"]:.1f}°C / {w["temp_max"]:.1f}°C |
-| 💧 Umidade | {w["humidity"]}% |
-| 💨 Vento | {w["wind"]:.1f} km/h |
-| {w["emoji"]} Condição | {w["condition"]} |
-| 🕐 Horário Local | {w["local_time"]} |
-| 🌅 Nascer do sol | {w["sunrise"][-5:]} |
-| 🌇 Pôr do sol | {w["sunset"][-5:]} |
+<br/><hr/><br/>
 
 """
-    else:
-        section = f"""
-<details>
-<summary><strong>{continent_emoji} {w["city_name"]}, {w["country"]} — {w["continent"]}</strong> · {w["temp"]:.0f}°C {w["emoji"]} · 🕐 {w["local_time"]}</summary>
-
-<div align="center">
-
-<img src="landmarks/{w['landmark']}" width="500" alt="{w['city_name']}"/>
-
-<br/>
-
-![{w["city_name"]}](cards/{w["slug"]}.svg)
-
-<img src="conditions/{w['condition_img']}" width="600" alt="{w['condition']}"/>
-
-</div>
-
-| Dado | Valor |
-|---|---|
-| 🌡️ Temperatura | **{w["temp"]:.1f}°C** |
-| 🤔 Sensação Térmica | {w["feels_like"]:.1f}°C |
-| 📉 Mín / 📈 Máx | {w["temp_min"]:.1f}°C / {w["temp_max"]:.1f}°C |
-| 💧 Umidade | {w["humidity"]}% |
-| 💨 Vento | {w["wind"]:.1f} km/h |
-| {w["emoji"]} Condição | {w["condition"]} |
-| 🕐 Horário Local | {w["local_time"]} |
-
-</details>
-
-"""
-    
-    return section
 
 
 # ============================================================

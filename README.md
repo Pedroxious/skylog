@@ -4,366 +4,392 @@
 
 ### Monitoramento climático em tempo real de 12 cidades ao redor do mundo
 
-![Last Update](https://img.shields.io/badge/Última_Atualização-2026-05-18_18%3A19_BRT-blue?style=for-the-badge&logo=github)
-![Records](https://img.shields.io/badge/Registros_CSV-36-green?style=for-the-badge&logo=database)
+![Last Update](https://img.shields.io/badge/Última_Atualização-2026-05-18_18%3A29_BRT-blue?style=for-the-badge&logo=github)
+![Records](https://img.shields.io/badge/Registros_CSV-48-green?style=for-the-badge&logo=database)
 ![Cities](https://img.shields.io/badge/Cidades-12-orange?style=for-the-badge&logo=earth)
 
 ---
 
-### 🌇 Entardecer — Horário de referência: Brasília (18:19)
+### 🌇 Entardecer — Horário de referência: Brasília (18:29)
 
 <img src="daytime/Dusk.jpeg" width="800" alt="🌇 Entardecer"/>
 
 </div>
 
----
-
-
-<div align="center">
-
-## 🏙️ São Paulo, Brasil — Cidade Destaque
-
-<img src="landmarks/SaoPaulo.webp" width="600" alt="São Paulo"/>
-
 <br/>
 
-![São Paulo](cards/sao_paulo.svg)
-
-<img src="conditions/OvercastNight.webp" width="700" alt="Nublado"/>
-
-</div>
-
-| Dado | Valor |
-|---|---|
-| 🌡️ Temperatura | **18.0°C** |
-| 🤔 Sensação Térmica | 19.0°C |
-| 📉 Mínima / 📈 Máxima | 16.0°C / 20.1°C |
-| 💧 Umidade | 89% |
-| 💨 Vento | 8.0 km/h |
-| ☁️ Condição | Nublado |
-| 🕐 Horário Local | 18:18 |
-| 🌅 Nascer do sol | 06:34 |
-| 🌇 Pôr do sol | 17:31 |
-
-
----
 
 <div align="center">
 
-## 🗺️ Panorama Global
+## 🏙️ São Paulo, Brasil
+
+<img src="landmarks/SaoPaulo.webp" width="800" alt="Vista de São Paulo"/>
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="cards/sao_paulo.svg" alt="Card São Paulo"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="conditions/OvercastNight.webp" width="380" alt="Condição em tempo real Nublado"/>
+    </td>
+  </tr>
+</table>
+
+| Parâmetro | Medição em Tempo Real |
+|:---:|:---:|
+| **Temperatura** | 18.0°C (Sensação: 19.0°C) |
+| **Variação (Mín/Máx)** | 16.0°C — 20.1°C |
+| **Umidade** | 89% |
+| **Vento** | 8.0 km/h |
+| **Condição Atual** | Nublado |
+| **Horário Local** | 18:29 |
 
 </div>
 
+<br/><hr/><br/>
 
-<details>
-<summary><strong>🌎 Rio de Janeiro, Brasil — América do Sul</strong> · 23°C ☁️ · 🕐 18:18</summary>
 
 <div align="center">
 
-<img src="landmarks/RiodeJaneiro.webp" width="500" alt="Rio de Janeiro"/>
+## 🏙️ Rio de Janeiro, Brasil
 
-<br/>
+<img src="landmarks/RiodeJaneiro.webp" width="800" alt="Vista de Rio de Janeiro"/>
 
-![Rio de Janeiro](cards/rio_de_janeiro.svg)
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="cards/rio_de_janeiro.svg" alt="Card Rio de Janeiro"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="conditions/OvercastNight.webp" width="380" alt="Condição em tempo real Nublado"/>
+    </td>
+  </tr>
+</table>
 
-<img src="conditions/OvercastNight.webp" width="600" alt="Nublado"/>
+| Parâmetro | Medição em Tempo Real |
+|:---:|:---:|
+| **Temperatura** | 23.1°C (Sensação: 26.1°C) |
+| **Variação (Mín/Máx)** | 22.4°C — 26.3°C |
+| **Umidade** | 87% |
+| **Vento** | 8.7 km/h |
+| **Condição Atual** | Nublado |
+| **Horário Local** | 18:29 |
 
 </div>
 
-| Dado | Valor |
-|---|---|
-| 🌡️ Temperatura | **23.1°C** |
-| 🤔 Sensação Térmica | 26.1°C |
-| 📉 Mín / 📈 Máx | 22.4°C / 26.3°C |
-| 💧 Umidade | 87% |
-| 💨 Vento | 8.7 km/h |
-| ☁️ Condição | Nublado |
-| 🕐 Horário Local | 18:18 |
+<br/><hr/><br/>
 
-</details>
-
-
-<details>
-<summary><strong>🌎 Buenos Aires, Argentina — América do Sul</strong> · 13°C ☀️ · 🕐 18:18</summary>
 
 <div align="center">
 
-<img src="landmarks/Argentina.webp" width="500" alt="Buenos Aires"/>
+## 🏙️ Buenos Aires, Argentina
 
-<br/>
+<img src="landmarks/Argentina.webp" width="800" alt="Vista de Buenos Aires"/>
 
-![Buenos Aires](cards/buenos_aires.svg)
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="cards/buenos_aires.svg" alt="Card Buenos Aires"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="conditions/FullMoonClear.webp" width="380" alt="Condição em tempo real Céu limpo"/>
+    </td>
+  </tr>
+</table>
 
-<img src="conditions/FullMoonClear.webp" width="600" alt="Céu limpo"/>
+| Parâmetro | Medição em Tempo Real |
+|:---:|:---:|
+| **Temperatura** | 13.1°C (Sensação: 10.4°C) |
+| **Variação (Mín/Máx)** | 4.7°C — 15.1°C |
+| **Umidade** | 50% |
+| **Vento** | 7.2 km/h |
+| **Condição Atual** | Céu limpo |
+| **Horário Local** | 18:29 |
 
 </div>
 
-| Dado | Valor |
-|---|---|
-| 🌡️ Temperatura | **13.1°C** |
-| 🤔 Sensação Térmica | 10.4°C |
-| 📉 Mín / 📈 Máx | 4.7°C / 15.1°C |
-| 💧 Umidade | 50% |
-| 💨 Vento | 7.2 km/h |
-| ☀️ Condição | Céu limpo |
-| 🕐 Horário Local | 18:18 |
+<br/><hr/><br/>
 
-</details>
-
-
-<details>
-<summary><strong>🌎 Mexico City, México — América Central</strong> · 27°C 🌤️ · 🕐 15:18</summary>
 
 <div align="center">
 
-<img src="landmarks/Mexico.webp" width="500" alt="Mexico City"/>
+## 🏙️ Mexico City, México
 
-<br/>
+<img src="landmarks/Mexico.webp" width="800" alt="Vista de Mexico City"/>
 
-![Mexico City](cards/mexico_city.svg)
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="cards/mexico_city.svg" alt="Card Mexico City"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="conditions/ParcialLimpo.webp" width="380" alt="Condição em tempo real Principalmente limpo"/>
+    </td>
+  </tr>
+</table>
 
-<img src="conditions/ParcialLimpo.webp" width="600" alt="Principalmente limpo"/>
+| Parâmetro | Medição em Tempo Real |
+|:---:|:---:|
+| **Temperatura** | 27.1°C (Sensação: 26.2°C) |
+| **Variação (Mín/Máx)** | 14.0°C — 27.3°C |
+| **Umidade** | 25% |
+| **Vento** | 7.2 km/h |
+| **Condição Atual** | Principalmente limpo |
+| **Horário Local** | 15:29 |
 
 </div>
 
-| Dado | Valor |
-|---|---|
-| 🌡️ Temperatura | **27.1°C** |
-| 🤔 Sensação Térmica | 26.2°C |
-| 📉 Mín / 📈 Máx | 14.0°C / 27.3°C |
-| 💧 Umidade | 25% |
-| 💨 Vento | 7.2 km/h |
-| 🌤️ Condição | Principalmente limpo |
-| 🕐 Horário Local | 15:18 |
+<br/><hr/><br/>
 
-</details>
-
-
-<details>
-<summary><strong>🌎 New York, EUA — América do Norte</strong> · 30°C ☀️ · 🕐 17:19</summary>
 
 <div align="center">
 
-<img src="landmarks/NewYork.webp" width="500" alt="New York"/>
+## 🏙️ New York, EUA
 
-<br/>
+<img src="landmarks/NewYork.webp" width="800" alt="Vista de New York"/>
 
-![New York](cards/new_york.svg)
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="cards/new_york.svg" alt="Card New York"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="conditions/Limpo.webp" width="380" alt="Condição em tempo real Céu limpo"/>
+    </td>
+  </tr>
+</table>
 
-<img src="conditions/Limpo.webp" width="600" alt="Céu limpo"/>
+| Parâmetro | Medição em Tempo Real |
+|:---:|:---:|
+| **Temperatura** | 29.7°C (Sensação: 28.4°C) |
+| **Variação (Mín/Máx)** | 20.7°C — 30.7°C |
+| **Umidade** | 41% |
+| **Vento** | 20.2 km/h |
+| **Condição Atual** | Céu limpo |
+| **Horário Local** | 17:29 |
 
 </div>
 
-| Dado | Valor |
-|---|---|
-| 🌡️ Temperatura | **29.7°C** |
-| 🤔 Sensação Térmica | 28.4°C |
-| 📉 Mín / 📈 Máx | 20.7°C / 30.7°C |
-| 💧 Umidade | 41% |
-| 💨 Vento | 20.2 km/h |
-| ☀️ Condição | Céu limpo |
-| 🕐 Horário Local | 17:19 |
+<br/><hr/><br/>
 
-</details>
-
-
-<details>
-<summary><strong>🌎 San Francisco, EUA — América do Norte</strong> · 27°C ☀️ · 🕐 14:19</summary>
 
 <div align="center">
 
-<img src="landmarks/SanFrancisco.webp" width="500" alt="San Francisco"/>
+## 🏙️ San Francisco, EUA
 
-<br/>
+<img src="landmarks/SanFrancisco.webp" width="800" alt="Vista de San Francisco"/>
 
-![San Francisco](cards/san_francisco.svg)
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="cards/san_francisco.svg" alt="Card San Francisco"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="conditions/Limpo.webp" width="380" alt="Condição em tempo real Céu limpo"/>
+    </td>
+  </tr>
+</table>
 
-<img src="conditions/Limpo.webp" width="600" alt="Céu limpo"/>
+| Parâmetro | Medição em Tempo Real |
+|:---:|:---:|
+| **Temperatura** | 26.6°C (Sensação: 24.4°C) |
+| **Variação (Mín/Máx)** | 16.9°C — 27.1°C |
+| **Umidade** | 14% |
+| **Vento** | 14.5 km/h |
+| **Condição Atual** | Céu limpo |
+| **Horário Local** | 14:29 |
 
 </div>
 
-| Dado | Valor |
-|---|---|
-| 🌡️ Temperatura | **26.6°C** |
-| 🤔 Sensação Térmica | 24.4°C |
-| 📉 Mín / 📈 Máx | 16.9°C / 27.1°C |
-| 💧 Umidade | 14% |
-| 💨 Vento | 14.5 km/h |
-| ☀️ Condição | Céu limpo |
-| 🕐 Horário Local | 14:19 |
+<br/><hr/><br/>
 
-</details>
-
-
-<details>
-<summary><strong>🌍 London, Reino Unido — Europa</strong> · 12°C ☁️ · 🕐 22:19</summary>
 
 <div align="center">
 
-<img src="landmarks/London.webp" width="500" alt="London"/>
+## 🏙️ London, Reino Unido
 
-<br/>
+<img src="landmarks/London.webp" width="800" alt="Vista de London"/>
 
-![London](cards/london.svg)
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="cards/london.svg" alt="Card London"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="conditions/OvercastNight.webp" width="380" alt="Condição em tempo real Nublado"/>
+    </td>
+  </tr>
+</table>
 
-<img src="conditions/OvercastNight.webp" width="600" alt="Nublado"/>
+| Parâmetro | Medição em Tempo Real |
+|:---:|:---:|
+| **Temperatura** | 12.4°C (Sensação: 9.4°C) |
+| **Variação (Mín/Máx)** | 8.5°C — 14.2°C |
+| **Umidade** | 64% |
+| **Vento** | 13.7 km/h |
+| **Condição Atual** | Nublado |
+| **Horário Local** | 22:29 |
 
 </div>
 
-| Dado | Valor |
-|---|---|
-| 🌡️ Temperatura | **12.4°C** |
-| 🤔 Sensação Térmica | 9.4°C |
-| 📉 Mín / 📈 Máx | 8.5°C / 14.2°C |
-| 💧 Umidade | 64% |
-| 💨 Vento | 13.7 km/h |
-| ☁️ Condição | Nublado |
-| 🕐 Horário Local | 22:19 |
+<br/><hr/><br/>
 
-</details>
-
-
-<details>
-<summary><strong>🌍 Paris, França — Europa</strong> · 13°C ☁️ · 🕐 23:19</summary>
 
 <div align="center">
 
-<img src="landmarks/Paris.webp" width="500" alt="Paris"/>
+## 🏙️ Paris, França
 
-<br/>
+<img src="landmarks/Paris.webp" width="800" alt="Vista de Paris"/>
 
-![Paris](cards/paris.svg)
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="cards/paris.svg" alt="Card Paris"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="conditions/OvercastNight.webp" width="380" alt="Condição em tempo real Nublado"/>
+    </td>
+  </tr>
+</table>
 
-<img src="conditions/OvercastNight.webp" width="600" alt="Nublado"/>
+| Parâmetro | Medição em Tempo Real |
+|:---:|:---:|
+| **Temperatura** | 13.0°C (Sensação: 11.7°C) |
+| **Variação (Mín/Máx)** | 9.2°C — 15.7°C |
+| **Umidade** | 68% |
+| **Vento** | 3.6 km/h |
+| **Condição Atual** | Nublado |
+| **Horário Local** | 23:29 |
 
 </div>
 
-| Dado | Valor |
-|---|---|
-| 🌡️ Temperatura | **13.0°C** |
-| 🤔 Sensação Térmica | 11.7°C |
-| 📉 Mín / 📈 Máx | 9.2°C / 15.7°C |
-| 💧 Umidade | 68% |
-| 💨 Vento | 3.6 km/h |
-| ☁️ Condição | Nublado |
-| 🕐 Horário Local | 23:19 |
+<br/><hr/><br/>
 
-</details>
-
-
-<details>
-<summary><strong>🌏 Tokyo, Japão — Ásia</strong> · 16°C ☀️ · 🕐 06:19</summary>
 
 <div align="center">
 
-<img src="landmarks/Tokyo.webp" width="500" alt="Tokyo"/>
+## 🏙️ Tokyo, Japão
 
-<br/>
+<img src="landmarks/Tokyo.webp" width="800" alt="Vista de Tokyo"/>
 
-![Tokyo](cards/tokyo.svg)
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="cards/tokyo.svg" alt="Card Tokyo"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="conditions/Limpo.webp" width="380" alt="Condição em tempo real Céu limpo"/>
+    </td>
+  </tr>
+</table>
 
-<img src="conditions/Limpo.webp" width="600" alt="Céu limpo"/>
+| Parâmetro | Medição em Tempo Real |
+|:---:|:---:|
+| **Temperatura** | 16.3°C (Sensação: 17.1°C) |
+| **Variação (Mín/Máx)** | 15.0°C — 27.4°C |
+| **Umidade** | 83% |
+| **Vento** | 2.3 km/h |
+| **Condição Atual** | Céu limpo |
+| **Horário Local** | 06:29 |
 
 </div>
 
-| Dado | Valor |
-|---|---|
-| 🌡️ Temperatura | **16.3°C** |
-| 🤔 Sensação Térmica | 17.1°C |
-| 📉 Mín / 📈 Máx | 15.0°C / 27.4°C |
-| 💧 Umidade | 83% |
-| 💨 Vento | 2.3 km/h |
-| ☀️ Condição | Céu limpo |
-| 🕐 Horário Local | 06:19 |
+<br/><hr/><br/>
 
-</details>
-
-
-<details>
-<summary><strong>🌍 Dubai, Emirados Árabes — Oriente Médio</strong> · 27°C ☀️ · 🕐 01:19</summary>
 
 <div align="center">
 
-<img src="landmarks/Dubai.webp" width="500" alt="Dubai"/>
+## 🏙️ Dubai, Emirados Árabes
 
-<br/>
+<img src="landmarks/Dubai.webp" width="800" alt="Vista de Dubai"/>
 
-![Dubai](cards/dubai.svg)
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="cards/dubai.svg" alt="Card Dubai"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="conditions/FullMoonClear.webp" width="380" alt="Condição em tempo real Céu limpo"/>
+    </td>
+  </tr>
+</table>
 
-<img src="conditions/FullMoonClear.webp" width="600" alt="Céu limpo"/>
+| Parâmetro | Medição em Tempo Real |
+|:---:|:---:|
+| **Temperatura** | 26.6°C (Sensação: 27.7°C) |
+| **Variação (Mín/Máx)** | 25.0°C — 32.7°C |
+| **Umidade** | 62% |
+| **Vento** | 14.8 km/h |
+| **Condição Atual** | Céu limpo |
+| **Horário Local** | 01:29 |
 
 </div>
 
-| Dado | Valor |
-|---|---|
-| 🌡️ Temperatura | **26.6°C** |
-| 🤔 Sensação Térmica | 27.7°C |
-| 📉 Mín / 📈 Máx | 25.0°C / 32.7°C |
-| 💧 Umidade | 62% |
-| 💨 Vento | 14.8 km/h |
-| ☀️ Condição | Céu limpo |
-| 🕐 Horário Local | 01:19 |
+<br/><hr/><br/>
 
-</details>
-
-
-<details>
-<summary><strong>🌍 Cairo, Egito — África</strong> · 26°C ☀️ · 🕐 00:19</summary>
 
 <div align="center">
 
-<img src="landmarks/Cairo.webp" width="500" alt="Cairo"/>
+## 🏙️ Cairo, Egito
 
-<br/>
+<img src="landmarks/Cairo.webp" width="800" alt="Vista de Cairo"/>
 
-![Cairo](cards/cairo.svg)
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="cards/cairo.svg" alt="Card Cairo"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="conditions/FullMoonClear.webp" width="380" alt="Condição em tempo real Céu limpo"/>
+    </td>
+  </tr>
+</table>
 
-<img src="conditions/FullMoonClear.webp" width="600" alt="Céu limpo"/>
+| Parâmetro | Medição em Tempo Real |
+|:---:|:---:|
+| **Temperatura** | 25.7°C (Sensação: 25.0°C) |
+| **Variação (Mín/Máx)** | 21.1°C — 35.1°C |
+| **Umidade** | 46% |
+| **Vento** | 12.0 km/h |
+| **Condição Atual** | Céu limpo |
+| **Horário Local** | 00:29 |
 
 </div>
 
-| Dado | Valor |
-|---|---|
-| 🌡️ Temperatura | **25.7°C** |
-| 🤔 Sensação Térmica | 25.0°C |
-| 📉 Mín / 📈 Máx | 21.1°C / 35.1°C |
-| 💧 Umidade | 46% |
-| 💨 Vento | 12.0 km/h |
-| ☀️ Condição | Céu limpo |
-| 🕐 Horário Local | 00:19 |
+<br/><hr/><br/>
 
-</details>
-
-
-<details>
-<summary><strong>🌏 Sydney, Austrália — Oceania</strong> · 15°C ⛅ · 🕐 07:19</summary>
 
 <div align="center">
 
-<img src="landmarks/Sydney.webp" width="500" alt="Sydney"/>
+## 🏙️ Sydney, Austrália
 
-<br/>
+<img src="landmarks/Sydney.webp" width="800" alt="Vista de Sydney"/>
 
-![Sydney](cards/sydney.svg)
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="cards/sydney.svg" alt="Card Sydney"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="conditions/ParcialNublado.webp" width="380" alt="Condição em tempo real Parcialmente nublado"/>
+    </td>
+  </tr>
+</table>
 
-<img src="conditions/ParcialNublado.webp" width="600" alt="Parcialmente nublado"/>
+| Parâmetro | Medição em Tempo Real |
+|:---:|:---:|
+| **Temperatura** | 15.2°C (Sensação: 15.7°C) |
+| **Variação (Mín/Máx)** | 14.8°C — 20.0°C |
+| **Umidade** | 97% |
+| **Vento** | 7.9 km/h |
+| **Condição Atual** | Parcialmente nublado |
+| **Horário Local** | 07:29 |
 
 </div>
 
-| Dado | Valor |
-|---|---|
-| 🌡️ Temperatura | **15.2°C** |
-| 🤔 Sensação Térmica | 15.7°C |
-| 📉 Mín / 📈 Máx | 14.8°C / 20.0°C |
-| 💧 Umidade | 97% |
-| 💨 Vento | 7.9 km/h |
-| ⛅ Condição | Parcialmente nublado |
-| 🕐 Horário Local | 07:19 |
+<br/><hr/><br/>
 
-</details>
-
-
----
 
 <div align="center">
 
@@ -372,14 +398,18 @@
 </div>
 
 | Estatística | Valor |
-|---|---|
-| 📁 Total de registros | **36** |
-| 📅 Primeiro registro | `2026-05-17 19:38` |
-| 📅 Último registro | `2026-05-19 07:19` |
-| 🔥 Temperatura mais alta | **29.7°C** — New York |
-| 🧊 Temperatura mais baixa | **10.2°C** — Buenos Aires |
+|:---:|:---:|
+| **Total de registros** | 48 |
+| **Primeiro registro** | `2026-05-17 19:38` |
+| **Último registro** | `2026-05-19 07:29` |
+| **Temperatura mais alta** | **29.7°C** — New York |
+| **Temperatura mais baixa** | **10.2°C** — Buenos Aires |
 
-📂 [Ver histórico completo → `data/history.csv`](data/history.csv)
+<div align="center">
+
+📂 <a href="data/history.csv">Ver histórico completo (history.csv)</a>
+
+</div>
 
 
 ---
@@ -391,12 +421,12 @@
 </div>
 
 | Item | Detalhe |
-|---|---|
-| 🌐 Fonte de dados | [Open-Meteo API](https://open-meteo.com/) (gratuita, sem API key) |
-| ⏰ Frequência | 3× ao dia (9h, 12h, 19h — horário de Brasília) |
-| 🤖 Automação | GitHub Actions — [ver workflow](.github/workflows/weather.yml) |
-| 🐍 Script | `update_weather.py` com `requests` + `pytz` |
-| 🏙️ Cidades | 12 cidades em 6 continentes |
+|:---:|:---:|
+| **Fonte de dados** | <a href="https://open-meteo.com/">Open-Meteo API</a> (gratuita) |
+| **Frequência** | 3× ao dia (9h, 12h, 19h — BRT) |
+| **Automação** | GitHub Actions — <a href=".github/workflows/weather.yml">ver workflow</a> |
+| **Script** | `update_weather.py` (requests e pytz) |
+| **Cidades Monitoradas** | 12 cidades globais |
 
 ---
 
