@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SkyLog Live Simulator</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="mood-clear">
+    
+    <!-- Dynamic Ambient Audio Elements -->
+    <audio id="audio-rain" loop src="https://cdn.freesound.org/previews/531/531947_11100236-lq.mp3"></audio>
+    <audio id="audio-birds" loop src="https://cdn.freesound.org/previews/416/416529_5121236-lq.mp3"></audio>
+    <audio id="audio-storm" loop src="https://cdn.freesound.org/previews/102/102733_1720873-lq.mp3"></audio>
+    <audio id="audio-wind" loop src="https://cdn.freesound.org/previews/136/136402_1762446-lq.mp3"></audio>
+
+    <!-- Global Background Elements -->
+    <div class="weather-background" id="weatherBg"></div>
+    <div class="particles" id="particles"></div>
+
+    <!-- UI Overlay container -->
+    <div class="app-ui">
+        <!-- Floating Header -->
+        <header class="glass-nav py-3 px-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div class="brand">
+                <h2 class="m-0 fw-bold header-title">🌍 SkyLog <span class="badge bg-danger ms-2 pulse-badge">LIVE</span></h2>
+                <small class="opacity-75">Global Synchronized Weather</small>
+            </div>
+            
+            <div class="controls d-flex align-items-center gap-3">
+                <button class="btn btn-glass" id="playAudioBtn">🔈 Som Ambientes</button>
+                <div class="live-status d-flex align-items-center gap-2">
+                    <div class="spinner-grow spinner-grow-sm text-info" role="status"></div>
+                    <span id="lastUpdated">Atualizando...</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard -->
+        <main class="container-fluid mt-4 px-4 pb-5">
+            <div class="row g-4" id="citiesGrid">
+                <!-- Dynamically populated via app.js -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- App Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
