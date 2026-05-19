@@ -83,3 +83,15 @@ datetime,city,country,continent,temp_c,feels_like_c,temp_min_c,temp_max_c,humidi
 2026-05-19 06:37,Dubai,Emirados Árabes,Oriente Médio,25.6,26.3,25.1,32.8,59,13.2,0.0,0,Céu limpo,DayClear.webp,1,2026-05-19T05:32,2026-05-19T18:58
 2026-05-19 05:37,Cairo,Egito,África,21.6,21.9,21.4,35.1,63,8.0,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-05-19T05:59,2026-05-19T19:43
 2026-05-19 12:37,Sydney,Austrália,Oceania,19.5,20.2,14.8,20.1,76,8.0,0.0,2,Parcialmente nublado,DayPartialCloudy.webp,1,2026-05-19T06:43,2026-05-19T17:00
+2026-05-19 00:02,São Paulo,Brasil,América do Sul,16.4,17.4,15.6,18.7,94,5.1,0.0,3,Nublado,NightOvercast.webp,0,2026-05-19T06:35,2026-05-19T17:30
+2026-05-19 00:02,Rio de Janeiro,Brasil,América do Sul,22.7,25.9,21.6,24.9,90,8.8,0.0,3,Nublado,NightOvercast.webp,0,2026-05-19T06:20,2026-05-19T17:18
+2026-05-19 00:02,Buenos Aires,Argentina,América do Sul,9.7,6.7,6.7,16.6,65,10.1,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-05-19T07:43,2026-05-19T17:56
+2026-05-18 21:02,Mexico City,México,América Central,17.9,18.3,14.0,27.6,75,4.4,0.1,51,Chuvisco,NightRain.webp,0,2026-05-18T06:00,2026-05-18T19:05
+2026-05-18 23:02,New York,EUA,América do Norte,25.2,24.9,20.7,30.7,55,15.5,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-05-18T05:35,2026-05-18T20:09
+2026-05-18 20:02,San Francisco,EUA,América do Norte,20.3,16.7,16.9,28.0,38,16.9,0.0,0,Céu limpo,DayClear.webp,1,2026-05-18T05:57,2026-05-18T20:15
+2026-05-19 04:02,London,Reino Unido,Europa,11.4,9.4,11.3,17.2,92,14.8,0.2,53,Chuvisco,NightRain.webp,0,2026-05-19T05:02,2026-05-19T20:51
+2026-05-19 05:02,Paris,França,Europa,11.0,9.7,11.0,17.5,88,7.2,0.0,61,Chuva,NightRain.webp,0,2026-05-19T06:03,2026-05-19T21:30
+2026-05-19 12:02,Tokyo,Japão,Ásia,27.1,30.3,14.9,27.1,53,7.6,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-19T04:33,2026-05-19T18:42
+2026-05-19 07:02,Dubai,Emirados Árabes,Oriente Médio,26.5,27.2,25.1,32.8,57,12.4,0.0,0,Céu limpo,DayClear.webp,1,2026-05-19T05:32,2026-05-19T18:58
+2026-05-19 06:02,Cairo,Egito,África,21.4,21.6,21.4,35.1,64,8.0,0.0,0,Céu limpo,DayClear.webp,1,2026-05-19T05:59,2026-05-19T19:43
+2026-05-19 13:02,Sydney,Austrália,Oceania,19.6,19.9,14.8,20.1,75,9.7,0.0,2,Parcialmente nublado,DayPartialCloudy.webp,1,2026-05-19T06:43,2026-05-19T17:00

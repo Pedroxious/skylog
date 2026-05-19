@@ -539,15 +539,15 @@ def generate_readme(all_weather, update_time):
 
 ### Monitoramento climático em tempo real de 12 cidades ao redor do mundo
 
-![Última Atualização](https://img.shields.io/badge/Atualização-{urllib.parse.quote(update_time)}-1E90FF?style=for-the-badge)
 [![SkyLog Live](https://img.shields.io/badge/SkyLog%20Live-Acessar%20Web%20App-000000?style=for-the-badge&logoColor=white)](https://pedroxious.github.io/skylog/)
 [![Registros CSV](https://img.shields.io/badge/Histórico%20CSV-{csv_stats['total_records']}%20Registros-2E8B57?style=for-the-badge)](data/history.csv)
 
 ---
 
-### {daytime_label} — Horário de referência: Brasília ({update_time.split()[1]})
+### Sync Ativo • Última atualização: {update_time.split()[1]} (BRT)
+*Projeto em expansão, operando com automações no GitHub Actions para manter métricas globais atualizadas em tempo real. Consulte a aba superior para a versão Web.*
 
-<img src="daytime/{daytime_img}" width="800" alt="{daytime_label}"/>
+<img src="VisualLog/ShowcaseV1.png" width="800" alt="SkyLog Showcase"/>
 
 </div>
 
@@ -604,7 +604,7 @@ def generate_readme(all_weather, update_time):
 | Item | Detalhe |
 |:---:|:---:|
 | **Fonte de dados** | <a href="https://open-meteo.com/">Open-Meteo API</a> (gratuita) |
-| **Frequência** | 3× ao dia (9h, 12h, 19h — BRT) |
+| **Frequência** | 12× ao dia (a cada 2 horas dia e noite) |
 | **Automação** | GitHub Actions — <a href=".github/workflows/weather.yml">ver workflow</a> |
 | **Script** | `update_weather.py` (requests e pytz) |
 | **Cidades Monitoradas** | 12 cidades globais |

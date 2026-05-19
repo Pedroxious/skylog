@@ -94,7 +94,7 @@
         <text x="25" y="38" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" 
             font-weight="800" fill="#FFFFFF" filter="url(#shadow)">Buenos Aires, Argentina</text>
         <text x="25" y="58" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500"
-            fill="#F0F0F0" filter="url(#light-shadow)">América do Sul · 23:37 · NOITE 🌙</text>
+            fill="#F0F0F0" filter="url(#light-shadow)">América do Sul · 00:02 · NOITE 🌙</text>
         
         <!-- Temperature -->
         <text x="25" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" 
@@ -109,22 +109,22 @@
         
         <!-- Details -->
         <text x="25" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#E0E0E0" filter="url(#light-shadow)">
-            💧 Umidade: 64%   💨 Vento: 10 km/h   🌡️ Mín 5° / Máx 16°
+            💧 Umidade: 65%   💨 Vento: 10 km/h   🌡️ Mín 7° / Máx 17°
         </text>
         
         <!-- Sunrise / Sunset -->
         <text x="25" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" fill="#E0E0E0" filter="url(#light-shadow)">
-            🌅 Nascer: 07:42  →  🌇 Pôr do sol: 17:57
+            🌅 Nascer: 07:43  →  🌇 Pôr do sol: 17:56
         </text>
         
         <!-- Day Progress Bar -->
         <rect x="25" y="215" width="400" height="8" rx="4" fill="rgba(0,0,0,0.3)"/>
-        <rect x="25" y="215" width="400" height="8" rx="4" fill="#81D4FA"/>
+        <rect x="25" y="215" width="0" height="8" rx="4" fill="#81D4FA"/>
         <text x="435" y="222" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700"
-            fill="#FFFFFF" filter="url(#shadow)">100%</text>
+            fill="#FFFFFF" filter="url(#shadow)">0%</text>
         
         <!-- Footer -->
         <text x="25" y="262" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500"
-            fill="#E0E0E0" filter="url(#light-shadow)">📍 -34.60, -58.38 · Atualizado: 2026-05-18 23:37</text>
+            fill="#E0E0E0" filter="url(#light-shadow)">📍 -34.60, -58.38 · Atualizado: 2026-05-19 00:02</text>
     </g>
 </svg>
