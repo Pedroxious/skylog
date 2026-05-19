@@ -134,26 +134,54 @@ function updateDOM(results) {
         const theme = info.mood === 'storm' ? 'theme-storm' : (isNight ? 'theme-night' : 'theme-day');
 
         newHTML += `
-            <div class="col-12 col-lg-6 col-xl-4">
-                <div class="city-card ${theme}" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.3">
+            <div class="col-12 col-md-6 col-xl-4 pb-3">
+                <div class="city-card premium-shadow ${theme}">
                     <div class="local-ecosystem" id="eco-${city.id}"></div>
-                    <div class="card-content d-flex justify-content-between">
-                        <div class="d-flex flex-column justify-content-between" style="width: 60%">
+                    
+                    <div class="card-content d-flex flex-column h-100">
+                        <!-- Top Row: Location & Icon -->
+                        <div class="d-flex justify-content-between align-items-center mb-3">
                             <div>
-                                <h3 class="city-name">${city.name}</h3>
-                                <div class="city-meta mt-1 opacity-75">${city.country} &bull; <span class="live-clock" id="clock-${city.id}"></span></div>
-                            </div>
-                            <div class="mt-4">
-                                <div class="temp-large">${Math.round(weather.temperature_2m)}°</div>
-                                <div class="mt-1 fw-bold fs-6 opacity-75">${info.label} (Sens: ${Math.round(weather.apparent_temperature)}°)</div>
-                                <div class="opacity-50 small mt-2 d-flex gap-2">
-                                    <span>💧 ${weather.relative_humidity_2m}%</span>
-                                    <span>💨 ${Math.round(weather.wind_speed_10m)} km/h</span>
+                                <h3 class="city-name text-truncate mb-0">${city.name}</h3>
+                                <div class="city-meta mt-1">
+                                    <span class="live-clock badge bg-dark bg-opacity-50 border border-light border-opacity-25" id="clock-${city.id}"></span> 
+                                    &bull; ${city.country}
                                 </div>
                             </div>
+                            <img src="${BASE_URL_SVG}${info.svg}" class="weather-icon flex-shrink-0" alt="${info.label}">
                         </div>
-                        <div class="d-flex align-items-center justify-content-end" style="width: 40%">
-                            <img src="${BASE_URL_SVG}${info.svg}" class="weather-icon" alt="${info.label}">
+
+                        <!-- Main Temp -->
+                        <div class="d-flex align-items-end gap-3 mb-4 mt-2">
+                            <span class="temp-large text-gradient">${Math.round(weather.temperature_2m)}°</span>
+                            <div class="d-flex flex-column pb-1">
+                                <span class="fw-bold fs-5">${info.label}</span>
+                                <span class="opacity-75 small">Sensação térmica de ${Math.round(weather.apparent_temperature)}°</span>
+                            </div>
+                        </div>
+
+                        <!-- Data Grid Panel -->
+                        <div class="data-glass-panel mt-auto">
+                            <div class="row g-2 text-center small fw-semibold">
+                                <div class="col-4">
+                                    <div class="data-box hover-lift">
+                                        <div class="opacity-50 text-uppercase mb-1" style="font-size:0.65rem">Umidade</div>
+                                        <div class="fs-6">💧 ${weather.relative_humidity_2m}%</div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="data-box hover-lift">
+                                        <div class="opacity-50 text-uppercase mb-1" style="font-size:0.65rem">Vento</div>
+                                        <div class="fs-6">💨 ${Math.round(weather.wind_speed_10m)} <span class="fs-7 opacity-75">km/h</span></div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="data-box hover-lift">
+                                        <div class="opacity-50 text-uppercase mb-1" style="font-size:0.65rem">Precipitação</div>
+                                        <div class="fs-6">☔ ${weather.precipitation.toFixed(1)} <span class="fs-7 opacity-75">mm</span></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -163,8 +191,8 @@ function updateDOM(results) {
 
     if (isFirstPaint) {
         grid.innerHTML = newHTML;
-        // Init 3D Physics
-        VanillaTilt.init(document.querySelectorAll(".city-card"));
+        // Removed VanillaTilt to fix document scroll bounds blocking
+
         // Register Live Clocks
         liveClocks = [];
         results.forEach(res => {

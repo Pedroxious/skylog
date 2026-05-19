@@ -9,6 +9,7 @@ import requests
 import csv
 import os
 import math
+import urllib.parse
 from datetime import datetime, timezone, timedelta
 
 # ============================================================
@@ -538,9 +539,9 @@ def generate_readme(all_weather, update_time):
 
 ### Monitoramento climático em tempo real de 12 cidades ao redor do mundo
 
-![Last Update](https://img.shields.io/badge/Última_Atualização-{update_time.replace(' ', '_').replace(':', '%3A')}-blue?style=for-the-badge&logo=github)
-![Records](https://img.shields.io/badge/Registros_CSV-{csv_stats['total_records']}-green?style=for-the-badge&logo=database)
-![Cities](https://img.shields.io/badge/Cidades-12-orange?style=for-the-badge&logo=earth)
+![Última Atualização](https://img.shields.io/badge/Atualização-{urllib.parse.quote(update_time)}-1E90FF?style=for-the-badge)
+[![SkyLog Live](https://img.shields.io/badge/SkyLog%20Live-Acessar%20Web%20App-000000?style=for-the-badge&logoColor=white)](https://pedroxious.github.io/skylog/)
+[![Registros CSV](https://img.shields.io/badge/Histórico%20CSV-{csv_stats['total_records']}%20Registros-2E8B57?style=for-the-badge)](data/history.csv)
 
 ---
 
@@ -557,6 +558,14 @@ def generate_readme(all_weather, update_time):
     # City Sections
     for w in all_weather:
         readme += generate_city_section(w)
+        
+    readme += """
+<br>
+<div align="center">
+    <i>🚀 Novas cidades da Ásia e Europa estão planejadas para as próximas atualizações. Fique ligado!</i>
+</div>
+
+"""
     
     # History section
     readme += f"""
