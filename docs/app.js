@@ -1,6 +1,5 @@
 /* 
-  SKYLOG LIVE - Javascript Engine
-  Handles Open-Meteo API fetching, DOM updates, audio, and mood contexts.
+  SKYLOG PREMIUM - Intelligent 3D Engine
 */
 
 const CITIES = [
@@ -18,88 +17,82 @@ const CITIES = [
     { id: "sydney", name: "Sydney", country: "AU", tz: "Australia/Sydney", lat: -33.8678, lon: 151.2073 }
 ];
 
-// Open-Meteo Weather Codes map to local modes
-function parseWeather(code, isDay) {
-    if ([0, 1].includes(code)) return { emoji: "☀️", mood: "clear", label: "Céu limpo" };
-    if ([2, 3].includes(code)) return { emoji: "☁️", mood: "clouds", label: "Nublado" };
-    if ([45, 48].includes(code)) return { emoji: "🌫️", mood: "clouds", label: "Nevoeiro" };
-    if ([51, 53, 55, 56, 57].includes(code)) return { emoji: "🌧️", mood: "rain", label: "Garoa / Chuvisco" };
-    if ([61, 63, 65, 66, 67, 80, 81, 82].includes(code)) return { emoji: "🌧️", mood: "rain", label: "Chuva" };
-    if ([71, 73, 75, 77, 85, 86].includes(code)) return { emoji: "❄️", mood: "clear", label: "Neve" };
-    if ([95, 96, 99].includes(code)) return { emoji: "⛈️", mood: "storm", label: "Tempestade" };
-    return { emoji: "🌤", mood: "clear", label: "Desconhecido" };
+const BASE_URL_SVG = "https://cdn.jsdelivr.net/gh/basmilius/weather-icons@master/design/fill/animation-ready/";
+
+function parseWeatherPremium(code, isDay) {
+    const timeStr = isDay ? "day" : "night";
+    if ([0, 1].includes(code)) return { svg: `clear-${timeStr}.svg`, mood: "clear", label: "Céu Limpo", localFx: "none" };
+    if ([2].includes(code)) return { svg: `partly-cloudy-${timeStr}.svg`, mood: "clouds", label: "Parcialmente Nublado", localFx: "none" };
+    if ([3].includes(code)) return { svg: `cloudy.svg`, mood: "clouds", label: "Nublado", localFx: "none" };
+    if ([45, 48].includes(code)) return { svg: `fog-${timeStr}.svg`, mood: "clouds", label: "Nevoeiro", localFx: "none" };
+    if ([51, 53, 55, 56, 57].includes(code)) return { svg: `drizzle.svg`, mood: "rain", label: "Garoa", localFx: "rain" };
+    if ([61, 63, 65, 66, 67, 80, 81, 82].includes(code)) return { svg: `rain.svg`, mood: "rain", label: "Chuva Intensa", localFx: "rain" };
+    if ([71, 73, 75, 77, 85, 86].includes(code)) return { svg: `snow.svg`, mood: "clear", label: "Neve", localFx: "snow" };
+    if ([95, 96, 99].includes(code)) return { svg: `thunderstorms-rain.svg`, mood: "storm", label: "Tempestade com Raios", localFx: "storm" };
+    return { svg: `partly-cloudy-${timeStr}.svg`, mood: "clear", label: "Estável", localFx: "none" };
 }
 
-// Audio management
+// Audio System
 let audioEnabled = false;
-const audioBtn = document.getElementById('playAudioBtn');
-const audios = {
+const audioObj = {
     clear: document.getElementById('audio-birds'),
     clouds: document.getElementById('audio-wind'),
     rain: document.getElementById('audio-rain'),
     storm: document.getElementById('audio-storm')
 };
-
-audioBtn.addEventListener('click', () => {
+document.getElementById('playAudioBtn').addEventListener('click', (e) => {
     audioEnabled = !audioEnabled;
-    audioBtn.innerHTML = audioEnabled ? "🔊 Som Ativado" : "🔈 Som Ambiente";
-    audioBtn.classList.toggle('text-success', audioEnabled);
-    if (!audioEnabled) {
-        Object.values(audios).forEach(a => { a.pause(); a.volume = 0; });
-    } else {
-        updateGlobalMood(); // Re-trigger sounds
-    }
+    e.currentTarget.innerHTML = audioEnabled ? "<span class='icon'>🔊</span> Áudio Atmosférico Em Tempo Real" : "<span class='icon'>🔇</span> Som Ambiente";
+    e.currentTarget.classList.toggle('text-info', audioEnabled);
+    if (!audioEnabled) Object.values(audioObj).forEach(a => { a.pause(); a.volume = 0; });
+    else setGlobalMood(currentGlobalMood);
 });
 
 let currentGlobalMood = 'clear';
-
 function setGlobalMood(mood) {
-    if (currentGlobalMood !== mood) {
-        document.body.className = `mood-${mood}`;
-        currentGlobalMood = mood;
-        applyWeatherEffects(mood);
-    }
-
+    document.body.className = `global-mood-${mood}`;
+    currentGlobalMood = mood;
     if (audioEnabled) {
-        Object.keys(audios).forEach(k => {
+        Object.keys(audioObj).forEach(k => {
             if (k === mood) {
-                audios[k].volume = 0.4;
-                audios[k].play().catch(() => console.log("Audio play blocked by browser policies"));
-            } else {
-                audios[k].pause();
-            }
+                audioObj[k].volume = 0.4;
+                audioObj[k].play().catch(() => console.log("Audio blocked by browser."));
+            } else { audioObj[k].pause(); }
         });
     }
 }
 
-function applyWeatherEffects(mood) {
-    const pContainer = document.getElementById('particles');
-    pContainer.innerHTML = ''; // reset
-    if (mood === 'rain' || mood === 'storm') {
-        const count = mood === 'storm' ? 80 : 30;
-        for (let i = 0; i < count; i++) {
+// Local Physics Effects
+function createLocalEcosystem(container, type) {
+    container.innerHTML = '';
+    if (type === 'rain' || type === 'storm') {
+        const dropCount = type === 'storm' ? 30 : 15;
+        for (let i = 0; i < dropCount; i++) {
             let drop = document.createElement('div');
-            drop.className = 'drop';
-            drop.style.left = Math.random() * 100 + 'vw';
-            drop.style.animationDuration = (Math.random() * 0.5 + 0.5) + 's';
-            drop.style.animationDelay = Math.random() * 2 + 's';
-            pContainer.appendChild(drop);
+            drop.className = 'local-rain';
+            drop.style.left = (Math.random() * 100) + '%';
+            drop.style.animationDuration = (Math.random() * 0.3 + 0.4) + 's';
+            drop.style.animationDelay = (Math.random() * 1) + 's';
+            container.appendChild(drop);
         }
     }
-
-    if (mood === 'storm') {
-        setInterval(() => {
-            if (currentGlobalMood === 'storm' && Math.random() > 0.7) {
-                let flash = document.createElement('div');
-                flash.className = 'lightning-flash';
-                document.body.appendChild(flash);
-                setTimeout(() => flash.remove(), 1000);
-            }
-        }, 3000);
+    if (type === 'snow') {
+        for (let i = 0; i < 20; i++) {
+            let flake = document.createElement('div');
+            flake.className = 'local-snow';
+            flake.style.left = (Math.random() * 100) + '%';
+            flake.style.animationDuration = (Math.random() * 2 + 2) + 's';
+            flake.style.animationDelay = (Math.random() * 2) + 's';
+            container.appendChild(flake);
+        }
+    }
+    if (type === 'storm') {
+        let flash = document.createElement('div');
+        flash.className = 'local-storm-flash';
+        container.appendChild(flash);
     }
 }
 
-// Data Fetching
 async function fetchCityWeather(city) {
     try {
         const url = `https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,wind_speed_10m&timezone=${encodeURIComponent(city.tz)}`;
@@ -107,55 +100,88 @@ async function fetchCityWeather(city) {
         const data = await res.json();
         return { city, weather: data.current };
     } catch (err) {
-        console.error(`Failed to fetch ${city.name}`, err);
-        return null;
+        return null; // Silent fail for seamless UX
     }
+}
+
+// Live Clock Elements
+let liveClocks = [];
+function renderClocks() {
+    const now = new Date();
+    liveClocks.forEach(c => {
+        const formatter = new Intl.DateTimeFormat('en-US', { timeZone: c.tz, hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+        c.element.innerText = formatter.format(now);
+    });
+    requestAnimationFrame(renderClocks);
 }
 
 function updateDOM(results) {
     const grid = document.getElementById('citiesGrid');
-    grid.innerHTML = '';
+
+    // First paint or update?
+    const isFirstPaint = grid.children.length === 0;
 
     let moodCounts = { clear: 0, clouds: 0, rain: 0, storm: 0 };
+    let newHTML = '';
 
-    results.forEach(res => {
+    results.forEach((res, index) => {
         if (!res) return;
         const { city, weather } = res;
-        const info = parseWeather(weather.weather_code, weather.is_day);
+        const info = parseWeatherPremium(weather.weather_code, weather.is_day);
         moodCounts[info.mood]++;
 
         const isNight = weather.is_day === 0;
-        const theme = isNight ? 'theme-night' : 'theme-day';
+        const theme = info.mood === 'storm' ? 'theme-storm' : (isNight ? 'theme-night' : 'theme-day');
 
-        const cardHTML = `
-            <div class="col-12 col-md-6 col-xl-4">
-                <div class="city-card ${theme}">
-                    <div class="d-flex justify-content-between align-items-start">
-                        <div>
-                            <h3 class="city-name">${city.name}</h3>
-                            <div class="city-meta mt-1">${city.country} &bull; ${new Date().toLocaleTimeString('en-US', { timeZone: city.tz, hour: '2-digit', minute: '2-digit' })} ${isNight ? '🌙' : '☀️'}</div>
+        newHTML += `
+            <div class="col-12 col-lg-6 col-xl-4">
+                <div class="city-card ${theme}" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.3">
+                    <div class="local-ecosystem" id="eco-${city.id}"></div>
+                    <div class="card-content d-flex justify-content-between">
+                        <div class="d-flex flex-column justify-content-between" style="width: 60%">
+                            <div>
+                                <h3 class="city-name">${city.name}</h3>
+                                <div class="city-meta mt-1 opacity-75">${city.country} &bull; <span class="live-clock" id="clock-${city.id}"></span></div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="temp-large">${Math.round(weather.temperature_2m)}°</div>
+                                <div class="mt-1 fw-bold fs-6 opacity-75">${info.label} (Sens: ${Math.round(weather.apparent_temperature)}°)</div>
+                                <div class="opacity-50 small mt-2 d-flex gap-2">
+                                    <span>💧 ${weather.relative_humidity_2m}%</span>
+                                    <span>💨 ${Math.round(weather.wind_speed_10m)} km/h</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="weather-emoji">${info.emoji}</div>
-                    </div>
-                    
-                    <div class="mt-4 d-flex justify-content-between align-items-end">
-                        <div>
-                            <div class="temp-large">${Math.round(weather.temperature_2m)}°</div>
-                            <div class="opacity-75 mt-1 fw-bold">${info.label} (Sens: ${Math.round(weather.apparent_temperature)}°)</div>
-                        </div>
-                        <div class="text-end opacity-75 small pb-1">
-                            <div>💧 ${weather.relative_humidity_2m}% Umi</div>
-                            <div>💨 ${Math.round(weather.wind_speed_10m)} km/h</div>
-                            <div>☔ ${weather.precipitation.toFixed(1)} mm</div>
+                        <div class="d-flex align-items-center justify-content-end" style="width: 40%">
+                            <img src="${BASE_URL_SVG}${info.svg}" class="weather-icon" alt="${info.label}">
                         </div>
                     </div>
                 </div>
             </div>
         `;
-        grid.innerHTML += cardHTML;
     });
 
-    // Compute dominant condition for the entire page background mapping
+    if (isFirstPaint) {
+        grid.innerHTML = newHTML;
+        // Init 3D Physics
+        VanillaTilt.init(document.querySelectorAll(".city-card"));
+        // Register Live Clocks
+        liveClocks = [];
+        results.forEach(res => {
+            if (res) liveClocks.push({ element: document.getElementById(`clock-${res.city.id}`), tz: res.city.tz });
+        });
+        requestAnimationFrame(renderClocks);
+
+        // Init Eco Systems
+        results.forEach(res => {
+            if (res) {
+                const info = parseWeatherPremium(res.weather.weather_code, res.weather.is_day);
+                createLocalEcosystem(document.getElementById(`eco-${res.city.id}`), info.localFx);
+            }
+        });
+    }
+
+    // Process mood dominance
     let dominantMood = 'clear';
     let max = -1;
     for (const [m, count] of Object.entries(moodCounts)) {
@@ -163,20 +189,17 @@ function updateDOM(results) {
     }
     setGlobalMood(dominantMood);
 
-    document.getElementById('lastUpdated').innerText = `Ao vivo • ${new Date().toLocaleTimeString()}`;
+    document.getElementById('lastUpdated').innerText = `Sync Ativo (${new Date().toLocaleTimeString()})`;
 }
 
-async function cycleUpdate() {
+async function startEngine() {
     const promises = CITIES.map(c => fetchCityWeather(c));
     const results = await Promise.all(promises);
     updateDOM(results);
 }
 
-function updateGlobalMood() {
-    setGlobalMood(currentGlobalMood);
-}
-
-// Boot
-console.log("SkyLog Live Engine Started");
-cycleUpdate();
-setInterval(cycleUpdate, 60000); // 60s live loop
+// Engage Engine
+window.addEventListener('DOMContentLoaded', () => {
+    startEngine();
+    setInterval(startEngine, 60000); // 60s live loop
+});

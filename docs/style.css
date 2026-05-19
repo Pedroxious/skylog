@@ -1,182 +1,286 @@
 /* 
-  SKYLOG LIVE - Master Stylesheet
-  Focus: Modern UI, Glassmorphism, Advanced Animations
+  SKYLOG PREMIUM - UI Engine
+  Features: localized CSS environments, 3D tilt adjustments, animated SVGs
 */
 
 :root {
-    --glass-bg: rgba(20, 25, 45, 0.4);
-    --glass-border: rgba(255, 255, 255, 0.15);
-    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    --glass-bg: rgba(20, 25, 45, 0.25);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     --primary-text: #FFFFFF;
 }
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Outfit', sans-serif;
     color: var(--primary-text);
+    background-color: #0b1120;
     overflow-x: hidden;
-    background-color: #0b0f19;
-    transition: background-color 2s ease;
 }
 
-/* =========================================
-   DYNAMIC BACKGROUNDS 
-=========================================== */
 .weather-background {
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 1;
+    inset: 0;
+    z-index: 0;
     background-size: cover;
     background-position: center;
-    transition: all 3s ease-in-out;
-    filter: brightness(0.8) contrast(1.1);
+    transition: background-image 3s ease, filter 3s ease;
+    filter: brightness(0.7) contrast(1.1);
 }
 
 .weather-background::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
-    pointer-events: none;
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
 }
 
-/* Base Body Modes */
-body.mood-clear .weather-background {
-    background-image: url('https://images.unsplash.com/photo-1601297183305-6df142704ea2?q=80&w=2000&auto=format&fit=crop');
-}
-body.mood-rain .weather-background {
-    background-image: url('https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?q=80&w=2000&auto=format&fit=crop');
-    filter: brightness(0.6) blur(2px) grayscale(0.5);
-}
-body.mood-storm .weather-background {
-    background-image: url('https://images.unsplash.com/photo-1605727216801-e27ce1d0ce49?q=80&w=2000&auto=format&fit=crop');
-    filter: brightness(0.4) contrast(1.5);
-}
-body.mood-clouds .weather-background {
-    background-image: url('https://images.unsplash.com/photo-1534088568595-a066f410cbda?q=80&w=2000&auto=format&fit=crop');
-    filter: brightness(0.7);
+.global-mood-clear .weather-background {
+    background-image: url('https://images.unsplash.com/photo-1601297183305-6df142704ea2?q=80&w=2500&auto=format&fit=crop');
 }
 
-/* =========================================
-   UI LAYER & GLASSMORPHISM
-=========================================== */
-.app-ui {
+.global-mood-rain .weather-background {
+    background-image: url('https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?q=80&w=2500&auto=format&fit=crop');
+    filter: brightness(0.4) grayscale(0.5);
+}
+
+.global-mood-storm .weather-background {
+    background-image: url('https://images.unsplash.com/photo-1605727216801-e27ce1d0ce49?q=80&w=2500&auto=format&fit=crop');
+    filter: brightness(0.3) contrast(1.5);
+}
+
+.global-mood-clouds .weather-background {
+    background-image: url('https://images.unsplash.com/photo-1534088568595-a066f410cbda?q=80&w=2500&auto=format&fit=crop');
+    filter: brightness(0.6);
+}
+
+.app-wrapper {
     position: relative;
     z-index: 10;
     min-height: 100vh;
 }
 
-.glass-nav {
-    background: rgba(15, 20, 30, 0.4);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+.glass-header {
+    background: rgba(10, 15, 25, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--glass-border);
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
-.header-title {
-    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+.logo-text {
+    font-family: 'Space Grotesk', sans-serif;
+    background: linear-gradient(to right, #ffffff, #88c0d0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+    text-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
 
-/* Glass City Card */
-.city-card {
-    background: var(--glass-bg);
-    border-radius: 24px;
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    padding: 1.5rem;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s;
-}
-
-.city-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-    border-color: rgba(255,255,255,0.3);
-}
-
-/* Day/Night internal hue inside cards */
-.theme-day { background: linear-gradient(135deg, rgba(30,136,229,0.2) 0%, rgba(25,118,210,0.4) 100%); }
-.theme-night { background: linear-gradient(135deg, rgba(20,20,40,0.6) 0%, rgba(5,5,15,0.8) 100%); }
-
-.city-name { font-weight: 800; font-size: 1.7rem; letter-spacing: -0.5px; margin: 0; text-shadow: 0 2px 5px rgba(0,0,0,0.6); }
-.city-meta { font-size: 0.85rem; opacity: 0.8; font-weight: 500; }
-
-.temp-large { font-size: 3.5rem; font-weight: 900; line-height: 1; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
-.weather-emoji { font-size: 3rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4)); animation: floatEmoji 6s ease-in-out infinite; }
-
-.btn-glass {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
+.btn-premium-glass {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
     backdrop-filter: blur(10px);
     border-radius: 50px;
-    padding: 0.5rem 1.2rem;
-    font-weight: 600;
+    padding: 0.6rem 1.4rem;
+    transition: all 0.3s ease;
 }
-.btn-glass:hover {
-    background: rgba(255,255,255,0.2);
+
+.btn-premium-glass:hover {
+    background: rgba(255, 255, 255, 0.15);
     color: white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 /* =========================================
-   ANIMATIONS & PARTICLES
+   3D CARDS & LOCAL ECOSYSTEM
 =========================================== */
-.pulse-badge {
-    animation: pulse 2s infinite;
+.city-card {
+    background: var(--glass-bg);
+    border-radius: 28px;
+    border: 1px solid var(--glass-border);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    min-height: 240px;
+    padding: 1.8rem;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.1); opacity: 0.8; }
-    100% { transform: scale(1); opacity: 1; }
-}
-
-@keyframes floatEmoji {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-}
-
-/* The particles container (rain/snow) */
-.particles {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    z-index: 5; pointer-events: none; overflow: hidden;
-}
-
-.drop {
+/* Internal local ecosystem bounds */
+.local-ecosystem {
     position: absolute;
-    background: rgba(255,255,255,0.5);
-    width: 2px; height: 20px;
-    animation: rainFall linear infinite;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+    overflow: hidden;
+    border-radius: 28px;
 }
 
-@keyframes rainFall {
-    0% { transform: translateY(-100px) rotate(15deg); opacity: 0; }
-    10% { opacity: 0.6; }
-    90% { opacity: 0.6; }
-    100% { transform: translateY(1200px) rotate(15deg); opacity: 0; }
+.card-content {
+    position: relative;
+    z-index: 2;
+    transform: translateZ(40px);
+    /* Pushes content forward for 3D Parallax */
 }
 
-/* Flashes for storm */
-.lightning-flash {
-    position: fixed; inset: 0; background: white; z-index: 8; opacity: 0; pointer-events: none;
-    animation: strike 0.5s ease-out forwards;
+.theme-day {
+    background: linear-gradient(135deg, rgba(82, 187, 255, 0.15) 0%, rgba(20, 80, 150, 0.25) 100%);
 }
 
-@keyframes strike {
-    0% { opacity: 0.8; }
-    10% { opacity: 0; }
-    20% { opacity: 0.6; }
-    100% { opacity: 0; }
+.theme-night {
+    background: linear-gradient(135deg, rgba(15, 20, 50, 0.3) 0%, rgba(0, 0, 10, 0.6) 100%);
+}
+
+.theme-storm {
+    background: linear-gradient(135deg, rgba(30, 30, 40, 0.5) 0%, rgba(10, 10, 20, 0.7) 100%);
+}
+
+.city-name {
+    font-weight: 800;
+    font-size: 1.8rem;
+    margin: 0;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    letter-spacing: -0.5px;
+}
+
+.live-clock {
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.95rem;
+    opacity: 0.9;
+    font-weight: 600;
+    color: #a3c2c2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.temp-large {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
+    transform: translateZ(60px);
+    /* Max 3D pop out */
+}
+
+/* Local Particles inside specific card */
+.local-rain {
+    position: absolute;
+    width: 2px;
+    height: 18px;
+    background: rgba(255, 255, 255, 0.7);
+    animation: dropFall linear infinite;
+}
+
+@keyframes dropFall {
+    0% {
+        transform: translateY(-50px) rotate(10deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(300px) rotate(10deg);
+        opacity: 0;
+    }
+}
+
+.local-snow {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+    filter: blur(1px);
+    animation: snowFall linear infinite;
+}
+
+@keyframes snowFall {
+    0% {
+        transform: translateY(-50px) translateX(0px);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(300px) translateX(20px);
+        opacity: 0;
+    }
+}
+
+.local-storm-flash {
+    position: absolute;
+    inset: 0;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    animation: miniFlash 4s ease-out infinite;
+    z-index: 1;
+}
+
+@keyframes miniFlash {
+
+    0%,
+    95%,
+    100% {
+        opacity: 0;
+    }
+
+    96% {
+        opacity: 0.4;
+    }
+
+    97% {
+        opacity: 0;
+    }
+
+    98% {
+        opacity: 0.5;
+    }
+}
+
+/* Hardware Status Pulses */
+.pulse-ring {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #00e676;
+    box-shadow: 0 0 0 rgba(0, 230, 118, 0.4);
+    animation: ringPulse 2s infinite;
+}
+
+@keyframes ringPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 230, 118, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 230, 118, 0);
+    }
 }
