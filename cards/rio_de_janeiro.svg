@@ -96,11 +96,11 @@
         <text x="25" y="38" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" 
             font-weight="800" fill="#FFFFFF" filter="url(#shadow)">Rio de Janeiro, Brasil</text>
         <text x="25" y="58" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500"
-            fill="#F0F0F0" filter="url(#light-shadow)">América do Sul · 00:02 · NOITE 🌙</text>
+            fill="#F0F0F0" filter="url(#light-shadow)">América do Sul · 04:43 · NOITE 🌙</text>
         
         <!-- Temperature -->
         <text x="25" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" 
-            font-weight="900" fill="#FFFFFF" filter="url(#shadow)">23°C</text>
+            font-weight="900" fill="#FFFFFF" filter="url(#shadow)">22°C</text>
         <text x="25" y="138" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500"
             fill="#F0F0F0" filter="url(#light-shadow)">Sensação 26°C</text>
         
@@ -111,7 +111,7 @@
         
         <!-- Details -->
         <text x="25" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#E0E0E0" filter="url(#light-shadow)">
-            💧 Umidade: 90%   💨 Vento: 9 km/h   🌡️ Mín 22° / Máx 25°
+            💧 Umidade: 93%   💨 Vento: 8 km/h   🌡️ Mín 22° / Máx 24°
         </text>
         
         <!-- Sunrise / Sunset -->
@@ -127,6 +127,6 @@
         
         <!-- Footer -->
         <text x="25" y="262" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500"
-            fill="#E0E0E0" filter="url(#light-shadow)">📍 -22.91, -43.17 · Atualizado: 2026-05-19 00:02</text>
+            fill="#E0E0E0" filter="url(#light-shadow)">📍 -22.91, -43.17 · Atualizado: 2026-05-19 04:43</text>
     </g>
 </svg>
