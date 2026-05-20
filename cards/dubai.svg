@@ -94,7 +94,7 @@
         <text x="25" y="38" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" 
             font-weight="800" fill="#FFFFFF" filter="url(#shadow)">Dubai, Emirados Árabes</text>
         <text x="25" y="58" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500"
-            fill="#F0F0F0" filter="url(#light-shadow)">Oriente Médio · 01:51 · NOITE 🌙</text>
+            fill="#F0F0F0" filter="url(#light-shadow)">Oriente Médio · 03:11 · NOITE 🌙</text>
         
         <!-- Temperature -->
         <text x="25" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" 
@@ -109,7 +109,7 @@
         
         <!-- Details -->
         <text x="25" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#E0E0E0" filter="url(#light-shadow)">
-            💧 Umidade: 64%   💨 Vento: 19 km/h   🌡️ Mín 27° / Máx 33°
+            💧 Umidade: 65%   💨 Vento: 17 km/h   🌡️ Mín 27° / Máx 33°
         </text>
         
         <!-- Sunrise / Sunset -->
@@ -125,6 +125,6 @@
         
         <!-- Footer -->
         <text x="25" y="262" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500"
-            fill="#E0E0E0" filter="url(#light-shadow)">📍 25.20, 55.27 · Atualizado: 2026-05-21 01:51</text>
+            fill="#E0E0E0" filter="url(#light-shadow)">📍 25.20, 55.27 · Atualizado: 2026-05-21 03:11</text>
     </g>
 </svg>

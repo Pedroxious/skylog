@@ -94,11 +94,11 @@
         <text x="25" y="38" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" 
             font-weight="800" fill="#FFFFFF" filter="url(#shadow)">Cairo, Egito</text>
         <text x="25" y="58" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500"
-            fill="#F0F0F0" filter="url(#light-shadow)">África · 00:51 · NOITE 🌙</text>
+            fill="#F0F0F0" filter="url(#light-shadow)">África · 02:11 · NOITE 🌙</text>
         
         <!-- Temperature -->
         <text x="25" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" 
-            font-weight="900" fill="#FFFFFF" filter="url(#shadow)">20°C</text>
+            font-weight="900" fill="#FFFFFF" filter="url(#shadow)">19°C</text>
         <text x="25" y="138" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500"
             fill="#F0F0F0" filter="url(#light-shadow)">Sensação 19°C</text>
         
@@ -109,7 +109,7 @@
         
         <!-- Details -->
         <text x="25" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#E0E0E0" filter="url(#light-shadow)">
-            💧 Umidade: 61%   💨 Vento: 5 km/h   🌡️ Mín 18° / Máx 29°
+            💧 Umidade: 64%   💨 Vento: 4 km/h   🌡️ Mín 18° / Máx 29°
         </text>
         
         <!-- Sunrise / Sunset -->
@@ -125,6 +125,6 @@
         
         <!-- Footer -->
         <text x="25" y="262" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500"
-            fill="#E0E0E0" filter="url(#light-shadow)">📍 30.04, 31.24 · Atualizado: 2026-05-21 00:51</text>
+            fill="#E0E0E0" filter="url(#light-shadow)">📍 30.04, 31.24 · Atualizado: 2026-05-21 02:11</text>
     </g>
 </svg>
