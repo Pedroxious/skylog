@@ -217,3 +217,14 @@ datetime,city,country,continent,temp_c,feels_like_c,temp_min_c,temp_max_c,humidi
 2026-05-20 22:15,Dubai,Emirados Árabes,Oriente Médio,29.2,30.9,27.1,37.7,59,16.5,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-05-20T05:31,2026-05-20T18:58
 2026-05-20 21:15,Cairo,Egito,África,22.4,21.0,20.8,29.4,47,10.5,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-05-20T05:58,2026-05-20T19:44
 2026-05-21 04:15,Sydney,Austrália,Oceania,12.0,9.3,11.1,17.4,73,13.8,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-05-21T06:44,2026-05-21T16:59
+2026-05-20 18:51,São Paulo,Brasil,América do Sul,16.9,17.6,14.9,21.2,92,7.9,0.0,3,Nublado,NightOvercast.webp,0,2026-05-20T06:35,2026-05-20T17:30
+2026-05-20 18:51,Rio de Janeiro,Brasil,América do Sul,21.9,24.4,21.2,23.2,91,10.0,0.0,3,Nublado,NightOvercast.webp,0,2026-05-20T06:21,2026-05-20T17:17
+2026-05-20 18:51,Buenos Aires,Argentina,América do Sul,12.8,10.3,7.1,14.2,64,10.3,0.0,3,Nublado,NightOvercast.webp,0,2026-05-20T07:44,2026-05-20T17:56
+2026-05-20 15:51,Mexico City,México,América Central,26.4,24.1,13.3,27.4,28,8.5,0.1,51,Chuvisco,drizzle.webp,1,2026-05-20T05:59,2026-05-20T19:06
+2026-05-20 17:51,New York,EUA,América do Norte,33.2,32.4,21.3,34.3,35,18.4,0.0,0,Céu limpo,DayClear.webp,1,2026-05-20T05:34,2026-05-20T20:10
+2026-05-20 14:51,San Francisco,EUA,América do Norte,21.9,21.0,11.0,23.9,47,20.0,0.0,0,Céu limpo,DayClear.webp,1,2026-05-20T05:55,2026-05-20T20:16
+2026-05-20 22:51,London,Reino Unido,Europa,15.8,14.9,12.8,19.6,77,10.1,0.0,3,Nublado,NightOvercast.webp,0,2026-05-20T05:01,2026-05-20T20:52
+2026-05-20 23:51,Paris,França,Europa,16.3,16.4,13.5,20.4,74,3.1,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-05-20T06:02,2026-05-20T21:31
+2026-05-21 06:51,Tokyo,Japão,Ásia,18.3,21.1,15.2,20.7,99,1.5,0.5,61,Chuva,DayRain.webp,1,2026-05-21T04:32,2026-05-21T18:43
+2026-05-21 01:51,Dubai,Emirados Árabes,Oriente Médio,27.3,28.4,26.9,33.3,64,18.7,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-05-21T05:31,2026-05-21T18:59
+2026-05-21 00:51,Cairo,Egito,África,19.5,19.4,18.0,28.7,61,4.8,0.0,1,Principalmente limpo,NightPartialClean.webp,0,2026-05-21T05:58,2026-05-21T19:45
