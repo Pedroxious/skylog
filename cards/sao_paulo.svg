@@ -47,8 +47,8 @@
     </style>
     <defs>
         <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#0f2027"/>
-            <stop offset="100%" style="stop-color:#203a43"/>
+            <stop offset="0%" style="stop-color:#141E30"/>
+            <stop offset="100%" style="stop-color:#243B55"/>
         </linearGradient>
         <clipPath id="rounded">
             <rect x="0" y="0" width="500" height="280" rx="20" ry="20"/>
@@ -70,48 +70,64 @@
         <rect width="500" height="280" fill="url(#bg)" rx="20" ry="20"/>
         
         <!-- Weather Animations -->
-        <ellipse cx="100" cy="60" rx="60" ry="20" fill="rgba(200,200,210,0.25)" class="cloud1"/>
-            <ellipse cx="350" cy="45" rx="50" ry="15" fill="rgba(200,200,210,0.2)" class="cloud2"/>
-        <circle cx="40" cy="20" r="1.5" fill="white" 
-                opacity="0.6" class="star" style="animation-delay:0.0s"/>
-            <circle cx="97" cy="43" r="1.5" fill="white" 
-                opacity="0.6" class="star" style="animation-delay:0.4s"/>
-            <circle cx="154" cy="66" r="1.5" fill="white" 
-                opacity="0.6" class="star" style="animation-delay:0.8s"/>
-            <circle cx="211" cy="29" r="1.5" fill="white" 
-                opacity="0.6" class="star" style="animation-delay:1.2s"/>
-            <circle cx="268" cy="52" r="1.5" fill="white" 
-                opacity="0.6" class="star" style="animation-delay:1.6s"/>
-            <circle cx="325" cy="75" r="1.5" fill="white" 
-                opacity="0.6" class="star" style="animation-delay:2.0s"/>
-            <circle cx="382" cy="38" r="1.5" fill="white" 
-                opacity="0.6" class="star" style="animation-delay:2.4s"/>
-            <circle cx="439" cy="61" r="1.5" fill="white" 
-                opacity="0.6" class="star" style="animation-delay:2.8s"/>
-            <circle cx="440" cy="45" r="16" fill="#E8EAF6" opacity="0.85"/>
-            <circle cx="448" cy="40" r="14" fill="#1a1a2e"/>
-        
+        <line x1="30" y1="-10" x2="22" y2="15" 
+                stroke="rgba(200,220,255,0.4)" stroke-width="1.5" class="rain" 
+                style="animation-delay:0.00s"/>
+            <line x1="68" y1="-10" x2="60" y2="20" 
+                stroke="rgba(200,220,255,0.4)" stroke-width="1.5" class="rain" 
+                style="animation-delay:0.15s"/>
+            <line x1="106" y1="-10" x2="98" y2="25" 
+                stroke="rgba(200,220,255,0.4)" stroke-width="1.5" class="rain" 
+                style="animation-delay:0.30s"/>
+            <line x1="144" y1="-10" x2="136" y2="15" 
+                stroke="rgba(200,220,255,0.4)" stroke-width="1.5" class="rain" 
+                style="animation-delay:0.45s"/>
+            <line x1="182" y1="-10" x2="174" y2="20" 
+                stroke="rgba(200,220,255,0.4)" stroke-width="1.5" class="rain" 
+                style="animation-delay:0.60s"/>
+            <line x1="220" y1="-10" x2="212" y2="25" 
+                stroke="rgba(200,220,255,0.4)" stroke-width="1.5" class="rain" 
+                style="animation-delay:0.75s"/>
+            <line x1="258" y1="-10" x2="250" y2="15" 
+                stroke="rgba(200,220,255,0.4)" stroke-width="1.5" class="rain" 
+                style="animation-delay:0.90s"/>
+            <line x1="296" y1="-10" x2="288" y2="20" 
+                stroke="rgba(200,220,255,0.4)" stroke-width="1.5" class="rain" 
+                style="animation-delay:1.05s"/>
+            <line x1="334" y1="-10" x2="326" y2="25" 
+                stroke="rgba(200,220,255,0.4)" stroke-width="1.5" class="rain" 
+                style="animation-delay:1.20s"/>
+            <line x1="372" y1="-10" x2="364" y2="15" 
+                stroke="rgba(200,220,255,0.4)" stroke-width="1.5" class="rain" 
+                style="animation-delay:1.35s"/>
+            <line x1="410" y1="-10" x2="402" y2="20" 
+                stroke="rgba(200,220,255,0.4)" stroke-width="1.5" class="rain" 
+                style="animation-delay:0.00s"/>
+            <line x1="448" y1="-10" x2="440" y2="25" 
+                stroke="rgba(200,220,255,0.4)" stroke-width="1.5" class="rain" 
+                style="animation-delay:0.15s"/>
+            
         
         <!-- City name & country -->
         <text x="25" y="38" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" 
             font-weight="800" fill="#FFFFFF" filter="url(#shadow)">São Paulo, Brasil</text>
         <text x="25" y="58" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500"
-            fill="#F0F0F0" filter="url(#light-shadow)">América do Sul · 00:24 · NOITE 🌙</text>
+            fill="#F0F0F0" filter="url(#light-shadow)">América do Sul · 04:41 · NOITE 🌙</text>
         
         <!-- Temperature -->
         <text x="25" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" 
             font-weight="900" fill="#FFFFFF" filter="url(#shadow)">16°C</text>
         <text x="25" y="138" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500"
-            fill="#F0F0F0" filter="url(#light-shadow)">Sensação 16°C</text>
+            fill="#F0F0F0" filter="url(#light-shadow)">Sensação 17°C</text>
         
         <!-- Condition emoji & text -->
-        <text x="260" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" filter="url(#shadow)">☁️</text>
+        <text x="260" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" filter="url(#shadow)">🌦️</text>
         <text x="260" y="132" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="600"
-            fill="#FFFFFF" filter="url(#shadow)">Nublado</text>
+            fill="#FFFFFF" filter="url(#shadow)">Chuvisco</text>
         
         <!-- Details -->
         <text x="25" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#E0E0E0" filter="url(#light-shadow)">
-            💧 Umidade: 92%   💨 Vento: 4 km/h   🌡️ Mín 15° / Máx 20°
+            💧 Umidade: 93%   💨 Vento: 4 km/h   🌡️ Mín 15° / Máx 20°
         </text>
         
         <!-- Sunrise / Sunset -->
@@ -127,6 +143,6 @@
         
         <!-- Footer -->
         <text x="25" y="262" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500"
-            fill="#E0E0E0" filter="url(#light-shadow)">📍 -23.55, -46.63 · Atualizado: 2026-05-20 00:24</text>
+            fill="#E0E0E0" filter="url(#light-shadow)">📍 -23.55, -46.63 · Atualizado: 2026-05-20 04:41</text>
     </g>
 </svg>
