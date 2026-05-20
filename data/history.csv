@@ -195,3 +195,13 @@ datetime,city,country,continent,temp_c,feels_like_c,temp_min_c,temp_max_c,humidi
 2026-05-20 12:48,Paris,França,Europa,18.5,16.5,13.5,20.4,61,15.2,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-20T06:02,2026-05-20T21:31
 2026-05-20 19:48,Tokyo,Japão,Ásia,22.1,24.3,16.3,28.7,79,5.9,0.0,3,Nublado,NightOvercast.webp,0,2026-05-20T04:32,2026-05-20T18:43
 2026-05-20 14:49,Dubai,Emirados Árabes,Oriente Médio,33.7,35.8,27.1,38.5,45,20.9,0.0,0,Céu limpo,DayClear.webp,1,2026-05-20T05:31,2026-05-20T18:58
+2026-05-20 11:59,São Paulo,Brasil,América do Sul,19.4,20.7,14.9,20.8,75,1.9,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-20T06:35,2026-05-20T17:30
+2026-05-20 11:59,Rio de Janeiro,Brasil,América do Sul,24.3,26.8,21.4,24.3,77,9.6,0.1,51,Chuvisco,drizzle.webp,1,2026-05-20T06:21,2026-05-20T17:17
+2026-05-20 11:59,Buenos Aires,Argentina,América do Sul,12.5,10.4,7.1,14.2,66,8.2,0.0,0,Céu limpo,DayClear.webp,1,2026-05-20T07:44,2026-05-20T17:56
+2026-05-20 08:59,Mexico City,México,América Central,17.6,17.8,12.8,27.0,65,1.3,0.0,0,Céu limpo,DayClear.webp,1,2026-05-20T05:59,2026-05-20T19:06
+2026-05-20 10:59,New York,EUA,América do Norte,31.6,32.3,20.9,34.6,42,21.2,0.0,0,Céu limpo,DayClear.webp,1,2026-05-20T05:34,2026-05-20T20:10
+2026-05-20 07:59,San Francisco,EUA,América do Norte,12.9,11.4,11.0,23.5,79,8.8,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-20T05:55,2026-05-20T20:16
+2026-05-20 15:59,London,Reino Unido,Europa,18.3,15.3,12.8,18.6,60,22.0,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-20T05:01,2026-05-20T20:52
+2026-05-20 16:59,Paris,França,Europa,20.2,18.6,13.5,20.3,55,13.0,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-20T06:02,2026-05-20T21:31
+2026-05-20 23:59,Tokyo,Japão,Ásia,20.3,23.1,16.3,28.7,90,2.6,0.0,2,Parcialmente nublado,NightPartialCloudy.webp,0,2026-05-20T04:32,2026-05-20T18:43
+2026-05-20 18:59,Dubai,Emirados Árabes,Oriente Médio,29.8,33.4,27.1,37.7,69,14.7,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-05-20T05:31,2026-05-20T18:58
