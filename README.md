@@ -5,11 +5,11 @@
 ### Monitoramento climático em tempo real de 12 cidades ao redor do mundo
 
 [![SkyLog Live](https://img.shields.io/badge/SkyLog%20Live-Acessar%20Web%20App-000000?style=for-the-badge&logoColor=white)](https://pedroxious.github.io/skylog/)
-[![Registros CSV](https://img.shields.io/badge/Histórico%20CSV-241%20Registros-2E8B57?style=for-the-badge)](data/history.csv)
+[![Registros CSV](https://img.shields.io/badge/Histórico%20CSV-253%20Registros-2E8B57?style=for-the-badge)](data/history.csv)
 
 ---
 
-### Sync Ativo • Última atualização: 20:11 (BRT)
+### Sync Ativo • Última atualização: 00:31 (BRT)
 *Projeto em expansão, operando com automações no GitHub Actions para manter métricas globais atualizadas em tempo real. Consulte a aba superior para a versão Web.*
 
 <img src="VisualLog/ShowcaseV1.png" width="800" alt="SkyLog Showcase"/>
@@ -31,19 +31,19 @@
       <img src="cards/sao_paulo.svg" alt="Card São Paulo"/>
     </td>
     <td align="center" width="50%">
-      <img src="conditions/NightPartialCloudy.webp" width="380" alt="Condição em tempo real Parcialmente nublado"/>
+      <img src="conditions/NightOvercast.webp" width="380" alt="Condição em tempo real Nublado"/>
     </td>
   </tr>
 </table>
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
-| **Temperatura** | 16.2°C (Sensação: 17.2°C) |
-| **Variação (Mín/Máx)** | 14.9°C — 21.2°C |
-| **Umidade** | 94% |
-| **Vento** | 5.4 km/h |
-| **Condição Atual** | Parcialmente nublado |
-| **Horário Local** | 20:11 |
+| **Temperatura** | 14.9°C (Sensação: 15.8°C) |
+| **Variação (Mín/Máx)** | 13.6°C — 16.8°C |
+| **Umidade** | 98% |
+| **Vento** | 4.1 km/h |
+| **Condição Atual** | Nublado |
+| **Horário Local** | 00:31 |
 
 </div>
 
@@ -62,19 +62,19 @@
       <img src="cards/rio_de_janeiro.svg" alt="Card Rio de Janeiro"/>
     </td>
     <td align="center" width="50%">
-      <img src="conditions/NightRain.webp" width="380" alt="Condição em tempo real Chuvisco"/>
+      <img src="conditions/NightOvercast.webp" width="380" alt="Condição em tempo real Nublado"/>
     </td>
   </tr>
 </table>
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
-| **Temperatura** | 21.6°C (Sensação: 24.1°C) |
-| **Variação (Mín/Máx)** | 21.2°C — 23.2°C |
-| **Umidade** | 93% |
-| **Vento** | 10.6 km/h |
-| **Condição Atual** | Chuvisco |
-| **Horário Local** | 20:11 |
+| **Temperatura** | 21.6°C (Sensação: 23.9°C) |
+| **Variação (Mín/Máx)** | 20.2°C — 21.6°C |
+| **Umidade** | 89% |
+| **Vento** | 9.0 km/h |
+| **Condição Atual** | Nublado |
+| **Horário Local** | 00:31 |
 
 </div>
 
@@ -100,12 +100,12 @@
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
-| **Temperatura** | 12.1°C (Sensação: 9.2°C) |
-| **Variação (Mín/Máx)** | 7.1°C — 14.2°C |
-| **Umidade** | 66% |
-| **Vento** | 13.3 km/h |
+| **Temperatura** | 10.1°C (Sensação: 7.5°C) |
+| **Variação (Mín/Máx)** | 6.5°C — 11.8°C |
+| **Umidade** | 67% |
+| **Vento** | 8.3 km/h |
 | **Condição Atual** | Nublado |
-| **Horário Local** | 20:11 |
+| **Horário Local** | 00:31 |
 
 </div>
 
@@ -124,19 +124,19 @@
       <img src="cards/mexico_city.svg" alt="Card Mexico City"/>
     </td>
     <td align="center" width="50%">
-      <img src="conditions/drizzle.webp" width="380" alt="Condição em tempo real Chuvisco"/>
+      <img src="conditions/NightFullMoonClear.webp" width="380" alt="Condição em tempo real Céu limpo"/>
     </td>
   </tr>
 </table>
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
-| **Temperatura** | 25.3°C (Sensação: 23.0°C) |
-| **Variação (Mín/Máx)** | 13.3°C — 27.4°C |
-| **Umidade** | 30% |
-| **Vento** | 9.2 km/h |
-| **Condição Atual** | Chuvisco |
-| **Horário Local** | 17:11 |
+| **Temperatura** | 17.8°C (Sensação: 17.8°C) |
+| **Variação (Mín/Máx)** | 13.3°C — 27.1°C |
+| **Umidade** | 67% |
+| **Vento** | 3.1 km/h |
+| **Condição Atual** | Céu limpo |
+| **Horário Local** | 21:31 |
 
 </div>
 
@@ -155,19 +155,19 @@
       <img src="cards/new_york.svg" alt="Card New York"/>
     </td>
     <td align="center" width="50%">
-      <img src="conditions/DayRain.webp" width="380" alt="Condição em tempo real Chuva"/>
+      <img src="conditions/NightOvercast.webp" width="380" alt="Condição em tempo real Nublado"/>
     </td>
   </tr>
 </table>
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
-| **Temperatura** | 29.4°C (Sensação: 27.2°C) |
-| **Variação (Mín/Máx)** | 20.9°C — 34.3°C |
-| **Umidade** | 51% |
-| **Vento** | 35.2 km/h |
-| **Condição Atual** | Chuva |
-| **Horário Local** | 19:11 |
+| **Temperatura** | 19.8°C (Sensação: 20.3°C) |
+| **Variação (Mín/Máx)** | 20.5°C — 34.3°C |
+| **Umidade** | 84% |
+| **Vento** | 13.2 km/h |
+| **Condição Atual** | Nublado |
+| **Horário Local** | 23:31 |
 
 </div>
 
@@ -186,19 +186,19 @@
       <img src="cards/san_francisco.svg" alt="Card San Francisco"/>
     </td>
     <td align="center" width="50%">
-      <img src="conditions/DayClear.webp" width="380" alt="Condição em tempo real Céu limpo"/>
+      <img src="conditions/NightFullMoonClear.webp" width="380" alt="Condição em tempo real Céu limpo"/>
     </td>
   </tr>
 </table>
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
-| **Temperatura** | 20.1°C (Sensação: 18.2°C) |
+| **Temperatura** | 15.3°C (Sensação: 13.1°C) |
 | **Variação (Mín/Máx)** | 11.0°C — 24.2°C |
-| **Umidade** | 54% |
-| **Vento** | 22.1 km/h |
+| **Umidade** | 64% |
+| **Vento** | 12.0 km/h |
 | **Condição Atual** | Céu limpo |
-| **Horário Local** | 16:11 |
+| **Horário Local** | 20:31 |
 
 </div>
 
@@ -217,19 +217,19 @@
       <img src="cards/london.svg" alt="Card London"/>
     </td>
     <td align="center" width="50%">
-      <img src="conditions/NightPartialClean.webp" width="380" alt="Condição em tempo real Principalmente limpo"/>
+      <img src="conditions/NightOvercast.webp" width="380" alt="Condição em tempo real Nublado"/>
     </td>
   </tr>
 </table>
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
-| **Temperatura** | 15.4°C (Sensação: 14.1°C) |
-| **Variação (Mín/Máx)** | 12.9°C — 23.6°C |
-| **Umidade** | 72% |
-| **Vento** | 10.1 km/h |
-| **Condição Atual** | Principalmente limpo |
-| **Horário Local** | 00:11 |
+| **Temperatura** | 13.3°C (Sensação: 11.9°C) |
+| **Variação (Mín/Máx)** | 13.3°C — 23.5°C |
+| **Umidade** | 79% |
+| **Vento** | 9.0 km/h |
+| **Condição Atual** | Nublado |
+| **Horário Local** | 04:31 |
 
 </div>
 
@@ -248,19 +248,19 @@
       <img src="cards/paris.svg" alt="Card Paris"/>
     </td>
     <td align="center" width="50%">
-      <img src="conditions/NightFullMoonClear.webp" width="380" alt="Condição em tempo real Céu limpo"/>
+      <img src="conditions/Mist.webp" width="380" alt="Condição em tempo real Neblina"/>
     </td>
   </tr>
 </table>
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
-| **Temperatura** | 15.6°C (Sensação: 15.7°C) |
-| **Variação (Mín/Máx)** | 11.9°C — 24.4°C |
-| **Umidade** | 76% |
-| **Vento** | 1.9 km/h |
-| **Condição Atual** | Céu limpo |
-| **Horário Local** | 01:11 |
+| **Temperatura** | 11.7°C (Sensação: 11.9°C) |
+| **Variação (Mín/Máx)** | 10.7°C — 24.3°C |
+| **Umidade** | 99% |
+| **Vento** | 2.3 km/h |
+| **Condição Atual** | Neblina |
+| **Horário Local** | 05:31 |
 
 </div>
 
@@ -286,12 +286,12 @@
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
-| **Temperatura** | 18.9°C (Sensação: 22.0°C) |
-| **Variação (Mín/Máx)** | 15.5°C — 21.0°C |
-| **Umidade** | 99% |
-| **Vento** | 1.6 km/h |
+| **Temperatura** | 20.0°C (Sensação: 22.8°C) |
+| **Variação (Mín/Máx)** | 15.6°C — 21.0°C |
+| **Umidade** | 96% |
+| **Vento** | 5.4 km/h |
 | **Condição Atual** | Chuva |
-| **Horário Local** | 08:11 |
+| **Horário Local** | 12:31 |
 
 </div>
 
@@ -310,19 +310,19 @@
       <img src="cards/dubai.svg" alt="Card Dubai"/>
     </td>
     <td align="center" width="50%">
-      <img src="conditions/NightFullMoonClear.webp" width="380" alt="Condição em tempo real Céu limpo"/>
+      <img src="conditions/DayClear.webp" width="380" alt="Condição em tempo real Céu limpo"/>
     </td>
   </tr>
 </table>
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
-| **Temperatura** | 27.0°C (Sensação: 28.4°C) |
-| **Variação (Mín/Máx)** | 26.9°C — 33.3°C |
-| **Umidade** | 65% |
-| **Vento** | 16.7 km/h |
+| **Temperatura** | 28.8°C (Sensação: 29.6°C) |
+| **Variação (Mín/Máx)** | 26.9°C — 33.7°C |
+| **Umidade** | 52% |
+| **Vento** | 14.3 km/h |
 | **Condição Atual** | Céu limpo |
-| **Horário Local** | 03:11 |
+| **Horário Local** | 07:31 |
 
 </div>
 
@@ -341,19 +341,19 @@
       <img src="cards/cairo.svg" alt="Card Cairo"/>
     </td>
     <td align="center" width="50%">
-      <img src="conditions/NightPartialClean.webp" width="380" alt="Condição em tempo real Principalmente limpo"/>
+      <img src="conditions/DayPartialCloudy.webp" width="380" alt="Condição em tempo real Parcialmente nublado"/>
     </td>
   </tr>
 </table>
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
-| **Temperatura** | 19.1°C (Sensação: 19.2°C) |
-| **Variação (Mín/Máx)** | 18.1°C — 28.7°C |
-| **Umidade** | 64% |
-| **Vento** | 3.6 km/h |
-| **Condição Atual** | Principalmente limpo |
-| **Horário Local** | 02:11 |
+| **Temperatura** | 18.4°C (Sensação: 19.1°C) |
+| **Variação (Mín/Máx)** | 18.3°C — 28.7°C |
+| **Umidade** | 75% |
+| **Vento** | 3.7 km/h |
+| **Condição Atual** | Parcialmente nublado |
+| **Horário Local** | 06:31 |
 
 </div>
 
@@ -379,12 +379,12 @@
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
-| **Temperatura** | 14.9°C (Sensação: 12.6°C) |
-| **Variação (Mín/Máx)** | 10.9°C — 17.3°C |
-| **Umidade** | 71% |
-| **Vento** | 14.9 km/h |
+| **Temperatura** | 17.1°C (Sensação: 14.6°C) |
+| **Variação (Mín/Máx)** | 11.1°C — 17.4°C |
+| **Umidade** | 67% |
+| **Vento** | 19.8 km/h |
 | **Condição Atual** | Principalmente limpo |
-| **Horário Local** | 09:11 |
+| **Horário Local** | 13:31 |
 
 </div>
 
@@ -405,9 +405,9 @@
 
 | Estatística | Valor |
 |:---:|:---:|
-| **Total de registros** | 241 |
+| **Total de registros** | 253 |
 | **Primeiro registro** | `2026-05-17 19:38` |
-| **Último registro** | `2026-05-21 09:11` |
+| **Último registro** | `2026-05-21 13:31` |
 | **Temperatura mais alta** | **38.0°C** — Dubai |
 | **Temperatura mais baixa** | **6.5°C** — Buenos Aires |
 
