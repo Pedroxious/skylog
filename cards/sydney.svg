@@ -112,11 +112,11 @@
         <text x="25" y="38" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" 
             font-weight="800" fill="#FFFFFF" filter="url(#shadow)">Sydney, Austrália</text>
         <text x="25" y="58" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500"
-            fill="#F0F0F0" filter="url(#light-shadow)">Oceania · 03:56 · NOITE 🌙</text>
+            fill="#F0F0F0" filter="url(#light-shadow)">Oceania · 05:53 · NOITE 🌙</text>
         
         <!-- Temperature -->
         <text x="25" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" 
-            font-weight="900" fill="#FFFFFF" filter="url(#shadow)">15°C</text>
+            font-weight="900" fill="#FFFFFF" filter="url(#shadow)">14°C</text>
         <text x="25" y="138" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500"
             fill="#F0F0F0" filter="url(#light-shadow)">Sensação 14°C</text>
         
@@ -127,7 +127,7 @@
         
         <!-- Details -->
         <text x="25" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#E0E0E0" filter="url(#light-shadow)">
-            💧 Umidade: 95%   💨 Vento: 14 km/h   🌡️ Mín 14° / Máx 18°
+            💧 Umidade: 93%   💨 Vento: 13 km/h   🌡️ Mín 14° / Máx 18°
         </text>
         
         <!-- Sunrise / Sunset -->
@@ -143,6 +143,6 @@
         
         <!-- Footer -->
         <text x="25" y="262" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500"
-            fill="#E0E0E0" filter="url(#light-shadow)">📍 -33.87, 151.21 · Atualizado: 2026-05-22 03:56</text>
+            fill="#E0E0E0" filter="url(#light-shadow)">📍 -33.87, 151.21 · Atualizado: 2026-05-22 05:53</text>
     </g>
 </svg>
