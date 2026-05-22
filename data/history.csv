@@ -333,3 +333,11 @@ datetime,city,country,continent,temp_c,feels_like_c,temp_min_c,temp_max_c,humidi
 2026-05-22 03:02,Dubai,Emirados Árabes,Oriente Médio,26.7,28.0,25.3,35.5,58,10.4,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-05-22T05:31,2026-05-22T18:59
 2026-05-22 02:02,Cairo,Egito,África,19.6,20.1,18.1,29.4,67,3.3,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-05-22T05:57,2026-05-22T19:45
 2026-05-22 09:02,Sydney,Austrália,Oceania,16.4,15.6,13.6,18.2,84,13.5,0.0,1,Principalmente limpo,DayPartialClean.webp,1,2026-05-22T06:45,2026-05-22T16:58
+2026-05-22 00:30,São Paulo,Brasil,América do Sul,13.6,12.7,13.3,15.4,91,10.5,0.0,3,Nublado,NightOvercast.webp,0,2026-05-22T06:36,2026-05-22T17:29
+2026-05-22 00:30,Rio de Janeiro,Brasil,América do Sul,19.5,22.2,19.3,21.7,94,2.7,0.0,3,Nublado,NightOvercast.webp,0,2026-05-22T06:21,2026-05-22T17:17
+2026-05-22 00:30,Buenos Aires,Argentina,América do Sul,8.1,5.3,6.1,11.6,66,7.5,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-05-22T07:45,2026-05-22T17:55
+2026-05-21 21:30,Mexico City,México,América Central,16.2,16.7,13.7,25.7,78,1.9,0.0,2,Parcialmente nublado,NightPartialCloudy.webp,0,2026-05-21T05:59,2026-05-21T19:06
+2026-05-22 12:31,Tokyo,Japão,Ásia,15.1,15.1,12.9,15.2,88,6.7,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-22T04:31,2026-05-22T18:44
+2026-05-22 07:31,Dubai,Emirados Árabes,Oriente Médio,29.0,30.8,25.9,36.0,50,6.1,0.0,0,Céu limpo,DayClear.webp,1,2026-05-22T05:31,2026-05-22T18:59
+2026-05-22 06:31,Cairo,Egito,África,18.1,19.0,18.1,29.2,74,1.1,0.0,0,Céu limpo,DayClear.webp,1,2026-05-22T05:57,2026-05-22T19:45
+2026-05-22 13:31,Sydney,Austrália,Oceania,17.8,15.6,13.6,18.6,73,20.7,0.1,51,Chuvisco,drizzle.webp,1,2026-05-22T06:45,2026-05-22T16:58
