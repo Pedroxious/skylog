@@ -94,11 +94,11 @@
         <text x="25" y="38" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" 
             font-weight="800" fill="#FFFFFF" filter="url(#shadow)">Dubai, Emirados Árabes</text>
         <text x="25" y="58" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500"
-            fill="#F0F0F0" filter="url(#light-shadow)">Oriente Médio · 01:08 · NOITE 🌙</text>
+            fill="#F0F0F0" filter="url(#light-shadow)">Oriente Médio · 02:57 · NOITE 🌙</text>
         
         <!-- Temperature -->
         <text x="25" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" 
-            font-weight="900" fill="#FFFFFF" filter="url(#shadow)">29°C</text>
+            font-weight="900" fill="#FFFFFF" filter="url(#shadow)">28°C</text>
         <text x="25" y="138" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500"
             fill="#F0F0F0" filter="url(#light-shadow)">Sensação 33°C</text>
         
@@ -109,7 +109,7 @@
         
         <!-- Details -->
         <text x="25" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#E0E0E0" filter="url(#light-shadow)">
-            💧 Umidade: 65%   💨 Vento: 7 km/h   🌡️ Mín 27° / Máx 35°
+            💧 Umidade: 71%   💨 Vento: 6 km/h   🌡️ Mín 27° / Máx 35°
         </text>
         
         <!-- Sunrise / Sunset -->
@@ -125,6 +125,6 @@
         
         <!-- Footer -->
         <text x="25" y="262" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500"
-            fill="#E0E0E0" filter="url(#light-shadow)">📍 25.20, 55.27 · Atualizado: 2026-05-23 01:08</text>
+            fill="#E0E0E0" filter="url(#light-shadow)">📍 25.20, 55.27 · Atualizado: 2026-05-23 02:57</text>
     </g>
 </svg>
