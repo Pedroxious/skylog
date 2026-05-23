@@ -70,8 +70,6 @@
         <rect width="500" height="280" fill="url(#bg)" rx="20" ry="20"/>
         
         <!-- Weather Animations -->
-        <ellipse cx="100" cy="60" rx="60" ry="20" fill="rgba(200,200,210,0.25)" class="cloud1"/>
-            <ellipse cx="350" cy="45" rx="50" ry="15" fill="rgba(200,200,210,0.2)" class="cloud2"/>
         <circle cx="40" cy="20" r="1.5" fill="white" 
                 opacity="0.6" class="star" style="animation-delay:0.0s"/>
             <circle cx="97" cy="43" r="1.5" fill="white" 
@@ -89,44 +87,44 @@
             <circle cx="439" cy="61" r="1.5" fill="white" 
                 opacity="0.6" class="star" style="animation-delay:2.8s"/>
             <circle cx="440" cy="45" r="16" fill="#E8EAF6" opacity="0.85"/>
-            <circle cx="448" cy="40" r="14" fill="#1a1a2e"/>
+            <circle cx="448" cy="40" r="14" fill="#0D1B2A"/>
         
         
         <!-- City name & country -->
         <text x="25" y="38" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" 
             font-weight="800" fill="#FFFFFF" filter="url(#shadow)">Tokyo, Japão</text>
         <text x="25" y="58" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500"
-            fill="#F0F0F0" filter="url(#light-shadow)">Ásia · 23:59 · NOITE 🌙</text>
+            fill="#F0F0F0" filter="url(#light-shadow)">Ásia · 01:57 · NOITE 🌙</text>
         
         <!-- Temperature -->
         <text x="25" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" 
             font-weight="900" fill="#FFFFFF" filter="url(#shadow)">14°C</text>
         <text x="25" y="138" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500"
-            fill="#F0F0F0" filter="url(#light-shadow)">Sensação 14°C</text>
+            fill="#F0F0F0" filter="url(#light-shadow)">Sensação 13°C</text>
         
         <!-- Condition emoji & text -->
-        <text x="260" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" filter="url(#shadow)">⛅</text>
+        <text x="260" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" filter="url(#shadow)">🌤️</text>
         <text x="260" y="132" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="600"
-            fill="#FFFFFF" filter="url(#shadow)">Parcialmente nublado</text>
+            fill="#FFFFFF" filter="url(#shadow)">Principalmente limpo</text>
         
         <!-- Details -->
         <text x="25" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#E0E0E0" filter="url(#light-shadow)">
-            💧 Umidade: 80%   💨 Vento: 5 km/h   🌡️ Mín 12° / Máx 17°
+            💧 Umidade: 81%   💨 Vento: 5 km/h   🌡️ Mín 13° / Máx 22°
         </text>
         
         <!-- Sunrise / Sunset -->
         <text x="25" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" fill="#E0E0E0" filter="url(#light-shadow)">
-            🌅 Nascer: 04:31  →  🌇 Pôr do sol: 18:45
+            🌅 Nascer: 04:30  →  🌇 Pôr do sol: 18:46
         </text>
         
         <!-- Day Progress Bar -->
         <rect x="25" y="215" width="400" height="8" rx="4" fill="rgba(0,0,0,0.3)"/>
-        <rect x="25" y="215" width="400" height="8" rx="4" fill="#81D4FA"/>
+        <rect x="25" y="215" width="0" height="8" rx="4" fill="#81D4FA"/>
         <text x="435" y="222" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700"
-            fill="#FFFFFF" filter="url(#shadow)">100%</text>
+            fill="#FFFFFF" filter="url(#shadow)">0%</text>
         
         <!-- Footer -->
         <text x="25" y="262" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500"
-            fill="#E0E0E0" filter="url(#light-shadow)">📍 35.68, 139.65 · Atualizado: 2026-05-23 23:59</text>
+            fill="#E0E0E0" filter="url(#light-shadow)">📍 35.68, 139.65 · Atualizado: 2026-05-24 01:57</text>
     </g>
 </svg>
