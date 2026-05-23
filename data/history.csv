@@ -442,3 +442,14 @@ datetime,city,country,continent,temp_c,feels_like_c,temp_min_c,temp_max_c,humidi
 2026-05-23 10:32,Dubai,Emirados Árabes,Oriente Médio,34.0,37.2,26.8,35.0,41,13.5,0.0,0,Céu limpo,DayClear.webp,1,2026-05-23T05:30,2026-05-23T19:00
 2026-05-23 09:32,Cairo,Egito,África,25.8,25.5,20.1,31.5,39,4.9,0.0,1,Principalmente limpo,DayPartialClean.webp,1,2026-05-23T05:57,2026-05-23T19:46
 2026-05-23 16:32,Sydney,Austrália,Oceania,17.6,18.0,15.6,19.1,84,8.8,0.1,51,Chuvisco,drizzle.webp,1,2026-05-23T06:45,2026-05-23T16:58
+2026-05-23 06:51,São Paulo,Brasil,América do Sul,14.4,14.7,14.4,20.1,98,7.4,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-23T06:37,2026-05-23T17:29
+2026-05-23 06:51,Rio de Janeiro,Brasil,América do Sul,19.1,20.8,19.1,25.0,93,8.7,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-23T06:22,2026-05-23T17:16
+2026-05-23 06:51,Buenos Aires,Argentina,América do Sul,9.1,8.2,8.9,13.2,90,2.3,0.0,1,Principalmente limpo,NightPartialClean.webp,0,2026-05-23T07:46,2026-05-23T17:54
+2026-05-23 03:51,Mexico City,México,América Central,14.9,15.5,14.0,26.0,84,0.6,0.0,1,Principalmente limpo,NightPartialClean.webp,0,2026-05-23T05:58,2026-05-23T19:07
+2026-05-23 05:51,New York,EUA,América do Norte,11.4,9.2,9.9,13.7,66,7.1,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-23T05:31,2026-05-23T20:13
+2026-05-23 02:51,San Francisco,EUA,América do Norte,11.1,9.0,11.1,17.9,96,14.9,0.0,3,Nublado,NightOvercast.webp,0,2026-05-23T05:53,2026-05-23T20:19
+2026-05-23 10:51,London,Reino Unido,Europa,23.5,23.6,20.3,29.2,52,6.1,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-23T04:57,2026-05-23T20:56
+2026-05-23 11:51,Paris,França,Europa,26.1,28.3,16.0,31.7,47,3.2,0.0,1,Principalmente limpo,DayPartialClean.webp,1,2026-05-23T05:59,2026-05-23T21:35
+2026-05-23 18:51,Tokyo,Japão,Ásia,16.3,15.9,12.1,17.7,72,5.0,0.0,1,Principalmente limpo,NightPartialClean.webp,0,2026-05-23T04:31,2026-05-23T18:45
+2026-05-23 13:51,Dubai,Emirados Árabes,Oriente Médio,34.8,37.6,27.5,35.5,38,16.2,0.0,0,Céu limpo,DayClear.webp,1,2026-05-23T05:30,2026-05-23T19:00
+2026-05-23 12:51,Cairo,Egito,África,30.5,31.0,20.1,31.4,25,9.0,0.0,1,Principalmente limpo,DayPartialClean.webp,1,2026-05-23T05:57,2026-05-23T19:46
