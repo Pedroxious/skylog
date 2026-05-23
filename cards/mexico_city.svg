@@ -79,13 +79,13 @@
         <text x="25" y="38" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" 
             font-weight="800" fill="#FFFFFF" filter="url(#shadow)">Mexico City, México</text>
         <text x="25" y="58" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500"
-            fill="#F0F0F0" filter="url(#light-shadow)">América Central · 07:21 · DIA ☀️</text>
+            fill="#F0F0F0" filter="url(#light-shadow)">América Central · 08:59 · DIA ☀️</text>
         
         <!-- Temperature -->
         <text x="25" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" 
-            font-weight="900" fill="#FFFFFF" filter="url(#shadow)">15°C</text>
+            font-weight="900" fill="#FFFFFF" filter="url(#shadow)">18°C</text>
         <text x="25" y="138" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500"
-            fill="#F0F0F0" filter="url(#light-shadow)">Sensação 15°C</text>
+            fill="#F0F0F0" filter="url(#light-shadow)">Sensação 18°C</text>
         
         <!-- Condition emoji & text -->
         <text x="260" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" filter="url(#shadow)">☀️</text>
@@ -94,7 +94,7 @@
         
         <!-- Details -->
         <text x="25" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#E0E0E0" filter="url(#light-shadow)">
-            💧 Umidade: 79%   💨 Vento: 2 km/h   🌡️ Mín 14° / Máx 26°
+            💧 Umidade: 63%   💨 Vento: 1 km/h   🌡️ Mín 14° / Máx 26°
         </text>
         
         <!-- Sunrise / Sunset -->
@@ -104,12 +104,12 @@
         
         <!-- Day Progress Bar -->
         <rect x="25" y="215" width="400" height="8" rx="4" fill="rgba(0,0,0,0.3)"/>
-        <rect x="25" y="215" width="42" height="8" rx="4" fill="#FFD54F"/>
+        <rect x="25" y="215" width="91" height="8" rx="4" fill="#FFD54F"/>
         <text x="435" y="222" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700"
-            fill="#FFFFFF" filter="url(#shadow)">11%</text>
+            fill="#FFFFFF" filter="url(#shadow)">23%</text>
         
         <!-- Footer -->
         <text x="25" y="262" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500"
-            fill="#E0E0E0" filter="url(#light-shadow)">📍 19.43, -99.13 · Atualizado: 2026-05-23 07:21</text>
+            fill="#E0E0E0" filter="url(#light-shadow)">📍 19.43, -99.13 · Atualizado: 2026-05-23 08:59</text>
     </g>
 </svg>
