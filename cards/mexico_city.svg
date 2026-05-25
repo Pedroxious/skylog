@@ -47,8 +47,8 @@
     </style>
     <defs>
         <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#0f2027"/>
-            <stop offset="100%" style="stop-color:#203a43"/>
+            <stop offset="0%" style="stop-color:#56CCF2"/>
+            <stop offset="100%" style="stop-color:#2F80ED"/>
         </linearGradient>
         <clipPath id="rounded">
             <rect x="0" y="0" width="500" height="280" rx="20" ry="20"/>
@@ -70,48 +70,31 @@
         <rect width="500" height="280" fill="url(#bg)" rx="20" ry="20"/>
         
         <!-- Weather Animations -->
-        <ellipse cx="100" cy="60" rx="60" ry="20" fill="rgba(200,200,210,0.25)" class="cloud1"/>
-            <ellipse cx="350" cy="45" rx="50" ry="15" fill="rgba(200,200,210,0.2)" class="cloud2"/>
-        <circle cx="40" cy="20" r="1.5" fill="white" 
-                opacity="0.6" class="star" style="animation-delay:0.0s"/>
-            <circle cx="97" cy="43" r="1.5" fill="white" 
-                opacity="0.6" class="star" style="animation-delay:0.4s"/>
-            <circle cx="154" cy="66" r="1.5" fill="white" 
-                opacity="0.6" class="star" style="animation-delay:0.8s"/>
-            <circle cx="211" cy="29" r="1.5" fill="white" 
-                opacity="0.6" class="star" style="animation-delay:1.2s"/>
-            <circle cx="268" cy="52" r="1.5" fill="white" 
-                opacity="0.6" class="star" style="animation-delay:1.6s"/>
-            <circle cx="325" cy="75" r="1.5" fill="white" 
-                opacity="0.6" class="star" style="animation-delay:2.0s"/>
-            <circle cx="382" cy="38" r="1.5" fill="white" 
-                opacity="0.6" class="star" style="animation-delay:2.4s"/>
-            <circle cx="439" cy="61" r="1.5" fill="white" 
-                opacity="0.6" class="star" style="animation-delay:2.8s"/>
-            <circle cx="440" cy="45" r="16" fill="#E8EAF6" opacity="0.85"/>
-            <circle cx="448" cy="40" r="14" fill="#1a1a2e"/>
+        <circle cx="440" cy="50" r="22" fill="#FFD54F" opacity="0.9" class="sun"/>
+            <circle cx="440" cy="50" r="30" fill="none" stroke="#FFD54F" stroke-width="2" 
+                opacity="0.4" class="sun-ray"/>
         
         
         <!-- City name & country -->
         <text x="25" y="38" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" 
             font-weight="800" fill="#FFFFFF" filter="url(#shadow)">Mexico City, México</text>
         <text x="25" y="58" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500"
-            fill="#F0F0F0" filter="url(#light-shadow)">América Central · 02:19 · NOITE 🌙</text>
+            fill="#F0F0F0" filter="url(#light-shadow)">América Central · 07:28 · DIA ☀️</text>
         
         <!-- Temperature -->
         <text x="25" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" 
-            font-weight="900" fill="#FFFFFF" filter="url(#shadow)">16°C</text>
+            font-weight="900" fill="#FFFFFF" filter="url(#shadow)">15°C</text>
         <text x="25" y="138" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500"
-            fill="#F0F0F0" filter="url(#light-shadow)">Sensação 16°C</text>
+            fill="#F0F0F0" filter="url(#light-shadow)">Sensação 15°C</text>
         
         <!-- Condition emoji & text -->
-        <text x="260" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" filter="url(#shadow)">⛅</text>
+        <text x="260" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" filter="url(#shadow)">🌤️</text>
         <text x="260" y="132" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="600"
-            fill="#FFFFFF" filter="url(#shadow)">Parcialmente nublado</text>
+            fill="#FFFFFF" filter="url(#shadow)">Principalmente limpo</text>
         
         <!-- Details -->
         <text x="25" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#E0E0E0" filter="url(#light-shadow)">
-            💧 Umidade: 72%   💨 Vento: 6 km/h   🌡️ Mín 14° / Máx 26°
+            💧 Umidade: 87%   💨 Vento: 4 km/h   🌡️ Mín 14° / Máx 26°
         </text>
         
         <!-- Sunrise / Sunset -->
@@ -121,12 +104,12 @@
         
         <!-- Day Progress Bar -->
         <rect x="25" y="215" width="400" height="8" rx="4" fill="rgba(0,0,0,0.3)"/>
-        <rect x="25" y="215" width="0" height="8" rx="4" fill="#81D4FA"/>
+        <rect x="25" y="215" width="45" height="8" rx="4" fill="#FFD54F"/>
         <text x="435" y="222" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700"
-            fill="#FFFFFF" filter="url(#shadow)">0%</text>
+            fill="#FFFFFF" filter="url(#shadow)">11%</text>
         
         <!-- Footer -->
         <text x="25" y="262" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500"
-            fill="#E0E0E0" filter="url(#light-shadow)">📍 19.43, -99.13 · Atualizado: 2026-05-25 02:19</text>
+            fill="#E0E0E0" filter="url(#light-shadow)">📍 19.43, -99.13 · Atualizado: 2026-05-25 07:28</text>
     </g>
 </svg>
