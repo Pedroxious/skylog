@@ -694,3 +694,15 @@ datetime,city,country,continent,temp_c,feels_like_c,temp_min_c,temp_max_c,humidi
 2026-05-26 01:21,Tokyo,Japão,Ásia,18.0,20.0,16.6,26.1,90,2.0,0.0,1,Principalmente limpo,NightPartialClean.webp,0,2026-05-26T04:29,2026-05-26T18:47
 2026-05-25 20:21,Dubai,Emirados Árabes,Oriente Médio,30.9,35.9,25.4,37.2,65,6.0,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-05-25T05:30,2026-05-25T19:01
 2026-05-25 19:21,Cairo,Egito,África,28.8,27.5,18.0,30.1,33,10.2,0.0,2,Parcialmente nublado,DayPartialCloudy.webp,1,2026-05-25T05:56,2026-05-25T19:47
+2026-05-25 16:27,São Paulo,Brasil,América do Sul,21.4,22.9,14.8,22.6,73,4.8,0.0,2,Parcialmente nublado,DayPartialCloudy.webp,1,2026-05-25T06:37,2026-05-25T17:28
+2026-05-25 16:27,Rio de Janeiro,Brasil,América do Sul,22.4,24.3,21.2,23.5,81,10.3,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-25T06:23,2026-05-25T17:16
+2026-05-25 16:27,Buenos Aires,Argentina,América do Sul,14.9,15.1,11.4,15.9,86,4.9,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-25T07:47,2026-05-25T17:53
+2026-05-25 13:27,Mexico City,México,América Central,23.8,25.4,14.4,24.1,41,2.4,0.1,51,Chuvisco,drizzle.webp,1,2026-05-25T05:58,2026-05-25T19:08
+2026-05-25 15:27,New York,EUA,América do Norte,19.8,22.3,12.8,21.0,89,3.1,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-25T05:30,2026-05-25T20:15
+2026-05-25 12:27,San Francisco,EUA,América do Norte,15.2,13.3,11.8,16.7,71,15.6,0.0,1,Principalmente limpo,DayPartialClean.webp,1,2026-05-25T05:52,2026-05-25T20:20
+2026-05-25 20:27,London,Reino Unido,Europa,30.5,29.8,19.8,33.9,35,12.2,0.0,0,Céu limpo,DayClear.webp,1,2026-05-25T04:55,2026-05-25T20:59
+2026-05-25 21:27,Paris,França,Europa,29.3,28.9,20.5,33.1,37,9.3,0.0,0,Céu limpo,DayClear.webp,1,2026-05-25T05:57,2026-05-25T21:37
+2026-05-26 04:27,Tokyo,Japão,Ásia,16.4,18.0,16.3,25.9,99,3.6,0.0,2,Parcialmente nublado,NightPartialCloudy.webp,0,2026-05-26T04:29,2026-05-26T18:47
+2026-05-25 23:27,Dubai,Emirados Árabes,Oriente Médio,29.4,33.4,25.4,37.2,64,5.1,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-05-25T05:30,2026-05-25T19:01
+2026-05-25 22:27,Cairo,Egito,África,23.3,23.1,18.0,30.1,59,12.4,0.0,1,Principalmente limpo,NightPartialClean.webp,0,2026-05-25T05:56,2026-05-25T19:47
+2026-05-26 05:27,Sydney,Austrália,Oceania,16.8,18.2,16.1,19.4,94,3.7,0.0,3,Nublado,NightOvercast.webp,0,2026-05-26T06:47,2026-05-26T16:56
