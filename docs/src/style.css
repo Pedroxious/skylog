@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+/* ── Custom Theme Config (Tailwind 4) ── */
+@theme {
+    --color-brand-cyan: #22d3ee;
+    --color-brand-blue: #3b82f6;
+    --color-brand-purple: #8b5cf6;
+
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-space: 'Space Grotesk', sans-serif;
+
+    --animate-float: float 6s ease-in-out infinite;
+    --animate-shimmer: shimmer 2s linear infinite;
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes shimmer {
+        0% {
+            background-position: -200% 0;
+        }
+
+        100% {
+            background-position: 200% 0;
+        }
+    }
+
+    @keyframes mapPulse {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        50% {
+            transform: scale(1.5);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+/* ── Global Styles ── */
+:root {
+    color-scheme: dark;
+}
+
+body {
+    background-attachment: fixed;
+}
+
+/* ── Glassmorphism Components ── */
+.glass-sidebar {
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(24px) saturate(150%);
+    -webkit-backdrop-filter: blur(24px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow:
+        0 8px 32px 0 rgba(0, 0, 0, 0.4),
+        inset 0 1px 1px rgba(255, 255, 255, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+/* ── Custom Utilities ── */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Chart & Map Containers ── */
+#weather-map {
+    background: #0f172a;
+}
+
+.leaflet-container {
+    background: transparent !important;
+}
+
+.leaflet-control-zoom {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background: rgba(15, 23, 42, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 12px !important;
+    overflow: hidden;
+}
+
+.leaflet-control-zoom a {
+    background: transparent !important;
+    color: white !important;
+    border: none !important;
+}
+
+.leaflet-control-zoom a:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* ── Animation Overrides ── */
+.transition-opacity-2000 {
+    transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pulse-badge {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(0.95);
+    }
+}
+
+/* ── Search Results List ── */
+.search-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* ── SVG Fixes ── */
+svg {
+    display: inline-block;
+    vertical-align: middle;
+}
