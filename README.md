@@ -12,7 +12,7 @@
 ### Sync Ativo • Última atualização: 04:43 (BRT)
 *Projeto em expansão, operando com automações no GitHub Actions para manter métricas globais atualizadas em tempo real. Consulte a aba superior para a versão Web.*
 
-<img src="VisualLog/ShowcaseV1.png" width="800" alt="SkyLog Showcase"/>
+<img src="VisualLog/ShowcaseV2.png" width="800" alt="SkyLog Showcase"/>
 
 </div>
 
