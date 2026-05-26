@@ -32,6 +32,13 @@ CIDADES = [
     {"nome": "Havana",         "pais": "Cuba",            "continente": "América Central",  "lat":  23.1136, "lon": -82.3666, "tz": "America/Havana",                 "slug": "havana",         "landmark": "Havana.webp",        "utc_offset": -4},
     {"nome": "Miami",          "pais": "EUA",             "continente": "América do Norte", "lat":  25.7617, "lon": -80.1918, "tz": "America/New_York",               "slug": "miami",          "landmark": "Miami.webp",         "utc_offset": -4},
     {"nome": "New York",       "pais": "EUA",             "continente": "América do Norte", "lat":  40.7128, "lon": -74.0060, "tz": "America/New_York",               "slug": "new_york",       "landmark": "NewYork.webp",       "utc_offset": -4},
+<<<<<<< HEAD
+=======
+    {"nome": "Miami",    "pais": "EUA",       "continente": "América do Norte",  "lat":  25.7617, "lon": -80.1918,  "tz": "America/New_York",    "slug": "miami",    "landmark": "Miami.webp",    "utc_offset": -4},
+    {"nome": "Moscow",   "pais": "Rússia",    "continente": "Europa",            "lat":  55.7558, "lon":  37.6173,  "tz": "Europe/Moscow",       "slug": "moscow",   "landmark": "Moscow.webp",   "utc_offset":  3},
+    {"nome": "Havana",   "pais": "Cuba",      "continente": "América Central",   "lat":  23.1136, "lon": -82.3666,  "tz": "America/Havana",      "slug": "havana",   "landmark": "Havana.webp",   "utc_offset": -4},
+    {"nome": "Bangkok",  "pais": "Tailândia", "continente": "Ásia",              "lat":  13.7563, "lon": 100.5018,  "tz": "Asia/Bangkok",        "slug": "bangkok",  "landmark": "Bangkok.webp",  "utc_offset":  7},
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
     {"nome": "London",         "pais": "Reino Unido",     "continente": "Europa",           "lat":  51.5074, "lon":  -0.1278, "tz": "Europe/London",                  "slug": "london",         "landmark": "London.webp",        "utc_offset": 1},
     {"nome": "Paris",          "pais": "França",          "continente": "Europa",           "lat":  48.8566, "lon":   2.3522, "tz": "Europe/Paris",                   "slug": "paris",          "landmark": "Paris.webp",         "utc_offset": 2},
     {"nome": "Moscow",         "pais": "Rússia",          "continente": "Europa",           "lat":  55.7558, "lon":  37.6173, "tz": "Europe/Moscow",                  "slug": "moscow",         "landmark": "Moscow.webp",        "utc_offset": 3},

@@ -102,6 +102,7 @@
         <!-- Top Info -->
         <text x="25" y="38" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" 
             font-weight="800" fill="#FFFFFF" filter="url(#shadow)">Rio de Janeiro, Brasil</text>
+<<<<<<< HEAD
         <text x="25" y="56" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="500"
             fill="#F1F5F9" filter="url(#light-shadow)">América do Sul · 19:52 · Noite</text>
         
@@ -110,21 +111,39 @@
             font-weight="900" fill="#FFFFFF" filter="url(#shadow)">22.3°C</text>
         <text x="25" y="136" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="500"
             fill="#F1F5F9" filter="url(#light-shadow)">Sensação: 24.8°C</text>
+=======
+        <text x="25" y="58" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500"
+            fill="#F0F0F0" filter="url(#light-shadow)">América do Sul · 19:20 · NOITE 🌙</text>
+        
+        <!-- Temperature -->
+        <text x="25" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" 
+            font-weight="900" fill="#FFFFFF" filter="url(#shadow)">22°C</text>
+        <text x="25" y="138" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500"
+            fill="#F0F0F0" filter="url(#light-shadow)">Sensação 25°C</text>
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
         
         <!-- Current Conditions (Right) -->
         <text x="475" y="102" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="48" text-anchor="end" filter="url(#shadow)">☁️</text>
         <text x="475" y="128" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700"
             fill="#FFFFFF" text-anchor="end" filter="url(#shadow)">Nublado</text>
         
+<<<<<<< HEAD
         <!-- Glassmorphism Details Section -->
         <rect x="20" y="156" width="460" height="66" rx="12" 
             fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5"/>
+=======
+        <!-- Details -->
+        <text x="25" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#E0E0E0" filter="url(#light-shadow)">
+            💧 Umidade: 88%   💨 Vento: 10 km/h   🌡️ Mín 20° / Máx 26°
+        </text>
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
         
         <!-- Row 1 details -->
         <text x="35" y="181" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">💧 Umid: 87%</text>
         <text x="180" y="181" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">💨 Vent: 9.1 km/h</text>
         <text x="340" y="181" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">☀️ UV: 0.0</text>
         
+<<<<<<< HEAD
         <!-- Row 2 details -->
         <text x="35" y="206" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">🎈 Press: 1018 hPa</text>
         <text x="180" y="206" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">👁️ Visib: 23.6 km</text>
@@ -157,5 +176,16 @@
         <!-- Slim Day Progress Bar at the very bottom -->
         <rect x="20" y="306" width="460" height="4" rx="2" fill="rgba(0,0,0,0.25)"/>
         <rect x="20" y="306" width="459" height="4" rx="2" fill="#81D4FA"/>
+=======
+        <!-- Day Progress Bar -->
+        <rect x="25" y="215" width="400" height="8" rx="4" fill="rgba(0,0,0,0.3)"/>
+        <rect x="25" y="215" width="400" height="8" rx="4" fill="#81D4FA"/>
+        <text x="435" y="222" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700"
+            fill="#FFFFFF" filter="url(#shadow)">100%</text>
+        
+        <!-- Footer -->
+        <text x="25" y="262" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500"
+            fill="#E0E0E0" filter="url(#light-shadow)">📍 -22.91, -43.17 · Atualizado: 2026-05-26 19:20</text>
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
     </g>
 </svg>

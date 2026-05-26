@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="320" viewBox="0 0 500 320">
     <style>
         @keyframes rainFall {
             0% { transform: translateY(-20px); opacity: 0.7; }
             100% { transform: translateY(320px); opacity: 0; }
+=======
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="280" viewBox="0 0 500 280">
+    <style>
+        @keyframes rainFall {
+            0% { transform: translateY(-20px); opacity: 0.7; }
+            100% { transform: translateY(300px); opacity: 0; }
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
         }
         @keyframes flash {
             0%, 100% { opacity: 0; }
@@ -11,11 +19,14 @@
             12% { opacity: 0.7; }
             15% { opacity: 0; }
         }
+<<<<<<< HEAD
         @keyframes snowFall {
             0% { transform: translateY(-10px) translateX(0); opacity: 0.8; }
             50% { transform: translateY(160px) translateX(8px); opacity: 0.6; }
             100% { transform: translateY(320px) translateX(-8px); opacity: 0; }
         }
+=======
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
         @keyframes drift1 {
             0% { transform: translateX(-80px); }
             100% { transform: translateX(520px); }
@@ -43,9 +54,14 @@
         }
         .rain { animation: rainFall 0.8s linear infinite; }
         .lightning { animation: flash 4s ease-in-out infinite; }
+<<<<<<< HEAD
         .snow { animation: snowFall 2.8s linear infinite; }
         .cloud1 { animation: drift1 20s linear infinite; }
         .cloud2 { animation: drift2 24s linear infinite; }
+=======
+        .cloud1 { animation: drift1 18s linear infinite; }
+        .cloud2 { animation: drift2 22s linear infinite; }
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
         .star { animation: twinkle 2s ease-in-out infinite; }
         .sun { animation: sunRotate 30s linear infinite; }
         .sun-ray { animation: sunPulse 3s ease-in-out infinite; }
@@ -53,6 +69,7 @@
     </style>
     <defs>
         <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+<<<<<<< HEAD
             <stop offset="0%" style="stop-color:#3A6073"/>
             <stop offset="50%" style="stop-color:#3a7bd5"/>
             <stop offset="100%" style="stop-color:#283c86"/>
@@ -75,6 +92,29 @@
     <!-- Card Frame -->
     <g clip-path="url(#rounded)">
         <rect width="500" height="320" fill="url(#bg)" rx="20" ry="20"/>
+=======
+            <stop offset="0%" style="stop-color:#606c88"/>
+            <stop offset="100%" style="stop-color:#3f4c6b"/>
+        </linearGradient>
+        <clipPath id="rounded">
+            <rect x="0" y="0" width="500" height="280" rx="20" ry="20"/>
+        </clipPath>
+        <!-- High-fidelity Drop Shadow for ultimate readability -->
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.75"/>
+        </filter>
+        <filter id="light-shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.6"/>
+        </filter>
+    </defs>
+    
+    <!-- Shadow -->
+    <rect x="4" y="4" width="500" height="280" rx="20" ry="20" fill="rgba(0,0,0,0.2)"/>
+    
+    <!-- Background -->
+    <g clip-path="url(#rounded)">
+        <rect width="500" height="280" fill="url(#bg)" rx="20" ry="20"/>
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
         
         <!-- Weather Animations -->
         <line x1="30" y1="-10" x2="22" y2="15" 
@@ -115,6 +155,7 @@
                 style="animation-delay:0.15s"/>
             
         
+<<<<<<< HEAD
         <!-- Top Info -->
         <text x="25" y="38" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" 
             font-weight="800" fill="#FFFFFF" filter="url(#shadow)">Havana, Cuba</text>
@@ -173,5 +214,43 @@
         <!-- Slim Day Progress Bar at the very bottom -->
         <rect x="20" y="306" width="460" height="4" rx="2" fill="rgba(0,0,0,0.25)"/>
         <rect x="20" y="306" width="417" height="4" rx="2" fill="#FFD54F"/>
+=======
+        <!-- City name & country -->
+        <text x="25" y="38" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" 
+            font-weight="800" fill="#FFFFFF" filter="url(#shadow)">Havana, Cuba</text>
+        <text x="25" y="58" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500"
+            fill="#F0F0F0" filter="url(#light-shadow)">América Central · 18:21 · DIA ☀️</text>
+        
+        <!-- Temperature -->
+        <text x="25" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" 
+            font-weight="900" fill="#FFFFFF" filter="url(#shadow)">28°C</text>
+        <text x="25" y="138" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500"
+            fill="#F0F0F0" filter="url(#light-shadow)">Sensação 33°C</text>
+        
+        <!-- Condition emoji & text -->
+        <text x="260" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" filter="url(#shadow)">🌧️</text>
+        <text x="260" y="132" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="600"
+            fill="#FFFFFF" filter="url(#shadow)">Chuva</text>
+        
+        <!-- Details -->
+        <text x="25" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#E0E0E0" filter="url(#light-shadow)">
+            💧 Umidade: 76%   💨 Vento: 7 km/h   🌡️ Mín 24° / Máx 32°
+        </text>
+        
+        <!-- Sunrise / Sunset -->
+        <text x="25" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" fill="#E0E0E0" filter="url(#light-shadow)">
+            🌅 Nascer: 06:44  →  🌇 Pôr do sol: 20:08
+        </text>
+        
+        <!-- Day Progress Bar -->
+        <rect x="25" y="215" width="400" height="8" rx="4" fill="rgba(0,0,0,0.3)"/>
+        <rect x="25" y="215" width="346" height="8" rx="4" fill="#FFD54F"/>
+        <text x="435" y="222" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700"
+            fill="#FFFFFF" filter="url(#shadow)">87%</text>
+        
+        <!-- Footer -->
+        <text x="25" y="262" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500"
+            fill="#E0E0E0" filter="url(#light-shadow)">📍 23.11, -82.37 · Atualizado: 2026-05-26 18:21</text>
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
     </g>
 </svg>

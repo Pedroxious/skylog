@@ -5,12 +5,21 @@
 ### Monitoramento climático em tempo real de 15 cidades ao redor do mundo
 
 [![SkyLog Live](https://img.shields.io/badge/SkyLog%20Live-Acessar%20Web%20App-000000?style=for-the-badge&logoColor=white)](https://pedroxious.github.io/skylog/)
+<<<<<<< HEAD
 [![Registros CSV](https://img.shields.io/badge/Histórico%20CSV-675%20Registros-2E8B57?style=for-the-badge)](data/history.csv)
 
 ---
 
 ### Sync Ativo • Última atualização: 19:53 (BRT)
 *Projeto em expansão, operando com automações no GitHub Actions para manter métricas globais atualizadas em tempo real. Consulte o link superior para a versão Web.*
+=======
+[![Registros CSV](https://img.shields.io/badge/Histórico%20CSV-790%20Registros-2E8B57?style=for-the-badge)](data/history.csv)
+
+---
+
+### Sync Ativo • Última atualização: 19:21 (BRT)
+*Projeto em expansão, operando com automações no GitHub Actions para manter métricas globais atualizadas em tempo real. Consulte a aba superior para a versão Web.*
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
 
 <img src="VisualLog/ShowcaseV2.png" width="800" alt="SkyLog Showcase"/>
 
@@ -38,6 +47,7 @@
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
+<<<<<<< HEAD
 | Temperatura | 19.0°C (Sensação: 20.6°C) |
 | Variação Diária | 16.1°C — 24.8°C |
 | Umidade / Pressão | 87% / 1019.2 hPa |
@@ -54,6 +64,14 @@
 | Amanhã | 🌦️ Chuvisco | 14.7°C a 23.0°C | UV: 5 | Precip: 1.2 mm |
 | 28/05 | ☁️ Nublado | 11.6°C a 19.0°C | UV: 5 | Precip: 0.0 mm |
 
+=======
+| **Temperatura** | 19.4°C (Sensação: 21.0°C) |
+| **Variação (Mín/Máx)** | 16.1°C — 24.8°C |
+| **Umidade** | 87% |
+| **Vento** | 6.5 km/h |
+| **Condição Atual** | Céu limpo |
+| **Horário Local** | 19:20 |
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
 
 </div>
 
@@ -78,6 +96,7 @@
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
+<<<<<<< HEAD
 | Temperatura | 22.3°C (Sensação: 24.8°C) |
 | Variação Diária | 20.3°C — 25.7°C |
 | Umidade / Pressão | 87% / 1018.4 hPa |
@@ -94,6 +113,14 @@
 | Amanhã | 🌦️ Chuvisco | 20.1°C a 25.9°C | UV: 5 | Precip: 0.3 mm |
 | 28/05 | 🌦️ Chuvisco | 19.5°C a 23.0°C | UV: 4 | Precip: 1.1 mm |
 
+=======
+| **Temperatura** | 22.2°C (Sensação: 24.6°C) |
+| **Variação (Mín/Máx)** | 20.3°C — 25.7°C |
+| **Umidade** | 88% |
+| **Vento** | 10.4 km/h |
+| **Condição Atual** | Nublado |
+| **Horário Local** | 19:20 |
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
 
 </div>
 
@@ -111,13 +138,18 @@
       <img src="cards/buenos_aires.svg" alt="Card Buenos Aires"/>
     </td>
     <td align="center" width="50%">
+<<<<<<< HEAD
       <img src="conditions/NightFullMoonClear.webp" width="380" alt="Condição em tempo real Céu limpo"/>
+=======
+      <img src="conditions/NightPartialClean.webp" width="380" alt="Condição em tempo real Principalmente limpo"/>
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
     </td>
   </tr>
 </table>
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
+<<<<<<< HEAD
 | Temperatura | 11.1°C (Sensação: 10.1°C) |
 | Variação Diária | 7.2°C — 14.2°C |
 | Umidade / Pressão | 94% / 1023.7 hPa |
@@ -134,6 +166,14 @@
 | Amanhã | ☁️ Nublado | 10.4°C a 13.9°C | UV: 4 | Precip: 0.0 mm |
 | 28/05 | 🌦️ Chuvisco | 13.4°C a 16.0°C | UV: 3 | Precip: 0.1 mm |
 
+=======
+| **Temperatura** | 10.9°C (Sensação: 10.0°C) |
+| **Variação (Mín/Máx)** | 7.2°C — 14.2°C |
+| **Umidade** | 94% |
+| **Vento** | 6.8 km/h |
+| **Condição Atual** | Principalmente limpo |
+| **Horário Local** | 19:20 |
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
 
 </div>
 
@@ -141,23 +181,32 @@
 
 <div align="center">
 
+<<<<<<< HEAD
 ## Mexico City, México
+=======
+## 🏙️ Moscow, Rússia
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
 
-<img src="landmarks/Mexico.webp" width="800" alt="Vista de Mexico City"/>
+<img src="landmarks/Moscow.webp" width="800" alt="Vista de Moscow"/>
 
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="cards/mexico_city.svg" alt="Card Mexico City"/>
+      <img src="cards/moscow.svg" alt="Card Moscow"/>
     </td>
     <td align="center" width="50%">
+<<<<<<< HEAD
       <img src="conditions/drizzle.webp" width="380" alt="Condição em tempo real Chuvisco"/>
+=======
+      <img src="conditions/NightPartialCloudy.webp" width="380" alt="Condição em tempo real Parcialmente nublado"/>
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
     </td>
   </tr>
 </table>
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
+<<<<<<< HEAD
 | Temperatura | 21.4°C (Sensação: 20.1°C) |
 | Variação Diária | 13.4°C — 25.0°C |
 | Umidade / Pressão | 48% / 1011.0 hPa |
@@ -174,6 +223,14 @@
 | Amanhã | ⛈️ Tempestade | 13.4°C a 24.5°C | UV: 7 | Precip: 11.7 mm |
 | 28/05 | 🌦️ Chuvisco | 11.7°C a 23.8°C | UV: 10 | Precip: 0.8 mm |
 
+=======
+| **Temperatura** | 8.1°C (Sensação: 5.8°C) |
+| **Variação (Mín/Máx)** | 7.2°C — 13.9°C |
+| **Umidade** | 83% |
+| **Vento** | 8.1 km/h |
+| **Condição Atual** | Parcialmente nublado |
+| **Horário Local** | 01:21 |
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
 
 </div>
 
@@ -221,6 +278,7 @@
 
 <div align="center">
 
+<<<<<<< HEAD
 ## Miami, EUA
 
 <img src="landmarks/Miami.webp" width="800" alt="Vista de Miami"/>
@@ -262,22 +320,30 @@
 <div align="center">
 
 ## New York, EUA
+=======
+## 🏙️ Havana, Cuba
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
 
-<img src="landmarks/NewYork.webp" width="800" alt="Vista de New York"/>
+<img src="landmarks/Havana.webp" width="800" alt="Vista de Havana"/>
 
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="cards/new_york.svg" alt="Card New York"/>
+      <img src="cards/havana.svg" alt="Card Havana"/>
     </td>
     <td align="center" width="50%">
+<<<<<<< HEAD
       <img src="conditions/DayCumulusCongestus.webp" width="380" alt="Condição em tempo real Nublado"/>
+=======
+      <img src="conditions/DayRain.webp" width="380" alt="Condição em tempo real Chuva"/>
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
     </td>
   </tr>
 </table>
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
+<<<<<<< HEAD
 | Temperatura | 23.9°C (Sensação: 22.6°C) |
 | Variação Diária | 14.6°C — 27.3°C |
 | Umidade / Pressão | 48% / 1016.5 hPa |
@@ -294,6 +360,14 @@
 | Amanhã | ☁️ Nublado | 17.5°C a 30.3°C | UV: 6 | Precip: 0.0 mm |
 | 28/05 | 🌦️ Chuvisco | 15.8°C a 23.6°C | UV: 7 | Precip: 0.4 mm |
 
+=======
+| **Temperatura** | 28.0°C (Sensação: 32.9°C) |
+| **Variação (Mín/Máx)** | 23.5°C — 32.2°C |
+| **Umidade** | 76% |
+| **Vento** | 6.6 km/h |
+| **Condição Atual** | Chuva |
+| **Horário Local** | 18:21 |
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
 
 </div>
 
@@ -301,14 +375,17 @@
 
 <div align="center">
 
+<<<<<<< HEAD
 ## London, Reino Unido
+=======
+## 🏙️ Bangkok, Tailândia
 
-<img src="landmarks/London.webp" width="800" alt="Vista de London"/>
+<img src="landmarks/Bangkok.webp" width="800" alt="Vista de Bangkok"/>
 
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="cards/london.svg" alt="Card London"/>
+      <img src="cards/bangkok.svg" alt="Card Bangkok"/>
     </td>
     <td align="center" width="50%">
       <img src="conditions/NightFullMoonClear.webp" width="380" alt="Condição em tempo real Céu limpo"/>
@@ -318,6 +395,39 @@
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
+| **Temperatura** | 26.9°C (Sensação: 32.9°C) |
+| **Variação (Mín/Máx)** | 26.9°C — 34.6°C |
+| **Umidade** | 89% |
+| **Vento** | 4.5 km/h |
+| **Condição Atual** | Céu limpo |
+| **Horário Local** | 05:21 |
+
+</div>
+
+<br/><hr/><br/>
+
+
+<div align="center">
+
+## 🏙️ London, Reino Unido
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
+
+<img src="landmarks/London.webp" width="800" alt="Vista de London"/>
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="cards/london.svg" alt="Card London"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="conditions/NightPartialCloudy.webp" width="380" alt="Condição em tempo real Parcialmente nublado"/>
+    </td>
+  </tr>
+</table>
+
+| Parâmetro | Medição em Tempo Real |
+|:---:|:---:|
+<<<<<<< HEAD
 | Temperatura | 27.4°C (Sensação: 27.8°C) |
 | Variação Diária | 21.3°C — 34.6°C |
 | Umidade / Pressão | 43% / 1024.6 hPa |
@@ -334,6 +444,14 @@
 | Amanhã | ☁️ Nublado | 17.4°C a 27.2°C | UV: 6 | Precip: 0.0 mm |
 | 28/05 | 🌦️ Chuvisco | 16.5°C a 31.4°C | UV: 5 | Precip: 0.2 mm |
 
+=======
+| **Temperatura** | 27.7°C (Sensação: 27.0°C) |
+| **Variação (Mín/Máx)** | 21.3°C — 34.6°C |
+| **Umidade** | 37% |
+| **Vento** | 8.3 km/h |
+| **Condição Atual** | Parcialmente nublado |
+| **Horário Local** | 23:21 |
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
 
 </div>
 
@@ -358,6 +476,7 @@
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
+<<<<<<< HEAD
 | Temperatura | 24.1°C (Sensação: 25.1°C) |
 | Variação Diária | 20.4°C — 32.3°C |
 | Umidade / Pressão | 55% / 1024.2 hPa |
@@ -374,6 +493,14 @@
 | Amanhã | ☁️ Nublado | 20.4°C a 32.5°C | UV: 7 | Precip: 0.0 mm |
 | 29/05 | ☁️ Nublado | 20.9°C a 33.7°C | UV: 7 | Precip: 0.0 mm |
 
+=======
+| **Temperatura** | 25.0°C (Sensação: 25.6°C) |
+| **Variação (Mín/Máx)** | 20.6°C — 32.5°C |
+| **Umidade** | 50% |
+| **Vento** | 4.0 km/h |
+| **Condição Atual** | Céu limpo |
+| **Horário Local** | 00:21 |
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
 
 </div>
 
@@ -478,6 +605,7 @@
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
+<<<<<<< HEAD
 | Temperatura | 19.9°C (Sensação: 22.6°C) |
 | Variação Diária | 17.2°C — 26.3°C |
 | Umidade / Pressão | 91% / 1013.4 hPa |
@@ -494,6 +622,14 @@
 | Amanhã | 🌦️ Chuvisco | 19.5°C a 23.0°C | UV: 3 | Precip: 0.2 mm |
 | 29/05 | ☁️ Nublado | 18.7°C a 30.4°C | UV: 7 | Precip: 0.0 mm |
 
+=======
+| **Temperatura** | 18.7°C (Sensação: 21.3°C) |
+| **Variação (Mín/Máx)** | 17.2°C — 26.3°C |
+| **Umidade** | 96% |
+| **Vento** | 2.9 km/h |
+| **Condição Atual** | Parcialmente nublado |
+| **Horário Local** | 07:21 |
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
 
 </div>
 
@@ -518,6 +654,7 @@
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
+<<<<<<< HEAD
 | Temperatura | 27.4°C (Sensação: 31.9°C) |
 | Variação Diária | 26.4°C — 36.7°C |
 | Umidade / Pressão | 81% / 1004.8 hPa |
@@ -534,6 +671,14 @@
 | Amanhã | ⛈️ Tempestade | 26.4°C a 36.5°C | UV: 9 | Precip: 0.0 mm |
 | 29/05 | ⛈️ Tempestade | 26.0°C a 39.0°C | UV: 9 | Precip: 0.0 mm |
 
+=======
+| **Temperatura** | 27.5°C (Sensação: 32.3°C) |
+| **Variação (Mín/Máx)** | 26.4°C — 36.7°C |
+| **Umidade** | 82% |
+| **Vento** | 8.8 km/h |
+| **Condição Atual** | Céu limpo |
+| **Horário Local** | 02:21 |
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
 
 </div>
 
@@ -558,6 +703,7 @@
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
+<<<<<<< HEAD
 | Temperatura | 20.7°C (Sensação: 21.6°C) |
 | Variação Diária | 18.7°C — 30.7°C |
 | Umidade / Pressão | 74% / 1014.7 hPa |
@@ -574,6 +720,14 @@
 | Amanhã | ☁️ Nublado | 19.2°C a 32.1°C | UV: 8 | Precip: 0.0 mm |
 | 29/05 | 🌤️ Principalmente limpo | 19.7°C a 32.7°C | UV: 8 | Precip: 0.0 mm |
 
+=======
+| **Temperatura** | 21.1°C (Sensação: 21.8°C) |
+| **Variação (Mín/Máx)** | 18.7°C — 30.7°C |
+| **Umidade** | 71% |
+| **Vento** | 8.0 km/h |
+| **Condição Atual** | Céu limpo |
+| **Horário Local** | 01:21 |
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
 
 </div>
 
@@ -598,6 +752,7 @@
 
 | Parâmetro | Medição em Tempo Real |
 |:---:|:---:|
+<<<<<<< HEAD
 | Temperatura | 15.2°C (Sensação: 16.2°C) |
 | Variação Diária | 14.7°C — 20.5°C |
 | Umidade / Pressão | 100% / 1019.4 hPa |
@@ -614,6 +769,14 @@
 | Amanhã | 🌧️ Chuva | 16.4°C a 19.2°C | UV: 4 | Precip: 6.8 mm |
 | 29/05 | 🌧️ Chuva | 14.6°C a 18.8°C | UV: 1 | Precip: 14.7 mm |
 
+=======
+| **Temperatura** | 15.1°C (Sensação: 16.1°C) |
+| **Variação (Mín/Máx)** | 14.7°C — 20.5°C |
+| **Umidade** | 99% |
+| **Vento** | 4.9 km/h |
+| **Condição Atual** | Nublado |
+| **Horário Local** | 08:21 |
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
 
 </div>
 
@@ -627,11 +790,19 @@
 
 | Estatística | Valor |
 |:---:|:---:|
+<<<<<<< HEAD
 | Total de registros | 675 |
 | Primeiro registro | `2026-05-17 19:38` |
 | Último registro | `2026-05-27 08:53` |
 | Temperatura mais alta | **38.0°C** — Dubai |
 | Temperatura mais baixa | **5.7°C** — Buenos Aires |
+=======
+| **Total de registros** | 790 |
+| **Primeiro registro** | `2026-05-17 19:38` |
+| **Último registro** | `2026-05-27 08:21` |
+| **Temperatura mais alta** | **38.0°C** — Dubai |
+| **Temperatura mais baixa** | **5.7°C** — Buenos Aires |
+>>>>>>> a515ce9f7cfcaf520789014812a822837aa64a4f
 
 <div align="center">
 
