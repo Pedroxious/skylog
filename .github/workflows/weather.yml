@@ -2,7 +2,7 @@ name: 🌍 SkyLog Weather Dashboard Update
 
 on:
   schedule:
-    - cron: '0 */2 * * *'    # Executa a cada 2 horas (12x ao dia)
+    - cron: '0 * * * *'    # Executar 12x ao dia por hora
   workflow_dispatch:
 
 jobs:
