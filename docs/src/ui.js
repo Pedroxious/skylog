@@ -8,7 +8,7 @@ import {
     weatherCodeToDesc, weatherCodeToIcon, formatTemp, formatTime,
     formatTimeShort, formatDay, formatFullDate, degToCompass,
     getUVLevel, getAQILevel, formatVisibility, getPressureTrend,
-    countryFlag, icon, getSunPosition
+    countryFlag, icon, getSunPosition, CARDS_BASE
 } from './utils.js';
 
 /* ═══════════════════════════════════
@@ -553,4 +553,28 @@ export function hideLoadingOverlay() {
         overlay.style.opacity = '0';
         setTimeout(() => overlay.remove(), 600);
     }
+}
+
+/* ═══════════════════════════════════
+   CLIMATE WEATHER CARD (PREMIUM SVG)
+   ═══════════════════════════════════ */
+export function renderWeatherCard(city) {
+    const container = document.getElementById('weather-card-container');
+    if (!container || !city) return;
+
+    // Normalize slug to match Python generated filename (e.g. "São Paulo" -> "sao_paulo")
+    const slug = city.name.toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/ /g, '_');
+
+    const cardUrl = `${CARDS_BASE}${slug}.svg`;
+
+    container.innerHTML = `
+    <div class="flex flex-col items-center justify-center w-full h-full p-2 animate-fade-in-up">
+      <img src="${cardUrl}"
+        class="w-full max-w-[480px] h-auto rounded-2xl shadow-2xl border border-white/10 hover:scale-[1.02] transition-all duration-300"
+        alt="Animated Weather Card for ${city.name}" />
+    </div>
+  `;
 }

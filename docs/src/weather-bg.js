@@ -150,39 +150,56 @@ export function selectBackground(weatherData) {
 
 /* ── Background Transition Manager ── */
 let currentBg = null;
-let transitioning = false;
+let activeTimeout = null;
+let activeImage = null;
 
 export function applyBackground(imageName) {
-    if (imageName === currentBg || transitioning) return;
+    if (imageName === currentBg) return;
 
     const url = getImageUrl(imageName);
-    preloadImage(imageName);
-
     const bgCurrent = document.getElementById('bg-current');
     const bgNext = document.getElementById('bg-next');
     if (!bgCurrent || !bgNext) return;
 
-    transitioning = true;
+    // Cancel any pending load or transition timeout
+    if (activeImage) {
+        activeImage.onload = null;
+        activeImage.onerror = null;
+    }
+    if (activeTimeout) {
+        clearTimeout(activeTimeout);
+    }
 
-    // Load image first
     const img = new Image();
+    activeImage = img;
+
     img.onload = () => {
+        if (activeImage !== img) return;
+
+        // Set the next image source and animate the crossfade
         bgNext.src = url;
         bgNext.style.opacity = '1';
         bgCurrent.style.opacity = '0';
 
-        setTimeout(() => {
+        activeTimeout = setTimeout(() => {
+            // Swap the active image to bgCurrent instantly after transition ends
             bgCurrent.src = url;
             bgCurrent.style.opacity = '1';
             bgNext.style.opacity = '0';
+            bgNext.src = '';
+            
             currentBg = imageName;
-            transitioning = false;
-        }, 2000);
+            activeTimeout = null;
+            activeImage = null;
+        }, 750); // Matches the CSS transition duration perfectly
     };
+
     img.onerror = () => {
-        transitioning = false;
+        if (activeImage !== img) return;
+        activeImage = null;
         console.warn(`[BG] Failed to load: ${imageName}`);
     };
+
     img.src = url;
 }
 

@@ -16,10 +16,10 @@
         rel="stylesheet">
 
     <!-- Core Styles -->
-  <script type="module" crossorigin src="./assets/index-DFWvV7tW.js"></script>
+  <script type="module" crossorigin src="./assets/index-Csol_D-I.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/charts-C_ASVdvE.js">
   <link rel="modulepreload" crossorigin href="./assets/maps-zdHhRoWp.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-B2QdoNqi.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-BhSytECo.css">
 </head>
 
 <body class="bg-[#020617] text-slate-50 font-sans selection:bg-cyan-500/30 overflow-x-hidden">
@@ -27,10 +27,10 @@
     <!-- ── Dynamic Weather Background ── -->
     <div class="fixed inset-0 z-0 pointer-events-none">
         <img id="bg-current" src=""
-            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-2000 brightness-[0.6] contrast-[1.1]"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 brightness-[0.6] contrast-[1.1]"
             alt="" />
         <img id="bg-next" src=""
-            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-2000 brightness-[0.6] contrast-[1.1]"
+            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 brightness-[0.6] contrast-[1.1]"
             alt="" />
         <!-- Gradient Overlays for Depth -->
         <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-[#020617]/40"></div>
@@ -99,16 +99,32 @@
             <!-- Mid Section: Hourly & Daily Grid -->
             <div class="grid grid-cols-1 xl:grid-cols-12 gap-6">
 
-                <!-- Hourly Forecast (24h) -->
-                <div class="xl:col-span-8 space-y-4">
-                    <div class="flex items-center justify-between px-2">
-                        <h3 class="text-sm font-semibold text-white/70 flex items-center gap-2">
-                            <i data-lucide="clock" class="w-4 h-4"></i> Hourly Forecast
-                        </h3>
+                <!-- Hourly Forecast (24h) & Weather Card -->
+                <div class="xl:col-span-8 flex flex-col gap-6">
+                    <!-- Hourly Forecast -->
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between px-2">
+                            <h3 class="text-sm font-semibold text-white/70 flex items-center gap-2">
+                                <i data-lucide="clock" class="w-4 h-4"></i> Hourly Forecast
+                            </h3>
+                        </div>
+                        <div class="glass-card rounded-2xl p-4 overflow-x-auto flex gap-4 no-scrollbar border border-white/10"
+                            id="hourly-container">
+                            <!-- Rendered by ui.js -->
+                        </div>
                     </div>
-                    <div class="glass-card rounded-2xl p-4 overflow-x-auto flex gap-4 no-scrollbar border border-white/10"
-                        id="hourly-container">
-                        <!-- Rendered by ui.js -->
+
+                    <!-- Climate Forecast Analytics -->
+                    <div class="space-y-4 flex-1 flex flex-col justify-end">
+                        <div class="flex items-center justify-between px-2">
+                            <h3 class="text-sm font-semibold text-white/70 flex items-center gap-2">
+                                <i data-lucide="cloud-sun" class="w-4 h-4"></i> Climate Forecast Analytics
+                            </h3>
+                        </div>
+                        <div class="glass-card rounded-3xl p-6 border border-white/10 flex-1 flex flex-col justify-center"
+                            id="weather-card-container">
+                            <!-- Rendered by ui.js -->
+                        </div>
                     </div>
                 </div>
 

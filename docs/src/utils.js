@@ -3,20 +3,24 @@
    ═══════════════════════════════════════════ */
 
 export const CONDITIONS_BASE = 'https://raw.githubusercontent.com/Pedroxious/skylog/main/conditions/';
+export const CARDS_BASE = 'https://raw.githubusercontent.com/Pedroxious/skylog/main/cards/';
 
 export const DEFAULT_CITIES = [
-    { name: 'São Paulo', country: 'BR', lat: -23.5475, lon: -46.6361, tz: 'America/Sao_Paulo' },
+    { name: 'São Paulo', country: 'BR', lat: -23.5505, lon: -46.6333, tz: 'America/Sao_Paulo' },
+    { name: 'Rio de Janeiro', country: 'BR', lat: -22.9068, lon: -43.1729, tz: 'America/Sao_Paulo' },
+    { name: 'Buenos Aires', country: 'AR', lat: -34.6037, lon: -58.3816, tz: 'America/Argentina/Buenos_Aires' },
+    { name: 'Mexico City', country: 'MX', lat: 19.4326, lon: -99.1332, tz: 'America/Mexico_City' },
+    { name: 'Havana', country: 'CU', lat: 23.1136, lon: -82.3666, tz: 'America/Havana' },
+    { name: 'Miami', country: 'US', lat: 25.7617, lon: -80.1918, tz: 'America/New_York' },
     { name: 'New York', country: 'US', lat: 40.7128, lon: -74.0060, tz: 'America/New_York' },
     { name: 'London', country: 'GB', lat: 51.5074, lon: -0.1278, tz: 'Europe/London' },
-    { name: 'Tokyo', country: 'JP', lat: 35.6762, lon: 139.6503, tz: 'Asia/Tokyo' },
     { name: 'Paris', country: 'FR', lat: 48.8566, lon: 2.3522, tz: 'Europe/Paris' },
-    { name: 'Sydney', country: 'AU', lat: -33.8688, lon: 151.2093, tz: 'Australia/Sydney' },
+    { name: 'Moscow', country: 'RU', lat: 55.7558, lon: 37.6173, tz: 'Europe/Moscow' },
+    { name: 'Bangkok', country: 'TH', lat: 13.7563, lon: 100.5018, tz: 'Asia/Bangkok' },
+    { name: 'Tokyo', country: 'JP', lat: 35.6762, lon: 139.6503, tz: 'Asia/Tokyo' },
     { name: 'Dubai', country: 'AE', lat: 25.2048, lon: 55.2708, tz: 'Asia/Dubai' },
-    { name: 'Buenos Aires', country: 'AR', lat: -34.6037, lon: -58.3816, tz: 'America/Argentina/Buenos_Aires' },
     { name: 'Cairo', country: 'EG', lat: 30.0444, lon: 31.2357, tz: 'Africa/Cairo' },
-    { name: 'Mexico City', country: 'MX', lat: 19.4326, lon: -99.1332, tz: 'America/Mexico_City' },
-    { name: 'San Francisco', country: 'US', lat: 37.7749, lon: -122.4194, tz: 'America/Los_Angeles' },
-    { name: 'Rio de Janeiro', country: 'BR', lat: -22.9068, lon: -43.1729, tz: 'America/Sao_Paulo' }
+    { name: 'Sydney', country: 'AU', lat: -33.8688, lon: 151.2093, tz: 'Australia/Sydney' }
 ];
 
 /* ── Weather Code → Description ── */

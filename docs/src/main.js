@@ -17,7 +17,8 @@ import {
 import {
     renderHero, renderHourlyForecast, renderDailyForecast,
     renderMetrics, renderSunInfo, renderAirQuality,
-    renderCityList, showSkeletons, hideLoadingOverlay, startClock
+    renderCityList, showSkeletons, hideLoadingOverlay, startClock,
+    renderWeatherCard
 } from './ui.js';
 import { renderTempChart, renderPrecipChart, renderWindChart, destroyCharts } from './charts.js';
 import { initMap, flyToCity } from './map.js';
@@ -53,12 +54,98 @@ async function initApp() {
 
     // Remove Initial Loader
     hideLoadingOverlay();
+
+    // Fetch all other cities in the background for instant navigation & display temperatures
+    prefetchAllCities();
+}
+
+/* ── Background Pre-fetcher ── */
+async function prefetchAllCities() {
+    console.log('[SKYLOG] Starting background sensor pre-fetch...');
+    const otherCities = store.cities.filter(c => c !== store.selectedCity);
+    
+    const prefetchPromises = otherCities.map(async (city) => {
+        try {
+            const [weather, aqi] = await Promise.all([
+                fetchWeather(city.lat, city.lon, city.tz),
+                fetchAirQuality(city.lat, city.lon)
+            ]);
+            if (weather) {
+                store.setWeatherData(city, weather);
+                store.setAirQuality(city, aqi);
+            }
+        } catch (err) {
+            console.error(`[SKYLOG] Pre-fetch failed for ${city.name}:`, err);
+        }
+    });
+
+    await Promise.all(prefetchPromises);
+    console.log('[SKYLOG] All sensors synced and cached!');
+    
+    // Refresh city list once all are pre-fetched so temperatures and descriptions load
+    renderCityList();
+}
+
+/* ── Premium Transition Animator ── */
+function triggerEntranceAnimations() {
+    const targets = document.querySelectorAll(
+        'main .glass-card, #hero-section, #metrics-grid > div'
+    );
+    targets.forEach(el => {
+        el.classList.remove('animate-fade-in-up');
+        void el.offsetWidth; // Force CSS reflow to restart keyframe animation
+        el.classList.add('animate-fade-in-up');
+    });
 }
 
 /* ── Data Fetching & UI Update ── */
 async function loadCityData(city) {
     if (!city) return;
 
+    // Check if weather and AQI data is already in cache/store for instant render
+    const cachedWeather = store.getWeatherData(city);
+    const cachedAqi = store.getAirQuality(city);
+
+    if (cachedWeather && cachedAqi) {
+        try {
+            // 1. Scene Selection
+            const bgScene = selectBackground(cachedWeather);
+            applyBackground(bgScene);
+
+            // 2. Update UI Panels
+            renderHero(city, cachedWeather);
+            renderHourlyForecast(cachedWeather.hourly);
+            renderDailyForecast(cachedWeather.daily);
+            renderMetrics(cachedWeather.current, cachedWeather.hourly, cachedWeather.daily);
+            renderSunInfo(cachedWeather.daily);
+            renderAirQuality(cachedAqi);
+            renderWeatherCard(city);
+            renderCityList();
+
+            // 3. Update Charts
+            destroyCharts();
+            renderTempChart(cachedWeather.hourly);
+            renderPrecipChart(cachedWeather.hourly);
+            renderWindChart(cachedWeather.current);
+
+            // 4. Update Map
+            flyToCity(city.lat, city.lon, city.name);
+
+            // 5. Start Live Clock for City Timezone
+            startClock(city.tz);
+
+            // 6. Refresh Icons
+            initIcons();
+
+            // 7. Trigger premium synchronized fadeInUp animations
+            triggerEntranceAnimations();
+        } catch (err) {
+            console.error('[SKYLOG] Instant load error:', err);
+        }
+        return;
+    }
+
+    // Fallback: If not cached, fetch fresh
     store.setLoading(true);
     showSkeletons();
 
@@ -84,6 +171,7 @@ async function loadCityData(city) {
             renderMetrics(weather.current, weather.hourly, weather.daily);
             renderSunInfo(weather.daily);
             renderAirQuality(aqi);
+            renderWeatherCard(city);
             renderCityList();
 
             // 4. Update Charts
@@ -100,6 +188,9 @@ async function loadCityData(city) {
 
             // 7. Refresh Icons
             initIcons();
+
+            // 8. Trigger premium synchronized fadeInUp animations
+            triggerEntranceAnimations();
         }
     } catch (err) {
         console.error('[SKYLOG] Load error:', err);
