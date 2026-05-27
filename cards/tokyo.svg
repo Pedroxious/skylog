@@ -53,9 +53,9 @@
     </style>
     <defs>
         <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#4facfe"/>
-            <stop offset="50%" style="stop-color:#00f2fe"/>
-            <stop offset="100%" style="stop-color:#00c6ff"/>
+            <stop offset="0%" style="stop-color:#0B132B"/>
+            <stop offset="50%" style="stop-color:#1C2541"/>
+            <stop offset="100%" style="stop-color:#3A506B"/>
         </linearGradient>
         <clipPath id="rounded">
             <rect x="0" y="0" width="500" height="320" rx="20" ry="20"/>
@@ -79,19 +79,37 @@
         <!-- Weather Animations -->
         <ellipse cx="100" cy="60" rx="60" ry="20" fill="rgba(255,255,255,0.22)" class="cloud1"/>
             <ellipse cx="350" cy="45" rx="50" ry="15" fill="rgba(255,255,255,0.18)" class="cloud2"/>
+        <circle cx="40" cy="20" r="1.5" fill="white" 
+                opacity="0.6" class="star" style="animation-delay:0.0s"/>
+            <circle cx="97" cy="43" r="1.5" fill="white" 
+                opacity="0.6" class="star" style="animation-delay:0.4s"/>
+            <circle cx="154" cy="66" r="1.5" fill="white" 
+                opacity="0.6" class="star" style="animation-delay:0.8s"/>
+            <circle cx="211" cy="29" r="1.5" fill="white" 
+                opacity="0.6" class="star" style="animation-delay:1.2s"/>
+            <circle cx="268" cy="52" r="1.5" fill="white" 
+                opacity="0.6" class="star" style="animation-delay:1.6s"/>
+            <circle cx="325" cy="75" r="1.5" fill="white" 
+                opacity="0.6" class="star" style="animation-delay:2.0s"/>
+            <circle cx="382" cy="38" r="1.5" fill="white" 
+                opacity="0.6" class="star" style="animation-delay:2.4s"/>
+            <circle cx="439" cy="61" r="1.5" fill="white" 
+                opacity="0.6" class="star" style="animation-delay:2.8s"/>
+            <circle cx="440" cy="45" r="16" fill="#E8EAF6" opacity="0.85"/>
+            <circle cx="448" cy="40" r="14" fill="#11141A"/>
         
         
         <!-- Top Info -->
         <text x="25" y="38" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" 
             font-weight="800" fill="#FFFFFF" filter="url(#shadow)">Tokyo, Japão</text>
         <text x="25" y="56" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="500"
-            fill="#F1F5F9" filter="url(#light-shadow)">Ásia · 18:31 · Dia</text>
+            fill="#F1F5F9" filter="url(#light-shadow)">Ásia · 21:48 · Noite</text>
         
         <!-- Current Conditions (Left) -->
         <text x="25" y="118" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="52" 
-            font-weight="900" fill="#FFFFFF" filter="url(#shadow)">24.1°C</text>
+            font-weight="900" fill="#FFFFFF" filter="url(#shadow)">21.2°C</text>
         <text x="25" y="136" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="500"
-            fill="#F1F5F9" filter="url(#light-shadow)">Sensação: 26.8°C</text>
+            fill="#F1F5F9" filter="url(#light-shadow)">Sensação: 24.1°C</text>
         
         <!-- Current Conditions (Right) -->
         <text x="475" y="102" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="48" text-anchor="end" filter="url(#shadow)">⛅</text>
@@ -103,41 +121,41 @@
             fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5"/>
         
         <!-- Row 1 details -->
-        <text x="35" y="181" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">💧 Umid: 73%</text>
-        <text x="180" y="181" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">💨 Vent: 4.7 km/h</text>
-        <text x="340" y="181" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">☀️ UV: 0.5</text>
+        <text x="35" y="181" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">💧 Umid: 89%</text>
+        <text x="180" y="181" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">💨 Vent: 5.1 km/h</text>
+        <text x="340" y="181" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">☀️ UV: 0.0</text>
         
         <!-- Row 2 details -->
         <text x="35" y="206" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">🎈 Press: 1009 hPa</text>
-        <text x="180" y="206" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">👁️ Visib: 24.2 km</text>
-        <text x="340" y="206" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">☁️ Nuvens: 72%</text>
+        <text x="180" y="206" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">👁️ Visib: 19.1 km</text>
+        <text x="340" y="206" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">☁️ Nuvens: 73%</text>
         
         <!-- 3-Hour Forecast Pills -->
         
         <!-- Pill 1 -->
         <rect x="20" y="240" width="144" height="52" rx="10" 
             fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1"/>
-        <text x="32" y="261" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#F1F5F9">19:00</text>
-        <text x="32" y="280" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">23.5°C</text>
+        <text x="32" y="261" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#F1F5F9">22:00</text>
+        <text x="32" y="280" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">21.2°C</text>
         <text x="124" y="275" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" filter="url(#shadow)">⛅</text>
         
         <!-- Pill 2 -->
         <rect x="178" y="240" width="144" height="52" rx="10" 
             fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1"/>
-        <text x="190" y="261" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#F1F5F9">20:00</text>
-        <text x="190" y="280" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">22.7°C</text>
+        <text x="190" y="261" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#F1F5F9">23:00</text>
+        <text x="190" y="280" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">20.9°C</text>
         <text x="282" y="275" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" filter="url(#shadow)">⛅</text>
         
         <!-- Pill 3 -->
         <rect x="336" y="240" width="144" height="52" rx="10" 
             fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1"/>
-        <text x="348" y="261" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#F1F5F9">21:00</text>
-        <text x="348" y="280" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">22.0°C</text>
+        <text x="348" y="261" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#F1F5F9">00:00</text>
+        <text x="348" y="280" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">20.6°C</text>
         <text x="440" y="275" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" filter="url(#shadow)">🌤️</text>
         
         
         <!-- Slim Day Progress Bar at the very bottom -->
         <rect x="20" y="306" width="460" height="4" rx="2" fill="rgba(0,0,0,0.25)"/>
-        <rect x="20" y="306" width="451" height="4" rx="2" fill="#FFD54F"/>
+        <rect x="20" y="306" width="459" height="4" rx="2" fill="#81D4FA"/>
     </g>
 </svg>
