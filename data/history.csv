@@ -1549,3 +1549,13 @@ datetime,city,country,continent,temp_c,feels_like_c,temp_min_c,temp_max_c,humidi
 2026-05-27 23:33,Bangkok,Tailândia,Ásia,26.7,33.4,26.8,36.5,94,3.2,0.3,55,Chuvisco,NightRain.webp,0,2026-05-27T05:49,2026-05-27T18:40,1010.5,0.0,3.6,91,177
 2026-05-28 01:33,Tokyo,Japão,Ásia,20.2,22.7,20.0,22.4,89,4.1,0.0,1,Principalmente limpo,NightPartialClean.webp,0,2026-05-28T04:28,2026-05-28T18:48,1006.8,0.0,19.8,38,165
 2026-05-27 20:33,Dubai,Emirados Árabes,Oriente Médio,30.3,36.1,26.9,36.5,75,8.2,0.0,95,Tempestade,Storm.webp,0,2026-05-27T05:29,2026-05-27T19:02,1005.7,0.0,14.9,31,247
+2026-05-27 16:14,São Paulo,Brasil,América do Sul,19.0,19.8,15.1,22.6,85,9.5,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-27T06:38,2026-05-27T17:28,1019.0,1.1,10.3,100,151
+2026-05-27 16:14,Rio de Janeiro,Brasil,América do Sul,23.6,25.3,19.9,27.2,85,18.3,0.0,2,Parcialmente nublado,DayPartialCloudy.webp,1,2026-05-27T06:24,2026-05-27T17:15,1017.2,1.6,11.2,50,230
+2026-05-27 16:14,Buenos Aires,Argentina,América do Sul,12.8,12.1,10.4,13.9,88,6.1,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-27T07:48,2026-05-27T17:52,1023.3,2.0,9.4,100,78
+2026-05-27 13:14,Mexico City,México,América Central,22.2,22.8,14.1,22.4,43,6.9,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-27T05:58,2026-05-27T19:09,1011.3,8.8,6.9,98,242
+2026-05-27 15:14,Havana,Cuba,América Central,30.2,36.2,23.9,32.5,65,2.9,0.2,53,Chuvisco,drizzle.webp,1,2026-05-27T06:44,2026-05-27T20:09,1015.0,5.2,12.6,100,83
+2026-05-27 15:14,Miami,EUA,América do Norte,30.0,32.9,25.1,30.0,67,21.7,0.0,0,Céu limpo,DayClear.webp,1,2026-05-27T06:30,2026-05-27T20:05,1018.3,8.4,23.4,19,130
+2026-05-27 15:14,New York,EUA,América do Norte,28.0,28.9,18.9,29.0,51,16.4,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-27T05:29,2026-05-27T20:16,1009.6,4.5,36.3,100,244
+2026-05-27 20:14,London,Reino Unido,Europa,20.4,18.1,17.0,26.5,55,18.4,0.0,0,Céu limpo,DayClear.webp,1,2026-05-27T04:53,2026-05-27T21:02,1024.3,0.0,22.1,0,88
+2026-05-27 21:14,Paris,França,Europa,30.3,29.1,19.3,32.9,28,7.2,0.0,0,Céu limpo,DayClear.webp,1,2026-05-27T05:55,2026-05-27T21:40,1021.5,0.6,48.5,0,87
+2026-05-27 22:14,Moscow,Rússia,Europa,9.0,7.1,7.7,13.5,85,6.9,0.1,80,Chuva,NightRain.webp,0,2026-05-27T03:58,2026-05-27T20:54,998.1,0.0,27.9,84,298
