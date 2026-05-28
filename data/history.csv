@@ -1582,3 +1582,13 @@ datetime,city,country,continent,temp_c,feels_like_c,temp_min_c,temp_max_c,humidi
 2026-05-28 01:11,Paris,França,Europa,24.7,25.9,21.1,32.5,58,4.9,0.0,3,Nublado,NightOvercast.webp,0,2026-05-28T05:54,2026-05-28T21:41,1022.0,0.0,40.5,100,54
 2026-05-28 02:11,Moscow,Rússia,Europa,7.5,5.3,6.9,10.6,88,7.8,0.0,3,Nublado,NightOvercast.webp,0,2026-05-28T03:57,2026-05-28T20:55,997.9,0.0,20.4,92,292
 2026-05-28 06:11,Bangkok,Tailândia,Ásia,27.4,34.4,27.4,34.8,92,2.2,0.0,95,Tempestade,Storm.webp,1,2026-05-28T05:49,2026-05-28T18:41,1008.7,0.0,19.0,95,261
+2026-05-27 23:13,São Paulo,Brasil,América do Sul,14.1,14.1,14.1,22.8,92,5.6,0.0,1,Principalmente limpo,NightPartialClean.webp,0,2026-05-27T06:38,2026-05-27T17:28,1023.2,0.0,18.4,30,163
+2026-05-27 23:13,Rio de Janeiro,Brasil,América do Sul,21.2,22.7,19.9,26.9,91,15.2,0.1,51,Chuvisco,NightRain.webp,0,2026-05-27T06:24,2026-05-27T17:15,1020.5,0.0,20.1,98,244
+2026-05-27 23:13,Buenos Aires,Argentina,América do Sul,13.5,12.1,10.4,13.8,85,11.5,0.0,3,Nublado,NightOvercast.webp,0,2026-05-27T07:48,2026-05-27T17:52,1023.1,0.0,30.3,100,29
+2026-05-27 20:13,Mexico City,México,América Central,17.9,17.8,13.9,25.5,65,3.1,0.0,2,Parcialmente nublado,NightPartialCloudy.webp,0,2026-05-27T05:58,2026-05-27T19:09,1016.2,0.0,13.0,76,187
+2026-05-27 22:13,Havana,Cuba,América Central,25.6,31.6,23.9,32.8,93,2.8,0.0,3,Nublado,NightOvercast.webp,0,2026-05-27T06:44,2026-05-27T20:09,1015.5,0.0,28.6,99,130
+2026-05-27 22:13,Miami,EUA,América do Norte,26.7,30.6,25.1,30.7,81,12.2,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-05-27T06:30,2026-05-27T20:05,1015.9,0.0,17.5,8,109
+2026-05-27 22:13,New York,EUA,América do Norte,23.3,23.8,18.9,28.7,64,11.1,0.0,2,Parcialmente nublado,NightPartialCloudy.webp,0,2026-05-27T05:29,2026-05-27T20:16,1006.8,0.0,27.3,50,245
+2026-05-28 03:13,London,Reino Unido,Europa,16.1,14.4,16.0,30.8,77,15.8,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-05-28T04:52,2026-05-28T21:03,1022.4,0.0,21.5,0,82
+2026-05-28 04:13,Paris,França,Europa,22.6,24.5,21.1,33.4,67,1.5,0.0,1,Principalmente limpo,NightPartialClean.webp,0,2026-05-28T05:54,2026-05-28T21:41,1021.6,0.0,38.9,68,14
+2026-05-28 05:13,Moscow,Rússia,Europa,7.2,4.8,6.9,10.5,86,8.4,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-28T03:57,2026-05-28T20:55,998.0,0.1,22.4,95,290
