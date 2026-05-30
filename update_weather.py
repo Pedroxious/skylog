@@ -153,7 +153,10 @@ def fetch_weather(city):
         "timezone": city["tz"],
         "forecast_days": 3,
     }
-    resp = requests.get(url, params=params, timeout=15)
+    headers = {
+        "User-Agent": "SkyLogWeatherDashboard/2.0 (contact: pedroazevedojoel@gmail.com; github: Pedroxious/skylog)"
+    }
+    resp = requests.get(url, params=params, headers=headers, timeout=15)
     resp.raise_for_status()
     return resp.json()
 
@@ -210,6 +213,8 @@ def parse_weather(city, data):
             f_time = datetime.fromisoformat(hourly_times[idx])
             f_temp = hourly_temps[idx]
             f_code = hourly_codes[idx]
+            if f_temp is None:
+                f_temp = 0.0
             f_is_day = f_time.hour >= 6 and f_time.hour < 18
             f_emoji, f_desc, _, _ = get_condition_image(f_code, f_is_day)
             forecast_3h.append({
@@ -230,6 +235,16 @@ def parse_weather(city, data):
         d_precip = daily["precipitation_sum"][i]
         d_emoji, d_desc, _, _ = get_condition_image(d_code, True)
         
+        # Safe-guards for None values returned by the API
+        if d_max is None:
+            d_max = 0.0
+        if d_min is None:
+            d_min = 0.0
+        if d_uv is None:
+            d_uv = 0.0
+        if d_precip is None:
+            d_precip = 0.0
+            
         day_label = d_time.strftime("%d/%m")
         if i == 0:
             day_label = "Hoje"
