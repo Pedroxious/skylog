@@ -1887,3 +1887,17 @@ datetime,city,country,continent,temp_c,feels_like_c,temp_min_c,temp_max_c,humidi
 2026-05-31 15:28,Dubai,Emirados Árabes,Oriente Médio,35.5,39.1,28.2,35.8,47,15.6,0.0,0,Céu limpo,DayClear.webp,1,2026-05-31T05:28,2026-05-31T19:04,1002.8,7.0,19.2,0,262
 2026-05-31 14:28,Cairo,Egito,África,33.6,35.3,20.2,34.5,27,8.7,0.0,1,Principalmente limpo,DayPartialClean.webp,1,2026-05-31T05:54,2026-05-31T19:50,1013.0,7.5,46.6,3,312
 2026-05-31 21:28,Sydney,Austrália,Oceania,12.5,9.0,11.3,17.9,64,17.0,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-05-31T06:50,2026-05-31T16:54,1012.0,0.0,51.6,0,263
+2026-05-31 10:17,São Paulo,Brasil,América do Sul,17.4,17.9,14.6,20.2,76,2.8,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-31T06:40,2026-05-31T17:27,1022.7,1.7,22.0,100,130
+2026-05-31 10:17,Rio de Janeiro,Brasil,América do Sul,22.4,24.4,19.7,23.3,84,11.1,0.0,2,Parcialmente nublado,DayPartialCloudy.webp,1,2026-05-31T06:25,2026-05-31T17:15,1020.5,3.2,12.4,72,253
+2026-05-31 10:17,Buenos Aires,Argentina,América do Sul,9.6,8.7,5.6,14.8,86,2.1,0.0,1,Principalmente limpo,DayPartialClean.webp,1,2026-05-31T07:51,2026-05-31T17:51,1023.2,1.2,0.7,43,329
+2026-05-31 07:17,Mexico City,México,América Central,15.3,15.1,14.6,28.8,77,3.9,0.0,0,Céu limpo,DayClear.webp,1,2026-05-31T05:57,2026-05-31T19:10,1017.5,0.3,23.7,7,16
+2026-05-31 09:17,Havana,Cuba,América Central,29.0,34.3,25.1,31.6,76,6.5,0.0,2,Parcialmente nublado,DayPartialCloudy.webp,1,2026-05-31T06:43,2026-05-31T20:10,1015.6,1.4,40.1,78,156
+2026-05-31 09:17,Miami,EUA,América do Norte,28.6,34.0,23.8,30.1,76,4.6,0.0,0,Céu limpo,DayClear.webp,1,2026-05-31T06:29,2026-05-31T20:07,1016.3,2.2,21.1,8,129
+2026-05-31 09:17,New York,EUA,América do Norte,15.2,13.9,8.0,24.8,59,6.8,0.0,0,Céu limpo,DayClear.webp,1,2026-05-31T05:27,2026-05-31T20:20,1018.1,3.0,31.1,1,273
+2026-05-31 14:17,London,Reino Unido,Europa,22.2,19.3,16.3,22.3,41,16.6,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-05-31T04:50,2026-05-31T21:07,1015.9,3.5,26.1,95,276
+2026-05-31 15:17,Paris,França,Europa,21.2,19.8,17.6,25.3,54,12.6,0.0,61,Chuva,DayRain.webp,1,2026-05-31T05:52,2026-05-31T21:44,1018.9,2.7,40.5,100,294
+2026-05-31 16:17,Moscow,Rússia,Europa,16.1,14.9,8.0,16.1,57,3.8,0.1,80,Chuva,DayRain.webp,1,2026-05-31T03:54,2026-05-31T21:00,1010.1,3.4,39.9,100,41
+2026-05-31 20:17,Bangkok,Tailândia,Ásia,26.6,33.2,25.4,35.7,94,3.3,0.9,81,Tempestade,Storm.webp,0,2026-05-31T05:49,2026-05-31T18:41,1009.4,0.0,3.0,100,209
+2026-05-31 22:17,Tokyo,Japão,Ásia,20.0,22.8,16.6,28.8,91,2.9,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-05-31T04:27,2026-05-31T18:50,1017.3,0.0,24.6,0,150
+2026-05-31 17:17,Dubai,Emirados Árabes,Oriente Médio,33.5,36.8,28.2,36.0,55,16.1,0.0,0,Céu limpo,DayClear.webp,1,2026-05-31T05:28,2026-05-31T19:04,1002.4,3.3,17.6,0,250
+2026-05-31 16:17,Cairo,Egito,África,34.2,33.0,20.2,34.2,21,10.5,0.0,0,Céu limpo,DayClear.webp,1,2026-05-31T05:54,2026-05-31T19:50,1012.1,5.5,51.8,2,311
