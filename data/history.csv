@@ -2080,3 +2080,13 @@ datetime,city,country,continent,temp_c,feels_like_c,temp_min_c,temp_max_c,humidi
 2026-06-02 02:57,Dubai,Emirados Árabes,Oriente Médio,29.0,30.4,28.6,36.3,57,15.4,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-06-02T05:28,2026-06-02T19:05,1004.4,0.0,17.6,0,190
 2026-06-02 01:57,Cairo,Egito,África,24.7,24.7,22.1,37.3,49,6.7,0.0,1,Principalmente limpo,NightPartialClean.webp,0,2026-06-02T05:54,2026-06-02T19:51,1015.5,0.0,41.6,13,16
 2026-06-02 08:57,Sydney,Austrália,Oceania,12.9,9.9,10.6,17.4,74,17.0,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-06-02T06:52,2026-06-02T16:54,1006.4,0.2,47.9,82,355
+2026-06-01 21:11,São Paulo,Brasil,América do Sul,13.2,12.7,12.6,20.1,91,7.1,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-06-01T06:41,2026-06-01T17:27,1022.6,0.0,20.2,5,156
+2026-06-01 21:11,Rio de Janeiro,Brasil,América do Sul,20.8,23.1,19.8,23.9,89,6.8,0.0,2,Parcialmente nublado,NightPartialCloudy.webp,0,2026-06-01T06:26,2026-06-01T17:15,1020.4,0.0,13.6,55,207
+2026-06-01 21:11,Buenos Aires,Argentina,América do Sul,11.8,9.7,11.4,13.4,81,11.8,0.0,3,Nublado,NightOvercast.webp,0,2026-06-01T07:52,2026-06-01T17:50,1026.7,0.0,27.5,100,103
+2026-06-01 18:11,Mexico City,México,América Central,25.0,21.9,15.4,28.2,28,13.8,0.0,1,Principalmente limpo,DayPartialClean.webp,1,2026-06-01T05:57,2026-06-01T19:11,1010.2,1.1,18.2,44,22
+2026-06-01 20:11,Havana,Cuba,América Central,28.3,33.0,25.2,32.0,80,11.7,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-06-01T06:43,2026-06-01T20:11,1015.2,0.4,41.4,98,54
+2026-06-01 20:11,Miami,EUA,América do Norte,24.0,26.7,24.0,31.7,95,20.4,10.8,65,Chuva,DayRain.webp,1,2026-06-01T06:29,2026-06-01T20:08,1015.5,0.1,0.8,100,54
+2026-06-01 20:11,New York,EUA,América do Norte,14.9,12.9,12.4,22.0,74,14.0,0.0,2,Parcialmente nublado,DayPartialCloudy.webp,1,2026-06-01T05:26,2026-06-01T20:20,1019.4,0.1,20.0,50,119
+2026-06-02 01:11,London,Reino Unido,Europa,15.9,15.8,14.6,21.3,94,12.6,0.3,55,Chuvisco,NightRain.webp,0,2026-06-02T04:48,2026-06-02T21:09,1007.4,0.0,15.0,100,190
+2026-06-02 02:11,Paris,França,Europa,21.8,22.1,17.2,22.9,57,4.5,0.0,80,Chuva,NightRain.webp,0,2026-06-02T05:50,2026-06-02T21:46,1010.5,0.0,40.5,100,209
+2026-06-02 03:11,Moscow,Rússia,Europa,11.4,10.0,11.1,18.8,72,4.2,0.0,3,Nublado,NightOvercast.webp,0,2026-06-02T03:52,2026-06-02T21:02,1014.2,0.0,37.2,100,290
