@@ -4,7 +4,7 @@
 
 ### Monitoramento climático em tempo real de 15 cidades ao redor do mundo
 
-[![SkyLog Live](https://img.shields.io/badge/SkyLog%20Live-Acessar%20Web%20App-000000?style=for-the-badge&logoColor=white)](https://pedroxious.github.io/skylog/)
+[![SkyLog Live](https://img.shields.io/badge/SkyLog%20Live-Acessar%20Web%20App-000000?style=for-the-badge&logoColor=white)](https://pedroxious.github.io/SkyLog/)
 [![Registros CSV](https://img.shields.io/badge/Histórico%20CSV-2297%20Registros-2E8B57?style=for-the-badge)](data/history.csv)
 
 ---
