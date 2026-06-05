@@ -2355,3 +2355,12 @@ datetime,city,country,continent,temp_c,feels_like_c,temp_min_c,temp_max_c,humidi
 2026-06-05 11:35,Tokyo,Japão,Ásia,20.1,20.4,16.3,21.2,67,6.4,0.0,1,Principalmente limpo,DayPartialClean.webp,1,2026-06-05T04:25,2026-06-05T18:54,1010.2,6.0,19.0,42,38
 2026-06-05 06:35,Dubai,Emirados Árabes,Oriente Médio,30.0,32.2,29.1,37.6,56,12.0,0.0,0,Céu limpo,DayClear.webp,1,2026-06-05T05:28,2026-06-05T19:06,1000.8,0.1,17.6,0,188
 2026-06-05 05:35,Cairo,Egito,África,21.6,23.4,21.5,35.8,75,5.0,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-06-05T05:53,2026-06-05T19:53,1013.8,0.0,34.9,0,360
+2026-06-05 03:59,São Paulo,Brasil,América do Sul,13.3,12.7,12.0,20.5,92,8.5,0.0,1,Principalmente limpo,NightPartialClean.webp,0,2026-06-05T06:42,2026-06-05T17:27,1025.5,0.0,14.0,33,95
+2026-06-05 03:59,Rio de Janeiro,Brasil,América do Sul,18.6,20.8,18.0,21.8,89,1.2,0.0,1,Principalmente limpo,NightPartialClean.webp,0,2026-06-05T06:28,2026-06-05T17:14,1025.0,0.0,8.5,37,63
+2026-06-05 03:59,Buenos Aires,Argentina,América do Sul,14.5,14.3,13.9,17.3,93,8.4,0.0,3,Nublado,NightOvercast.webp,0,2026-06-05T07:54,2026-06-05T17:50,1021.6,0.0,34.8,100,65
+2026-06-05 00:59,Mexico City,México,América Central,15.6,16.5,14.2,22.3,86,0.4,0.0,3,Nublado,NightOvercast.webp,0,2026-06-05T05:57,2026-06-05T19:12,1018.5,0.0,11.2,99,117
+2026-06-05 02:59,Havana,Cuba,América Central,24.4,28.4,23.9,30.6,89,8.4,0.0,3,Nublado,NightOvercast.webp,0,2026-06-05T06:43,2026-06-05T20:12,1015.3,0.0,33.2,98,115
+2026-06-05 02:59,Miami,EUA,América do Norte,24.1,26.2,23.0,27.0,80,13.7,0.0,3,Nublado,NightOvercast.webp,0,2026-06-05T06:28,2026-06-05T20:09,1016.3,0.0,18.3,90,60
+2026-06-05 02:59,New York,EUA,América do Norte,18.0,18.1,16.9,33.9,73,6.2,0.0,2,Parcialmente nublado,NightPartialCloudy.webp,0,2026-06-05T05:25,2026-06-05T20:23,1016.0,0.0,22.5,61,291
+2026-06-05 08:00,London,Reino Unido,Europa,13.7,11.6,13.1,18.0,74,13.0,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-06-05T04:46,2026-06-05T21:12,1010.7,0.5,14.3,98,252
+2026-06-05 17:01,Sydney,Austrália,Oceania,14.8,12.8,10.3,17.9,61,8.5,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-06-05T06:53,2026-06-05T16:53,1013.8,0.1,52.4,13,208
