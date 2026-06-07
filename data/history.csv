@@ -2662,3 +2662,13 @@ datetime,city,country,continent,temp_c,feels_like_c,temp_min_c,temp_max_c,humidi
 2026-06-07 17:07,London,Reino Unido,Europa,19.3,16.7,11.4,19.7,56,19.1,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-06-07T04:45,2026-06-07T21:14,1019.2,1.2,21.5,95,232
 2026-06-07 18:07,Paris,França,Europa,22.7,22.2,12.5,22.8,45,4.1,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-06-07T05:48,2026-06-07T21:50,1022.2,4.2,41.8,100,232
 2026-06-07 19:07,Moscow,Rússia,Europa,24.9,23.8,12.1,26.2,36,6.0,0.0,1,Principalmente limpo,DayPartialClean.webp,1,2026-06-07T03:47,2026-06-07T21:08,1017.8,1.0,44.9,37,295
+2026-06-07 14:58,São Paulo,Brasil,América do Sul,22.3,20.4,10.3,22.2,33,4.6,0.0,2,Parcialmente nublado,DayPartialCloudy.webp,1,2026-06-07T06:43,2026-06-07T17:27,1016.2,4.7,45.9,60,252
+2026-06-07 14:58,Rio de Janeiro,Brasil,América do Sul,22.9,23.1,15.5,23.7,60,9.8,0.0,1,Principalmente limpo,DayPartialClean.webp,1,2026-06-07T06:28,2026-06-07T17:14,1016.4,4.3,13.7,41,193
+2026-06-07 14:58,Buenos Aires,Argentina,América do Sul,15.6,14.5,13.7,15.8,87,15.2,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-06-07T07:55,2026-06-07T17:49,1019.6,2.2,10.4,100,104
+2026-06-07 11:58,Mexico City,México,América Central,21.8,24.5,14.6,23.2,62,4.3,0.0,2,Parcialmente nublado,DayPartialCloudy.webp,1,2026-06-07T05:57,2026-06-07T19:13,1011.0,6.3,15.1,72,204
+2026-06-07 13:58,Havana,Cuba,América Central,29.5,34.1,23.6,30.6,67,16.6,0.4,80,Chuva,DayRain.webp,1,2026-06-07T06:43,2026-06-07T20:13,1014.1,8.0,5.7,99,37
+2026-06-07 13:58,Miami,EUA,América do Norte,29.7,34.3,24.7,29.8,69,18.0,0.0,1,Principalmente limpo,DayPartialClean.webp,1,2026-06-07T06:28,2026-06-07T20:10,1015.5,8.2,22.6,30,89
+2026-06-07 13:58,New York,EUA,América do Norte,28.6,26.6,19.7,28.8,39,26.3,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-06-07T05:24,2026-06-07T20:24,1009.0,7.8,49.1,91,295
+2026-06-07 18:58,London,Reino Unido,Europa,18.2,15.9,11.4,19.4,60,16.6,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-06-07T04:45,2026-06-07T21:14,1018.8,0.4,22.3,100,228
+2026-06-07 19:58,Paris,França,Europa,22.7,21.6,12.5,23.3,43,7.1,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-06-07T05:48,2026-06-07T21:50,1020.6,2.5,42.3,100,156
+2026-06-07 20:58,Moscow,Rússia,Europa,22.4,22.0,12.1,26.2,46,3.4,0.0,1,Principalmente limpo,DayPartialClean.webp,1,2026-06-07T03:47,2026-06-07T21:08,1017.8,0.2,42.5,12,288
