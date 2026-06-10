@@ -85,59 +85,59 @@
         <text x="25" y="38" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" 
             font-weight="800" fill="#FFFFFF" filter="url(#shadow)">New York, EUA</text>
         <text x="25" y="56" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="500"
-            fill="#F1F5F9" filter="url(#light-shadow)">América do Norte · 13:53 · Dia</text>
+            fill="#F1F5F9" filter="url(#light-shadow)">América do Norte · 16:13 · Dia</text>
         
         <!-- Current Conditions (Left) -->
         <text x="25" y="118" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="52" 
-            font-weight="900" fill="#FFFFFF" filter="url(#shadow)">29.6°C</text>
+            font-weight="900" fill="#FFFFFF" filter="url(#shadow)">26.9°C</text>
         <text x="25" y="136" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="500"
-            fill="#F1F5F9" filter="url(#light-shadow)">Sensação: 32.9°C</text>
+            fill="#F1F5F9" filter="url(#light-shadow)">Sensação: 28.5°C</text>
         
         <!-- Current Conditions (Right) -->
-        <text x="475" y="102" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="48" text-anchor="end" filter="url(#shadow)">⛅</text>
+        <text x="475" y="102" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="48" text-anchor="end" filter="url(#shadow)">☁️</text>
         <text x="475" y="128" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700"
-            fill="#FFFFFF" text-anchor="end" filter="url(#shadow)">Parcialmente nublado</text>
+            fill="#FFFFFF" text-anchor="end" filter="url(#shadow)">Nublado</text>
         
         <!-- Glassmorphism Details Section -->
         <rect x="20" y="156" width="460" height="66" rx="12" 
             fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5"/>
         
         <!-- Row 1 details -->
-        <text x="35" y="181" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">💧 Umid: 56%</text>
-        <text x="180" y="181" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">💨 Vent: 15.3 km/h</text>
-        <text x="340" y="181" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">☀️ UV: 6.5</text>
+        <text x="35" y="181" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">💧 Umid: 66%</text>
+        <text x="180" y="181" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">💨 Vent: 15.5 km/h</text>
+        <text x="340" y="181" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">☀️ UV: 3.9</text>
         
         <!-- Row 2 details -->
         <text x="35" y="206" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">🎈 Press: 1010 hPa</text>
-        <text x="180" y="206" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">👁️ Visib: 31.6 km</text>
-        <text x="340" y="206" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">☁️ Nuvens: 77%</text>
+        <text x="180" y="206" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">👁️ Visib: 22.0 km</text>
+        <text x="340" y="206" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" filter="url(#light-shadow)">☁️ Nuvens: 100%</text>
         
         <!-- 3-Hour Forecast Pills -->
         
         <!-- Pill 1 -->
         <rect x="20" y="240" width="144" height="52" rx="10" 
             fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1"/>
-        <text x="32" y="261" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#F1F5F9">14:00</text>
-        <text x="32" y="280" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">29.6°C</text>
-        <text x="124" y="275" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" filter="url(#shadow)">☁️</text>
+        <text x="32" y="261" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#F1F5F9">17:00</text>
+        <text x="32" y="280" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">25.6°C</text>
+        <text x="124" y="275" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" filter="url(#shadow)">🌦️</text>
         
         <!-- Pill 2 -->
         <rect x="178" y="240" width="144" height="52" rx="10" 
             fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1"/>
-        <text x="190" y="261" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#F1F5F9">15:00</text>
-        <text x="190" y="280" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">29.3°C</text>
-        <text x="282" y="275" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" filter="url(#shadow)">☁️</text>
+        <text x="190" y="261" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#F1F5F9">18:00</text>
+        <text x="190" y="280" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">26.9°C</text>
+        <text x="282" y="275" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" filter="url(#shadow)">⛅</text>
         
         <!-- Pill 3 -->
         <rect x="336" y="240" width="144" height="52" rx="10" 
             fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1"/>
-        <text x="348" y="261" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#F1F5F9">16:00</text>
-        <text x="348" y="280" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">28.8°C</text>
+        <text x="348" y="261" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#F1F5F9">19:00</text>
+        <text x="348" y="280" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">27.7°C</text>
         <text x="440" y="275" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" filter="url(#shadow)">☁️</text>
         
         
         <!-- Slim Day Progress Bar at the very bottom -->
         <rect x="20" y="306" width="460" height="4" rx="2" fill="rgba(0,0,0,0.25)"/>
-        <rect x="20" y="306" width="259" height="4" rx="2" fill="#FFD54F"/>
+        <rect x="20" y="306" width="331" height="4" rx="2" fill="#FFD54F"/>
     </g>
 </svg>
