@@ -3073,3 +3073,13 @@ datetime,city,country,continent,temp_c,feels_like_c,temp_min_c,temp_max_c,humidi
 2026-06-12 01:13,Dubai,Emirados Árabes,Oriente Médio,29.8,34.5,27.6,36.7,72,10.4,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-06-12T05:28,2026-06-12T19:09,1000.6,0.0,14.8,0,216
 2026-06-12 00:13,Cairo,Egito,África,26.4,27.3,21.4,35.7,53,8.1,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-06-12T05:53,2026-06-12T19:56,1013.5,0.0,41.1,0,21
 2026-06-12 07:13,Sydney,Austrália,Oceania,12.9,11.9,12.9,18.9,93,10.3,0.0,1,Principalmente limpo,DayPartialClean.webp,1,2026-06-12T06:57,2026-06-12T16:52,1032.5,0.0,16.6,45,272
+2026-06-11 20:15,São Paulo,Brasil,América do Sul,16.2,16.7,14.8,19.0,86,4.9,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-06-11T06:44,2026-06-11T17:27,1017.3,0.0,27.7,7,8
+2026-06-11 20:15,Rio de Janeiro,Brasil,América do Sul,20.1,23.3,19.4,21.7,94,2.2,0.0,2,Parcialmente nublado,NightPartialCloudy.webp,0,2026-06-11T06:30,2026-06-11T17:14,1016.7,0.0,19.6,59,14
+2026-06-11 20:15,Buenos Aires,Argentina,América do Sul,12.2,11.9,10.3,16.6,94,4.9,0.0,0,Céu limpo,NightFullMoonClear.webp,0,2026-06-11T07:57,2026-06-11T17:49,1017.5,0.0,11.8,0,332
+2026-06-11 17:15,Mexico City,México,América Central,18.5,18.9,14.3,24.2,77,7.0,2.4,82,Tempestade,Storm.webp,1,2026-06-11T05:57,2026-06-11T19:14,1010.9,0.7,3.9,82,206
+2026-06-11 19:15,Havana,Cuba,América Central,28.6,32.6,22.8,31.2,74,12.3,0.0,3,Nublado,DayCumulusCongestus.webp,1,2026-06-11T06:43,2026-06-11T20:15,1014.5,0.5,40.9,100,63
+2026-06-11 19:15,Miami,EUA,América do Norte,29.2,32.0,24.5,31.8,65,14.7,0.0,0,Céu limpo,DayClear.webp,1,2026-06-11T06:28,2026-06-11T20:12,1015.4,1.8,25.5,3,107
+2026-06-11 19:15,New York,EUA,América do Norte,33.4,34.9,22.3,34.4,46,16.6,0.0,1,Principalmente limpo,DayPartialClean.webp,1,2026-06-11T05:24,2026-06-11T20:27,1005.4,1.4,42.5,40,243
+2026-06-12 00:15,London,Reino Unido,Europa,15.7,14.3,15.4,21.4,86,17.6,0.0,3,Nublado,NightOvercast.webp,0,2026-06-12T04:43,2026-06-12T21:17,1017.7,0.0,17.3,98,258
+2026-06-12 01:15,Paris,França,Europa,17.8,16.2,16.7,25.0,63,11.8,0.0,3,Nublado,NightOvercast.webp,0,2026-06-12T05:46,2026-06-12T21:54,1023.4,0.0,39.2,99,258
+2026-06-12 02:15,Moscow,Rússia,Europa,19.9,21.3,18.6,30.7,76,4.0,0.0,1,Principalmente limpo,NightPartialClean.webp,0,2026-06-12T03:45,2026-06-12T21:13,1015.3,0.0,35.9,39,90
